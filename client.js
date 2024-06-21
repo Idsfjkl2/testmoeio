@@ -3620,7 +3620,7 @@ var twirlAngle   = 90;
 function draw(e) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
-    particles.forEach(function (particlesss) {
+    particles.forEach(function (particle) {
         // move the particle to its original position
         particle.position.affected = Object.create(particle.position.actual);
         
