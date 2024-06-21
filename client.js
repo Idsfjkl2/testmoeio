@@ -3569,7 +3569,7 @@ ctx.shadowColor = "black"; //default for everything
 
 var particles = [];
 
-function Particle() {
+function Particless() {
     this.position = {
         actual : {
             x : 0,
@@ -3591,7 +3591,7 @@ var rows     = canvas.height / gridSize;
 // create grid using particles
 for (var i = 0; i < rows+1; i++) {
     for (var j = 0; j < canvas.width; j += 2) {
-        var p = new Particle();
+        var p = new Particless();
         p.position.actual.x = j;
         p.position.actual.y = i * gridSize;
         p.position.affected = Object.create(p.position.actual);
@@ -3600,7 +3600,7 @@ for (var i = 0; i < rows+1; i++) {
 }
 for (var i = 0; i < columns+1; i++) {
     for (var j = 0; j < canvas.height; j += 2) {
-        var p = new Particle();
+        var p = new Particless();
         p.position.actual.x = i * gridSize;
         p.position.actual.y = j;
         p.position.affected = Object.create(p.position.actual);
@@ -3620,7 +3620,7 @@ var twirlAngle   = 90;
 function draw(e) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
-    particles.forEach(function (particle) {
+    particles.forEach(function (particlesss) {
         // move the particle to its original position
         particle.position.affected = Object.create(particle.position.actual);
         
