@@ -3564,8 +3564,135 @@ var brMapCanvas = null;
 var nPlayersViewing = 0;
 var nPlayersAlive = 0;
 var ctx = canvas.getContext("2d");
-
 ctx.shadowColor = "black"; //default for everything
+
+
+var particles = [];
+
+function Particle() {
+    this.position = {
+        actual : {
+            x : 0,
+            y : 0
+        },
+        affected : {
+            x : 0,
+            y : 0
+        },
+    };
+}
+
+// space between particles
+var gridSize = 25;
+
+var columns  = canvas.width / gridSize;
+var rows     = canvas.height / gridSize;
+
+// create grid using particles
+for (var i = 0; i < rows+1; i++) {
+    for (var j = 0; j < canvas.width; j += 2) {
+        var p = new Particle();
+        p.position.actual.x = j;
+        p.position.actual.y = i * gridSize;
+        p.position.affected = Object.create(p.position.actual);
+        particles.push(p);
+    }
+}
+for (var i = 0; i < columns+1; i++) {
+    for (var j = 0; j < canvas.height; j += 2) {
+        var p = new Particle();
+        p.position.actual.x = i * gridSize;
+        p.position.actual.y = j;
+        p.position.affected = Object.create(p.position.actual);
+        particles.push(p);
+    }
+}
+
+// track mouse coordinates as it is the source of mass/gravity
+var mouse = {
+    x : -100,
+    y : -100,
+};
+
+var effectRadius = 75;
+var twirlAngle   = 90;
+
+function draw(e) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    particles.forEach(function (particle) {
+        // move the particle to its original position
+        particle.position.affected = Object.create(particle.position.actual);
+        
+        // calculate the effect area
+        var a = mouse.y - particle.position.actual.y;
+        var b = mouse.x - particle.position.actual.x;
+        var dist = Math.sqrt(a*a + b*b);
+        
+        // check if the particle is in the affected area
+        if (dist < effectRadius) {
+            
+            // angle of the particle relative to the mouse
+            var a = angle(mouse.x, mouse.y, particle.position.actual.x, particle.position.actual.y);
+            
+            var strength = dist.map(0, effectRadius, twirlAngle, 0);
+            
+            // twirl
+            a += strength;
+            
+            // new position for the particle that's affected by gravity
+            var p = rotate(a, dist, mouse.x, mouse.y);
+            
+            particle.position.affected.x = p.x;
+            particle.position.affected.y = p.y;
+        }
+        
+        ctx.beginPath();
+        ctx.rect(particle.position.affected.x -1, particle.position.affected.y -1, 2, 2);
+        ctx.fillStyle = "black";
+        ctx.fill();
+    });
+}
+
+draw();
+
+window.addEventListener("mousemove", function (e) {
+    mouse.x = e.x - canvas.offsetLeft;
+    mouse.y = e.y - canvas.offsetTop;
+    requestAnimationFrame(draw);
+});
+
+function angle(originX, originY, targetX, targetY) {
+    var dx = targetX - originX;
+    var dy = targetY - originY;
+    var theta = Math.atan2(dy, dx) * (180 / Math.PI);
+    if (theta < 0) theta = 360 + theta;
+    return theta;
+}
+
+Number.prototype.map = function (in_min, in_max, out_min, out_max) {
+    return (this - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+};
+
+function pos(x, y, angle, length) {
+    angle *= Math.PI / 180;
+    return {
+        x : Math.round(x + length * Math.cos(angle)),
+        y : Math.round(y + length * Math.sin(angle)),
+    };
+}
+
+function rotate(angle, distance, originX, originY) {
+    return {
+        x : originX + Math.cos(angle * Math.PI/180) * distance,
+        y : originY + Math.sin(angle * Math.PI/180) * distance,
+    }
+}
+
+
+
+
+
 //global settings
 var localStorageOn = false;
 var pixelRat = Math.min(window.devicePixelRatio, 2.0); //limit to 2 for performance
