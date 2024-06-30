@@ -20321,7 +20321,7 @@ InfVoid.prototype.customDraw = function(batchDrawOutline){
   ctx.save();
 
 
-  var theImg = getLoadedImg("img/infinitevoid.png");
+  var theImg = getLoadedImg("img/infinitevoid.svg");
   if (theImg) {
     var rad = this.rad;
     ctx.rotate(this.rPer * Math.PI * 2.0);
