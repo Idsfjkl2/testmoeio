@@ -14823,10 +14823,12 @@ extraRotate = 0;
           "skins/dinomonster.png"
         );
         
-
+	     var time = (timestamp - this.spawnTime)
+	     var deathtime = 1000
         if (theImg) {
           var rad = this.rad * 500/340;
           ctx.rotate(this.angle);
+	  ctx.globalAlpha = 1 * Math.max((deathtime - time)/deathtime, 0)
           ctx.drawImage(theImg, -rad, -rad, 2 * rad, 2 * rad);
           //console.log("drawing banana");
         }
