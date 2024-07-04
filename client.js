@@ -13018,7 +13018,7 @@ case o_cakesplash:
 					    
                   else if (this.type == ability_kamui2) this.z = 2000; 
       
-            else if (this.type == ability_tentaclegrab) this.z = 999.8; 
+            else if (this.type == ability_tentaclegrab && this.type == ability_spinthrow) this.z = 999.8; 
       
                 else if (this.type == ability_snakewrap) this.z = 1400;
       
@@ -13554,7 +13554,7 @@ AbilityObj.prototype.updateZ = function() {
                                 else if (this.abilityType == ability_flametrail) this.z = 999.9999; 
       else if (this.abilityType == ability_kamui2) this.z = 2000;
   
-    else if (this.abilityType == ability_tentaclegrab) this.z = 999.8;
+    else if (this.abilityType == ability_tentaclegrab && this.abilityType == ability_spinthrow) this.z = 999.8;
   
   else if (this.abilityType == ability_snakewrap) this.z = 1400;
   
@@ -14816,6 +14816,23 @@ extraRotate = 0;
         ctx.restore();
       }
       break;
+          case  ability_spinthrow://mark9000
+      {
+        //draw banana img
+        var theImg = getLoadedImg(
+          "skins/dinomonster.png"
+        );
+        
+
+        if (theImg) {
+          var rad = this.rad * 500/340;
+          ctx.rotate(this.angle);
+          ctx.drawImage(theImg, -rad, -rad, 2 * rad, 2 * rad);
+          //console.log("drawing banana");
+        }
+      }
+      break;
+		  
           case  ability_fruitThrow://mark9000
       {
         //draw banana img
