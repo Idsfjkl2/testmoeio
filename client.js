@@ -18512,7 +18512,9 @@ if (this.rad < 20) {
   }
 
   //player name text
+	if (this.canhavenick) {
   this.drawNickName(idealOp);
+	}
 
   this.drawCustomUIForAni();
   //ctx.restore();
@@ -20083,6 +20085,7 @@ Animal.prototype.readCustomData_onNewlyVisible = function(msg) {
 //  console.log(msg)
   var nickName = msg.readString();
   // read which speices is this animal
+  this.canhavenick = msg.readUInt8();
   this.animalSpecies = msg.readUInt8();
   this.velocityX = msg.readUInt8();
   this.velocityX = msg.readUInt8();
