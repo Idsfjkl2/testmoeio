@@ -14828,7 +14828,7 @@ extraRotate = 0;
         if (theImg) {
           var rad = this.rad * 500/340;
           ctx.rotate(this.angle);
-	  ctx.globalAlpha = 1 * Math.max((deathtime - time)/deathtime, 0)
+	  ctx.globalAlpha = 0.5 * Math.max((deathtime - time)/deathtime, 0)
           ctx.drawImage(theImg, -rad, -rad, 2 * rad, 2 * rad);
           //console.log("drawing banana");
         }
