@@ -12305,7 +12305,7 @@ this.beforeCustomDraw();
   }
 
   //draw HP bar
-  if (!this.flag_invisible) {
+  if (!this.flag_invisible && this.canhavenick) {
   this.drawHealthBar();
   }
 
