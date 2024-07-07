@@ -51,6 +51,14 @@
     //ONLY LOAD AD SCRIPTS IF NOT MOBILE APP
   //https://cdn.discordapp.com/attachments/1039682883633303593/1139369781808595064/AAA.png
   //https://cdn.discordapp.com/attachments/1067917244891406378/1109495988378415195/Untitled_-_2023-05-20T110051.935.png
+
+  function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
     function getQueryParams(qs) {
       qs = qs.split("+").join(" ");
       var params = {},
