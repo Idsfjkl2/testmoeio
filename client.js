@@ -424,6 +424,7 @@ a_marlin = 138;
 a_lobster = 139;
 a_dontlook = 140;
 a_ant = 141;
+a_ladybug = 142;
 var infoForAnimalType = function (aniT) {
     var infoO = {};
     switch (aniT) {
@@ -1027,6 +1028,13 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n A scrawny bug...\n You can climb on hills!";
             infoO.aniCol = "#FF0000";
             infoO.skinName = "ant";
+            break;
+		    		    		    		     case a_ladybug:
+            infoO.aniName = "Ladybug";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n A beautiful ladybug that can fly...\n You can hide under hills, rocks, and fruit trees!";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "ladybug";
             break;
 
 		    		    		     case a_dontlook:
@@ -13247,6 +13255,7 @@ this.z = 1005; //fireball just under dragon
 
 
           else if (this.animalType == a_blackDragon) this.z = 1500 + this.rad/1000;
+	else if (this.animalType == a_ladybug) this.z = 998 + this.rad/1000;
            else if (this.flag_inTree) this.z = 1301 + this.rad/1000;   
           //flies above hill, water/food also
     else if (this.animalType == a_dinoMonster) this.z = 1002 + this.rad/1000;
@@ -17504,6 +17513,14 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n A scrawny bug...\n You can climb on hills!";
             infoO.aniCol = "#FF0000";
             infoO.skinName = "ant";
+            break;
+
+		  		    		    		    		     case a_ladybug:
+            infoO.aniName = "Ladybug";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n A beautiful ladybug that can fly...\n You can hide under hills, rocks, and fruit trees!";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "ladybug";
             break;
 
 		  
