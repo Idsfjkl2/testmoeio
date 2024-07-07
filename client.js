@@ -368,63 +368,65 @@ a_scorpion = 78,
 a_lochness = 83,
 a_griffin = 84,
 a_santa = 85,
-a_finaldragon = 86;
-a_cassowary = 87;
-a_flamingo = 88;
-a_peacock = 89;
-a_topdragon = 90;
-a_menhir = 91;
-a_crackedhir = 92;
-a_alligator = 93;
-a_eel = 94;
-a_amalga = 95;
-a_stegosaurus = 96;
-a_sheep = 97;
-a_tortise = 98;
-a_capybara = 99;
-a_gaur = 100;
-a_qilin = 101;
-a_skink = 102;
-a_sloth = 103;
-a_leopardseal = 104;
-a_taver = 105;
-a_waterbear = 106;
-a_astraldragon = 107;
-a_tornado = 108;
-a_slug = 109;
-a_minibd = 110;
-a_secretarybird = 111;
-a_flock = 112;
-a_beluga = 113;
-a_cachalot = 114;
-a_bigfin = 115;
-a_bigmouse = 116;
-a_titanboa = 117;
-a_edgepi = 118;
-a_lavacolossal = 119;
-a_beaver = 120;
-a_tadpole = 121;
-a_glaciermonster = 122;
-a_pengu = 123;
-a_pondturtle = 124;
-a_pike = 125;
-a_manatee = 126;
-a_cakemonster = 127;
-a_clownfish = 128;
-a_searobin = 129;
-a_cuttlefish = 130;
-a_catfish = 131;
-a_obd = 132;
-a_astraltrex = 133;
-a_horseshoe = 134;
-a_testsnake = 135;
-a_easterbunny = 136;
-a_frogfish = 137;
-a_marlin = 138;
-a_lobster = 139;
-a_dontlook = 140;
-a_ant = 141;
-a_ladybug = 142;
+a_finaldragon = 86,
+a_cassowary = 87,
+a_flamingo = 88,
+a_peacock = 89,
+a_topdragon = 90,
+a_menhir = 91,
+a_crackedhir = 92,
+a_alligator = 93,
+a_eel = 94,
+a_amalga = 95,
+a_stegosaurus = 96,
+a_sheep = 97,
+a_tortise = 98,
+a_capybara = 99,
+a_gaur = 100,
+a_qilin = 101,
+a_skink = 102,
+a_sloth = 103,
+a_leopardseal = 104,
+a_taver = 105,
+a_waterbear = 106,
+a_astraldragon = 107,
+a_tornado = 108,
+a_slug = 109,
+a_minibd = 110,
+a_secretarybird = 111,
+a_flock = 112,
+a_beluga = 113,
+a_cachalot = 114,
+a_bigfin = 115,
+a_bigmouse = 116,
+a_titanboa = 117,
+a_edgepi = 118,
+a_lavacolossal = 119,
+a_beaver = 120,
+a_tadpole = 121,
+a_glaciermonster = 122,
+a_pengu = 123,
+a_pondturtle = 124,
+a_pike = 125,
+a_manatee = 126,
+a_cakemonster = 127,
+a_clownfish = 128,
+a_searobin = 129,
+a_cuttlefish = 130,
+a_catfish = 131,
+a_obd = 132,
+a_astraltrex = 133,
+a_horseshoe = 134,
+a_testsnake = 135,
+a_easterbunny = 136,
+a_frogfish = 137,
+a_marlin = 138,
+a_lobster = 139,
+a_dontlook = 140,
+a_ant = 141,
+a_ladybug = 142,
+a_earthworm = 143,
+a_skibidi = 9999;
 var infoForAnimalType = function (aniT) {
     var infoO = {};
     switch (aniT) {
@@ -1087,6 +1089,13 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.skinName = "easterbunny";
             break;
 		    
+		    		    		                                                            case a_earthworm:
+            infoO.aniName = "Earthworm";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n You can dig!";
+            infoO.aniCol = "#231f18";
+            infoO.skinName = "earthworm";
+            break;
 		    		                                                            case a_testsnake:
             infoO.aniName = "Death Worm";
             infoO.aniDesc = "";
@@ -13221,7 +13230,7 @@ this.z = 1005; //fireball just under dragon
 
         if (
           this.flag_underWater ||
-          (this.flag_usingAbility && (this.animalType == a_mole || this.animalType == a_testsnake))
+          (this.flag_usingAbility && (this.animalType == a_mole || this.animalType == a_testsnake || this.animalType == a_earthworm))
         ) {
           this.z = -100; //above lake and lake island
         } else {
@@ -17505,6 +17514,13 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.aniCol = "#FF0000";
             infoO.skinName = "lobster";
             break;
+		  		    		    		    		                                                            case a_earthworm:
+            infoO.aniName = "Earthworm";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n You can dig!";
+            infoO.aniCol = "#231f18";
+            infoO.skinName = "earthworm";
+            break;
 
 
 		  		    		    		     case a_ant:
@@ -18100,7 +18116,7 @@ Animal.prototype.customDraw = function(batchDrawOutline) {
   var idealOp =
     this.flag_underWater ||
     (this.flag_usingAbility &&
-      ((this.animalType == a_mole || this.animalType == a_testsnake) ||
+      ((this.animalType == a_mole || this.animalType == a_testsnake || this.animalType == a_earthworm) ||
 
         this.isTransforming&& this.animalType == a_yeti || this.flag_stealth))
       ? 0.0
@@ -18403,7 +18419,7 @@ if (this.rad < 20) {
     !(
       this.dead ||
       this.flag_underWater ||
-      ((this.animalType == a_mole || this.animalType == a_testsnake) && this.flag_usingAbility)
+      ((this.animalType == a_mole || this.animalType == a_testsnake || this.animalType == a_earthworm) && this.flag_usingAbility)
     )
   )
     if (gameMode == gameMode_teamMode && this.teamID != 0) {
@@ -18643,7 +18659,7 @@ Animal.prototype.drawUnderSkinImgOutline = function() {
 
   if (
     this.flag_underWater ||
-    (this.flag_usingAbility && (this.animalType == a_mole || this.animalType == a_testsnake))
+    (this.flag_usingAbility && (this.animalType == a_mole || this.animalType == a_testsnake || this.animalType == a_earthworm))
   ) {
     ctx.save();
     ctx.globalAlpha = 1.0 - this.underwaterA; //bubbles appear as animal fades
