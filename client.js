@@ -427,6 +427,7 @@ a_ant = 141,
 a_ladybug = 142,
 a_earthworm = 143,
 a_centipede = 144,
+a_aardvark = 146,
 a_skibidi = 9999;
 var infoForAnimalType = function (aniT) {
     var infoO = {};
@@ -1039,6 +1040,7 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.aniCol = "#FF0000";
             infoO.skinName = "ladybug";
             break;
+
 		    		    		    		    		     case a_centipede:
             infoO.aniName = "Centipede";
             infoO.aniDesc = "";
@@ -1046,6 +1048,15 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.aniCol = "#FF0000";
             infoO.skinName = "centipede";
             break;
+		    		    		    		    		    		    		     case a_aardvark:
+            infoO.aniName = "Aardvark";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n You can stomp on people with your feet knocking nearby players from holes!";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "aardvark";
+            break;
+
+		    
 
 		    
 
@@ -1625,6 +1636,7 @@ ability_frogfishabil = 142,
 ability_marlin = 143,
 ability_spinthrow = 144,
 ability_centipede = 145,
+ability_aardvark = 146,
   ability_none = 0;
 var infoForAbilityT = function(abilT) {
   var infoO = {};
@@ -1655,6 +1667,15 @@ var infoForAbilityT = function(abilT) {
         "skins/" +
         zombieFolder +
         infoForAnimalType(myPlayerLastAniT).skinName +
+        ".png";
+      break;
+
+		  		  		  		                                          case ability_aardvark:
+      infoO.abilName = "Stomp";
+      infoO.abilImg =
+        "skins/" +
+        zombieFolder +
+        infoForAnimalType(myPlayerLastAniT).skinName + 2 +
         ".png";
       break;
 		  		                                          case ability_marlin:
@@ -17565,7 +17586,13 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.aniCol = "#FF0000";
             infoO.skinName = "centipede";
             break;
-
+		    		    		    		    		    		     case a_aardvark:
+            infoO.aniName = "Aardvark";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n You can stomp on people with your feet knocking nearby players from holes!";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "aardvark";
+            break;
 		  
 
 		  
