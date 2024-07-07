@@ -423,6 +423,7 @@ a_frogfish = 137;
 a_marlin = 138;
 a_lobster = 139;
 a_dontlook = 140;
+a_ant = 141;
 var infoForAnimalType = function (aniT) {
     var infoO = {};
     switch (aniT) {
@@ -1018,6 +1019,14 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n Use your giant claws to pull and crush prey!";
             infoO.aniCol = "#FF0000";
             infoO.skinName = "lobster";
+            break;
+
+		    		    		     case a_ant:
+            infoO.aniName = "Ant";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n A scrawny bug...\n You can climb on hills!";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "ant";
             break;
 
 		    		    		     case a_dontlook:
@@ -17487,6 +17496,17 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.aniCol = "#FF0000";
             infoO.skinName = "lobster";
             break;
+
+
+		  		    		    		     case a_ant:
+            infoO.aniName = "Ant";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n A scrawny bug...\n You can climb on hills!";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "ant";
+            break;
+
+		  
 
 		  
 		    		    		     case a_dontlook:
