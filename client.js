@@ -25395,6 +25395,27 @@ window.Donkey = Donkey;
 //add this file as a class! (make sure to call require!)
 GameObjType.setCustomClassForGameObjType(Donkey, o_animal, a_donkey);
 
+var Ladybug = Ladybug;
+var superClass = Animal;
+Ladybug.prototype = Object.create(superClass.prototype); //properly inherit prototype of superclass
+Ladybug.prototype.constructor = Ladybug;
+Ladybug.superClass = superClass; //'class' var
+
+Ladybug.prototype.updateZ = function() {
+	if (this.flag_flying) {
+        this.z = 10000;
+	} else {
+  this.z = 997 + this.rad/1000;
+	}
+};
+
+
+function Ladybug() {
+  Ladybug.superClass.call(this, o_animal);
+}
+window.Ladybug = Ladybug;
+//add this file as a class! (make sure to call require!)
+GameObjType.setCustomClassForGameObjType(Ladybug, o_animal, a_ladybug);
 
 var Kraken = Kraken;
 var superClass = Animal;
