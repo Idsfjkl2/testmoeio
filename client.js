@@ -20077,6 +20077,7 @@ Animal.prototype.getSkinName = function() {
             break;
     case a_pufferFish:
     case a_muskox:
+    case a_aardvark:
     case a_ladybug:
     case a_astraltrex:
     case a_swordfish:
