@@ -19049,9 +19049,11 @@ Animal.prototype.skinScale = 0;
 Animal.prototype.basicDrawSkinImg = function() {
   var iScale = 500 / 340.0; //scale up ps image to fit (to remove blank space)
   var rad = this.rad - this.outlineW;
+  var WScale = 1
+  var HScale = 1
   this.skinRad = rad;
   this.skinScale = iScale;
-
+ if (this.flag_usingAbility && this.animalType == a_ladybug) WScale = 1.294;
 
   if (this.loadedSkinImg) {
     if ((this.animalType == a_trex || this._animalType == a_trex) && this.specType != 200) { //animal x and y set mark20
@@ -19221,8 +19223,8 @@ Animal.prototype.basicDrawSkinImg = function() {
         this.loadedSkinImg,
         -rad * iScale,
         -rad * iScale,
-        2 * rad * iScale,
-        2 * rad * iScale
+        2 * rad * iScale * WScale,
+        2 * rad * iScale * HScale
       );
 
 	    
@@ -20005,6 +20007,7 @@ Animal.prototype.getSkinName = function() {
             break;
     case a_pufferFish:
     case a_muskox:
+    case a_ladybug:
     case a_astraltrex:
     case a_swordfish:
     case a_turtle:
