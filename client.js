@@ -13255,7 +13255,6 @@ this.z = 1005; //fireball just under dragon
 
 
           else if (this.animalType == a_blackDragon) this.z = 1500 + this.rad/1000;
-	else if (this.animalType == a_ladybug) this.z = 998 + this.rad/1000;
            else if (this.flag_inTree) this.z = 1301 + this.rad/1000;   
           //flies above hill, water/food also
     else if (this.animalType == a_dinoMonster) this.z = 1002 + this.rad/1000;
@@ -13272,6 +13271,7 @@ this.z = 1005; //fireball just under dragon
           else if (this.animalType == a_dragon) this.z = 1500 + this.rad/1000;
                    else if (this.animalType == a_griffin) this.z = 1005 + this.rad/1000;
           else if (this.animalType ==  a_kingCrab) this.z = 1006 + this.rad/1000;
+		  	else if (this.animalType == a_ladybug) this.z = 0 + this.rad/1000;
           //flies above hill, water/food also
           else this.z = 1000 + this.rad/1000;
         }
