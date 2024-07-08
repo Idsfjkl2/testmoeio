@@ -1062,7 +1062,7 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s are great swimmers, dominate the Lakes/Oceans/Mud! You are also immune to poison and can bite animals.";
             infoO.aniCol = "#FF0000";
-            infoO.skinName = "aardvark";
+            infoO.skinName = "mongoose";
             break;
 
 		    
@@ -1646,6 +1646,7 @@ ability_marlin = 143,
 ability_spinthrow = 144,
 ability_centipede = 145,
 ability_aardvark = 146,
+ability_bite = 147,
   ability_none = 0;
 var infoForAbilityT = function(abilT) {
   var infoO = {};
@@ -1671,6 +1672,15 @@ var infoForAbilityT = function(abilT) {
       break;
 
 		  		  		                                          case ability_centipede:
+      infoO.abilName = "Bite";
+      infoO.abilImg =
+        "skins/" +
+        zombieFolder +
+        infoForAnimalType(myPlayerLastAniT).skinName +
+        ".png";
+      break;
+
+		  		  		  		                                          case ability_bite:
       infoO.abilName = "Bite";
       infoO.abilImg =
         "skins/" +
@@ -17601,6 +17611,14 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n You can stomp on people with your feet knocking nearby players from holes!";
             infoO.aniCol = "#FF0000";
             infoO.skinName = "aardvark";
+            break;
+
+		  		    		    		    		    		    		    		    		     case a_mongoose:
+            infoO.aniName = "Mongoose";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s are great swimmers, dominate the Lakes/Oceans/Mud! You are also immune to poison and can bite animals.";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "mongoose";
             break;
 		  
 
