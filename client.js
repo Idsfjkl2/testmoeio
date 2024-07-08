@@ -4943,7 +4943,11 @@ function drawGameInterface() {
   if (!serverCon_aliveInAGame) return;
 
   ctx.save();
-
+        var theImg222 = getLoadedImg("img/blindness.png");
+        if (theImg222) {
+          ctx.drawImage(theImg222, 0, 0, canvasW, canvasH);
+        }
+      
   //ease animated vars
   waterBarPerc += (waterBarPerc_n - waterBarPerc) * 0.1;
  pressureBarPerc += (pressureBarPerc_n - pressureBarPerc) * 0.1;
