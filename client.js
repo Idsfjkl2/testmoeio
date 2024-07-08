@@ -428,6 +428,7 @@ a_ladybug = 142,
 a_earthworm = 143,
 a_centipede = 144,
 a_aardvark = 146,
+a_mongoose = 147,
 a_skibidi = 9999;
 var infoForAnimalType = function (aniT) {
     var infoO = {};
@@ -1052,6 +1053,14 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.aniName = "Aardvark";
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n You can stomp on people with your feet knocking nearby players from holes!";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "aardvark";
+            break;
+
+		    		    		    		    		    		    		    		     case a_mongoose:
+            infoO.aniName = "Mongoose";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s are great swimmers, dominate the Lakes/Oceans/Mud! You are also immune to poison and can bite animals.";
             infoO.aniCol = "#FF0000";
             infoO.skinName = "aardvark";
             break;
