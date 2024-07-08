@@ -1059,7 +1059,7 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             break;
 		    
 		    		    		    		    		    		    		    		    		     case a_bat:
-            infoO.aniName = "Bats";
+            infoO.aniName = "Bat";
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s have lower vision then other animals. You can fire screeches at animals that show their stats. \n (Tip: You are faster when attacking players you screeched recently)";
             infoO.aniCol = "#FF0000";
@@ -17628,6 +17628,14 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s are great swimmers, dominate the Lakes/Oceans/Mud! You are also immune to poison and can bite animals.";
             infoO.aniCol = "#FF0000";
             infoO.skinName = "mongoose";
+            break;
+
+		  		    		    		    		    		    		    		    		    		     case a_bat:
+            infoO.aniName = "Bat";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s have lower vision then other animals. You can fire screeches at animals that show their stats. \n (Tip: You are faster when attacking players you screeched recently)";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "bat";
             break;
 		  
 
