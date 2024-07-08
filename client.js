@@ -4943,8 +4943,8 @@ function drawGameInterface() {
   if (!serverCon_aliveInAGame) return;
 
   ctx.save();
-	if (myPlayer && myPlayer.animalType == a_bat) {
-        var theImg222 = getLoadedImg("img/blindness.png");
+	        var theImg222 = getLoadedImg("img/blindness.png");
+	if (myPlayer.animalType == a_bat) {
         if (theImg222) {
           ctx.drawImage(theImg222, 0, 0, canvasW, canvasH);
         }
