@@ -429,6 +429,7 @@ a_earthworm = 143,
 a_centipede = 144,
 a_aardvark = 146,
 a_mongoose = 147,
+a_bat = 148,
 a_skibidi = 9999;
 var infoForAnimalType = function (aniT) {
     var infoO = {};
@@ -1055,6 +1056,14 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n You can stomp on people with your feet knocking nearby players from holes!";
             infoO.aniCol = "#FF0000";
             infoO.skinName = "aardvark";
+            break;
+		    
+		    		    		    		    		    		    		    		    		     case a_bat:
+            infoO.aniName = "Bats";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s have lower vision then other animals. You can fire screeches at animals that show their stats. \n (Tip: You are faster when attacking players you screeched recently)";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "bat";
             break;
 
 		    		    		    		    		    		    		    		     case a_mongoose:
