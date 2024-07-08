@@ -4944,8 +4944,7 @@ function drawGameInterface() {
 
   ctx.save();
 	        var theImg222 = getLoadedImg("img/blindness.png");
-	console.log(myPlayer)
-	if (myPlayer && myPlayer.animalType == a_bat) {
+	if (gameObjsByID[myPlayerID] && gameObjsByID[myPlayerID].animalType == a_bat) {
         if (theImg222) {
           ctx.drawImage(theImg222, 0, 0, canvasW, canvasH);
         }
