@@ -1656,6 +1656,7 @@ ability_spinthrow = 144,
 ability_centipede = 145,
 ability_aardvark = 146,
 ability_bite = 147,
+ability_echo = 148,
   ability_none = 0;
 var infoForAbilityT = function(abilT) {
   var infoO = {};
@@ -1680,6 +1681,16 @@ var infoForAbilityT = function(abilT) {
       }
       break;
 
+
+		  		  		  		                                          case ability_echo:
+      infoO.abilName = "Echo";
+      infoO.abilImg =
+        "skins/" +
+        zombieFolder +
+        infoForAnimalType(myPlayerLastAniT).skinName +
+        ".png";
+      break;
+		  
 		  		  		                                          case ability_centipede:
       infoO.abilName = "Bite";
       infoO.abilImg =
@@ -13092,6 +13103,7 @@ case o_cakesplash:
         this.type == ability_boaSuffocate ||
         this.type == ability_sabertoothJawAttack ||
         this.type == ability_trexShake ||
+	this.type == ability_echo ||
         this.type == ability_tigerSlash ||
         this.type == ability_pounce ||
         //this.type == ability_tigerJump ||
@@ -13616,6 +13628,7 @@ AbilityObj.prototype.updateZ = function() {
     this.abilityType == ability_boaSuffocate ||
     this.abilityType == ability_sabertoothJawAttack ||
     this.abilityType == ability_trexShake ||
+    this.abilityType == ability_echo ||
     this.abilityType == ability_tigerSlash ||
     this.abilityType == ability_pounce ||
     //this.abilityType == ability_tigerJump ||
@@ -16018,7 +16031,28 @@ ctx.globalAlpha = 1
       }
       break;
     case ability_tsunamiWave:
-    case ability_orcaWave:
+    case ability_echo:
+      {
+        ctx.save();
+        ctx.rotate(this.angle);
+
+        var oldA = ctx.globalAlpha;
+        //ctx.globalAlpha = 0.1 * oldA;
+        //drawCircle(0, 0, this.rad, "#1898BD");
+
+        ctx.globalAlpha = 0.8 * oldA;
+        var theImg = getLoadedImg("img/ability_bat.png");
+        if (theImg) {
+          var rad = this.rad;
+
+          ctx.drawImage(theImg, -rad, -rad, 2 * rad, 2 * rad);
+          //console.log("drawing banana");
+        }
+        ctx.restore();
+      }
+      break;
+
+		      case ability_orcaWave:
       {
         ctx.save();
         if (this.abilityType == ability_tsunamiWave)
