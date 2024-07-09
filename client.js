@@ -3507,6 +3507,9 @@ var AbilityButton = function () {
           ctx.globalAlpha = oAlpha * this.abil_avilableA;
                     if (abilImg == "skins/secretarybird/secretarybird.png" || abilImg == "skins/trex.png") {
           ctx.drawImage(theImg, -rad, -rad/500 * 600 * 0.85, 2 * rad, 2 * rad/500 * 600);
+          } else if (abilImg == "skins/secretarybird/muddauber.png") {
+			              var rad = this.w * 0.4 * 1050/500;
+	ctx.drawImage(theImg, -rad, -rad * 0.85, 2 * rad, 2 * rad);	    
           } else {
                       ctx.drawImage(theImg, -rad, -rad * 0.85, 2 * rad, 2 * rad);
           }
