@@ -1665,6 +1665,7 @@ ability_centipede = 145,
 ability_aardvark = 146,
 ability_bite = 147,
 ability_echo = 148,
+ability_poisonsting = 149,
   ability_none = 0;
 var infoForAbilityT = function(abilT) {
   var infoO = {};
@@ -1689,6 +1690,15 @@ var infoForAbilityT = function(abilT) {
       }
       break;
 
+		  
+		  		  		  		                                          case ability_poisonsting:
+      infoO.abilName = "Poison Sting";
+      infoO.abilImg =
+        "skins/" +
+        zombieFolder +
+        infoForAnimalType(myPlayerLastAniT).skinName +
+        ".png";
+      break;
 
 		  		  		  		                                          case ability_echo:
       infoO.abilName = "Echo";
