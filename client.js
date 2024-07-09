@@ -430,6 +430,7 @@ a_centipede = 144,
 a_aardvark = 146,
 a_mongoose = 147,
 a_bat = 148,
+a_muddauber = 149,
 a_skibidi = 9999;
 var infoForAnimalType = function (aniT) {
     var infoO = {};
@@ -1057,8 +1058,15 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.aniCol = "#FF0000";
             infoO.skinName = "aardvark";
             break;
-		    
-		    		    		    		    		    		    		    		    		     case a_bat:
+		    		    		    		    		    		    		    		     case a_mongoose:
+            infoO.aniName = "Mongoose";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s are great swimmers, dominate the Lakes/Oceans/Mud! You are also immune to poison and can bite animals.";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "mongoose";
+            break;
+
+		    		    		    		    		    		    		    		    		    		     case a_bat:
             infoO.aniName = "Bat";
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s have lower vision then other animals. You can fire screeches at animals that show their stats. \n (Tip: You are faster when attacking players you screeched recently)";
@@ -1066,12 +1074,12 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.skinName = "bat";
             break;
 
-		    		    		    		    		    		    		    		     case a_mongoose:
-            infoO.aniName = "Mongoose";
+		    		    		    		    		    		    		    		    		    		    		     case a_muddauber:
+            infoO.aniName = "Mud Dauber";
             infoO.aniDesc = "";
-            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s are great swimmers, dominate the Lakes/Oceans/Mud! You are also immune to poison and can bite animals.";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s can sting and poison animals behind you.\n (Tip: You can fly on hills and rocks)";
             infoO.aniCol = "#FF0000";
-            infoO.skinName = "mongoose";
+            infoO.skinName = "muddauber";
             break;
 
 		    
@@ -17663,7 +17671,7 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.skinName = "aardvark";
             break;
 
-		  		    		    		    		    		    		    		    		     case a_mongoose:
+		    		    		    		    		    		    		    		     case a_mongoose:
             infoO.aniName = "Mongoose";
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s are great swimmers, dominate the Lakes/Oceans/Mud! You are also immune to poison and can bite animals.";
@@ -17671,12 +17679,20 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.skinName = "mongoose";
             break;
 
-		  		    		    		    		    		    		    		    		    		     case a_bat:
+		    		    		    		    		    		    		    		    		    		     case a_bat:
             infoO.aniName = "Bat";
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s have lower vision then other animals. You can fire screeches at animals that show their stats. \n (Tip: You are faster when attacking players you screeched recently)";
             infoO.aniCol = "#FF0000";
             infoO.skinName = "bat";
+            break;
+
+		    		    		    		    		    		    		    		    		    		    		     case a_muddauber:
+            infoO.aniName = "Mud Dauber";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s can sting and poison animals behind you.\n (Tip: You can fly on hills and rocks)";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "muddauber";
             break;
 		  
 
@@ -19206,6 +19222,9 @@ Animal.prototype.basicDrawSkinImg = function() {
   var rad = this.rad - this.outlineW;
   var WScale = 1
   var HScale = 1
+	if (this.animalType == a_muddauber) {
+		iScale = 1050 / 340.0;
+	}
   this.skinRad = rad;
   this.skinScale = iScale;
  if (this.flag_usingAbility && this.animalType == a_ladybug) WScale = 1.294;
