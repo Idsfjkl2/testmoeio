@@ -17703,7 +17703,7 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
 		    		    		    		    		    		    		    		    		    		    		     case a_muddauber:
             infoO.aniName = "Mud Dauber";
             infoO.aniDesc = "";
-            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s can sting and poison animals behind you.\n (Tip: You can fly on hills and rocks)";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s can sting and poison animals behind you and fly on hills and rocks.\n (Tip: Boost while using your ability)";
             infoO.aniCol = "#FF0000";
             infoO.skinName = "muddauber";
             break;
