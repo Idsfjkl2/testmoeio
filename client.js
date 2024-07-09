@@ -5777,7 +5777,14 @@ function drawLeaderboard() {
   //         lbCanvas.height * interfS
   //       );
   //   }
-
+	        ctx.save();
+		        var theImg222 = getLoadedImg("img/blindness.png");
+	if (gameObjsByID[myPlayerID] && gameObjsByID[myPlayerID].animalType == a_bat) {
+        if (theImg222) {
+          ctx.drawImage(theImg222, 0, 0, canvasW, canvasH);
+        }
+	}
+              ctx.restore();
   if (_gameMode != null) _gameMode.drawLeaderboard();
 }
 
@@ -31849,14 +31856,6 @@ function drawGame(currentTime) {
   drawGameInterface();
   drawScreenText();
   drawGamePlay();
-	        ctx.save();
-		        var theImg222 = getLoadedImg("img/blindness.png");
-	if (gameObjsByID[myPlayerID] && gameObjsByID[myPlayerID].animalType == a_bat) {
-        if (theImg222) {
-          ctx.drawImage(theImg222, 0, 0, canvasW, canvasH);
-        }
-	}
-              ctx.restore();
   if (serverCon_aliveInAGame) displayPlayerStats();
   //draw ad loading txt (when video ad is loading)
   if (videoAdShowLoading) {
