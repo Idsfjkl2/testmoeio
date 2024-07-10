@@ -19589,6 +19589,37 @@ Animal.prototype.drawTopEffects = function() {
     ctx.globalAlpha = 100;
     ctx.restore();
   }
+	    if (this.animalType == a_wanderingspider) {
+    ctx.save();
+
+    var fac0to1 = (timestamp - this.spawnTime) % 1000.0/1000.0;
+    var period = 0.75;
+    var shiftAm = 1.0;
+    var moveA = shiftAm * Math.sin(((2.0 * Math.PI) / period) * tSinceSpawn);
+    var x = 100
+    var waveMoveTms=1.0*1000; //ms to one full movement
+        var fac0to1 = (timestamp - this.spawnTime) % waveMoveTms /waveMoveTms;
+        var waveX= x + this.rad * 2  * (fac0to1);
+
+    var theA = 1;
+    ctx.globalAlpha *= 0.8 - 0.2 * moveA;
+    drawCircle(
+      this.rad * 0.15,
+      -this.rad * 1.27 * ((340+290.5)/340),
+      this.rad * (0.1 + 0.05 * moveA),
+      "#efefef"
+    );
+    drawCircle(
+      -this.rad * 0.15,
+      -this.rad * 1.27 * ((340+290.5)/340),
+      this.rad * (0.1 - 0.05 * moveA),
+      "#efefef"
+    );
+    drawCircle(0, -this.rad * 0.3, this.rad * (1.05 + 0.1 * moveA), "#7BB7BB");
+    ctx.globalAlpha = 100;
+		    console.log("w")
+    ctx.restore();
+  }
   var idealOp = this.flag_eff_stunned ? 1.0 : 0.0;
   this.stunA += (idealOp - this.stunA) * 0.1;
   if (this.stunA > 0.01) {
