@@ -19259,7 +19259,7 @@ Animal.prototype.basicDrawSkinImg = function() {
 		iScale = 1050 / 340.0;
 	}
 		if (this.animalType == a_wanderingspider) {
-		iScale = 800 / 340.0;
+		iScale = 1000 / 340.0;
 	}
   this.skinRad = rad;
   this.skinScale = iScale;
