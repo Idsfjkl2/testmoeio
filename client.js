@@ -19559,7 +19559,8 @@ Animal.prototype.drawOnTopOfSkinImg = function() {//womp
 //top layer, NOT ROTATED
 Animal.prototype.drawTopEffects = function() {
   //stun effect
-  if (this.animalType == a_giantSpider && this.flag_usingAbility) {
+  if (this.animalType == a_giantSpider) {
+	      var tSinceSpawn = (timestamp - this.spawnTime) / 1000.0;
     //var fac0to1 = (timestamp - this.spawnTime) % 1000.0/1000.0;
     var period = 0.75;
     var shiftAm = 1.0;
