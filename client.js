@@ -3279,11 +3279,11 @@ AbilityQ.prototype = {
   controlsPressEvent(cNum_keyQ, false);
 
   //unselect run (if pressed through sliding down finger)
-  if (button_run.pressed && button_run.pressedTouchID == -1) {
+ /* if (button_run.pressed && button_run.pressedTouchID == -1) {
     //button RELEASED!
     button_run.pressed = false;
     controlsPressEvent(cNum_leftClick, false);
-  }
+  } */
 };
 
 function AbilityQ(text) {
