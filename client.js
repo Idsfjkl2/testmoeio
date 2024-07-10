@@ -19590,7 +19590,7 @@ Animal.prototype.drawTopEffects = function() {
     ctx.globalAlpha = theA;
   }
 
-	  if (this.animalType == a_wanderingspider && this.flag_usingAbility) {
+	  if (this.animalType == a_wanderingspider && this.specType2 == 1) {
 	      var tSinceSpawn = (timestamp - this.spawnTime) / 1000.0;
     //var fac0to1 = (timestamp - this.spawnTime) % 1000.0/1000.0;
     var period = 0.75;
