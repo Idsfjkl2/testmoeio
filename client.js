@@ -431,6 +431,7 @@ a_aardvark = 146,
 a_mongoose = 147,
 a_bat = 148,
 a_muddauber = 149,
+a_wanderingspider = 150,
 a_skibidi = 9999;
 var infoForAnimalType = function (aniT) {
     var infoO = {};
@@ -1078,6 +1079,14 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.aniName = "Mud Dauber";
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s can sting and poison animals behind you and fly on hills and rocks.\n (Tip: Boost while using your ability)";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "muddauber";
+            break;
+
+		    		    		    		    		    		    		    		    		    		    		    		     case a_wanderingspider:
+            infoO.aniName = "Wandering Spider";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s have very toxic poison. You can pounce and web animals you hit!";
             infoO.aniCol = "#FF0000";
             infoO.skinName = "muddauber";
             break;
