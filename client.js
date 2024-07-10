@@ -3271,10 +3271,12 @@ AbilityQ.prototype = {
     this.y = newY + (newH) * (0.5 - anchorY);
   },
   //set this for each button
-
   onButtonTouchStart: function() {
-};
+    //console.log("button touch started!");
+  },
   onButtonTouchEnd: function() {
+    //console.log("button touch ended!");
+  }
 };
 
 function AbilityQ(text) {
