@@ -3520,7 +3520,7 @@ var AbilityButton = function () {
 			              var rad = this.w * 0.4 * 1050/500;
 	ctx.drawImage(theImg, -rad, -rad * 0.85, 2 * rad, 2 * rad);	    
 	} else if (abilImg == "skins/wanderingspider.png") {
-	var rad = this.w * 0.4 * 800/500;
+	var rad = this.w * 0.4 * 1000/500;
 	ctx.drawImage(theImg, -rad, -rad * 0.85, 2 * rad, 2 * rad);	  
           } else {
                       ctx.drawImage(theImg, -rad, -rad * 0.85, 2 * rad, 2 * rad);
