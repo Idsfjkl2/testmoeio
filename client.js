@@ -1088,7 +1088,7 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s have very toxic poison. You can pounce and web animals you hit!";
             infoO.aniCol = "#FF0000";
-            infoO.skinName = "muddauber";
+            infoO.skinName = "wanderingspider";
             break;
 
 		    
@@ -3516,9 +3516,12 @@ var AbilityButton = function () {
           ctx.globalAlpha = oAlpha * this.abil_avilableA;
                     if (abilImg == "skins/secretarybird/secretarybird.png" || abilImg == "skins/trex.png") {
           ctx.drawImage(theImg, -rad, -rad/500 * 600 * 0.85, 2 * rad, 2 * rad/500 * 600);
-          } else if (abilImg == "skins/secretarybird/muddauber.png") {
+          } else if (abilImg == "skins/muddauber.png") {
 			              var rad = this.w * 0.4 * 1050/500;
 	ctx.drawImage(theImg, -rad, -rad * 0.85, 2 * rad, 2 * rad);	    
+	} else if (abilImg == "skins/wanderingspider.png") {
+	var rad = this.w * 0.4 * 800/500;
+	ctx.drawImage(theImg, -rad, -rad * 0.85, 2 * rad, 2 * rad);	  
           } else {
                       ctx.drawImage(theImg, -rad, -rad * 0.85, 2 * rad, 2 * rad);
           }
@@ -17716,6 +17719,14 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.aniCol = "#FF0000";
             infoO.skinName = "muddauber";
             break;
+
+		  		    		    		    		    		    		    		    		    		    		    		    		     case a_wanderingspider:
+            infoO.aniName = "Wandering Spider";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s have very toxic poison. You can pounce and web animals you hit!";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "wanderingspider";
+            break;
 		  
 
 		  
@@ -19246,6 +19257,9 @@ Animal.prototype.basicDrawSkinImg = function() {
   var HScale = 1
 	if (this.animalType == a_muddauber) {
 		iScale = 1050 / 340.0;
+	}
+		if (this.animalType == a_wanderingspider) {
+		iScale = 800 / 340.0;
 	}
   this.skinRad = rad;
   this.skinScale = iScale;
