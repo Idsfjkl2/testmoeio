@@ -19606,13 +19606,13 @@ Animal.prototype.drawTopEffects = function() {
     ctx.globalAlpha *= 0.8 - 0.2 * moveA;
     drawCircle(
       this.rad * 0.15,
-      -this.rad * 1.27 * 1.9,
+      -this.rad * 1.27 * 1.95,
       this.rad * (0.1 + 0.05 * moveA),
       "#efefef"
     );
     drawCircle(
       -this.rad * 0.15,
-      -this.rad * 1.27 * 1.9,
+      -this.rad * 1.27 * 1.95,
       this.rad * (0.1 - 0.05 * moveA),
       "#efefef"
     );
