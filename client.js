@@ -3271,12 +3271,20 @@ AbilityQ.prototype = {
     this.y = newY + (newH) * (0.5 - anchorY);
   },
   //set this for each button
+
   onButtonTouchStart: function() {
-    //console.log("button touch started!");
-  },
+  controlsPressEvent(cNum_keyQ, true);
+};
   onButtonTouchEnd: function() {
-    //console.log("button touch ended!");
+  controlsPressEvent(cNum_keyQ, false);
+
+  //unselect run (if pressed through sliding down finger)
+  if (button_run.pressed && button_run.pressedTouchID == -1) {
+    //button RELEASED!
+    button_run.pressed = false;
+    controlsPressEvent(cNum_leftClick, false);
   }
+};
 };
 
 function AbilityQ(text) {
