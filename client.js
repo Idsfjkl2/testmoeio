@@ -19586,10 +19586,12 @@ Animal.prototype.drawTopEffects = function() {
       "#efefef"
     );
     //drawCircle(0, -this.rad * 0.3, this.rad * (1.05 + 0.1 * moveA), "#7BB7BB");
+	  	      ctx.rotate(-this.angle);
     ctx.globalAlpha = theA;
   }
 
 	  if (this.animalType == a_wanderingspider && this.flag_usingAbility) {
+	      var tSinceSpawn = (timestamp - this.spawnTime) / 1000.0;
     //var fac0to1 = (timestamp - this.spawnTime) % 1000.0/1000.0;
     var period = 0.75;
     var shiftAm = 1.0;
@@ -19600,6 +19602,7 @@ Animal.prototype.drawTopEffects = function() {
         var waveX= x + dist * (fac0to1);*/
 
     var theA = ctx.globalAlpha;
+	      ctx.rotate(this.angle);
     ctx.globalAlpha *= 0.8 - 0.2 * moveA;
     drawCircle(
       this.rad * 0.15,
@@ -19614,6 +19617,7 @@ Animal.prototype.drawTopEffects = function() {
       "#efefef"
     );
     //drawCircle(0, -this.rad * 0.3, this.rad * (1.05 + 0.1 * moveA), "#7BB7BB");
+	  	      ctx.rotate(-this.angle);
     ctx.globalAlpha = theA;
   }
 
