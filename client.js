@@ -13384,6 +13384,7 @@ this.z = 1005; //fireball just under dragon
 
 
           else if (this.animalType == a_blackDragon) this.z = 1500 + this.rad/1000;
+		  	 else if (this.animalType == a_wanderingspider && this.specType2 == 1) this.z = 1650 + this.rad/1000;
 	 else if (this.animalType == a_wanderingspider) this.z = 1300 + this.rad/1000;
            else if (this.flag_inTree) this.z = 1301 + this.rad/1000;   
           //flies above hill, water/food also
