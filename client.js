@@ -3285,7 +3285,6 @@ AbilityQ.prototype = {
     controlsPressEvent(cNum_leftClick, false);
   }
 };
-};
 
 function AbilityQ(text) {
 
