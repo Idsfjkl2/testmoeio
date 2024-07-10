@@ -19571,6 +19571,7 @@ Animal.prototype.drawTopEffects = function() {
         var waveX= x + dist * (fac0to1);*/
 
     var theA = ctx.globalAlpha;
+	      ctx.rotate(this.angle);
     ctx.globalAlpha *= 0.8 - 0.2 * moveA;
     drawCircle(
       this.rad * 0.15,
