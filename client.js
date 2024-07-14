@@ -11802,7 +11802,7 @@ if (myPlayer && myPlayer.flag_flying) {
       {
 
 	                  if (myPlayer.flag_indeepsea) {
-        ctx.fillStyle = #665728;
+        ctx.fillStyle = "#665728";
              }  else {
         ctx.fillStyle = col_landbiome;
 			  }
