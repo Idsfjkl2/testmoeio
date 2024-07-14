@@ -12713,8 +12713,8 @@ GameObj.prototype.getOutlineColor = function() {
   var biome = this.curBiome;
 myPlayer = gameObjsByID[myPlayerID];
 		if (!this.isbuttonchar && myPlayer) {
-			  if (myPlayer.curBiome == 0 && myPlayer.flag_indeepsea) return col_outline_underground;
-		  		  if (myPlayer.curBiome == 1 && myPlayer.flag_indeepsea) return col_outline_deep;
+			  if (biome == 0 && myPlayer.flag_indeepsea) return col_outline_underground;
+		  		  if (biome == 1 && myPlayer.flag_indeepsea) return col_outline_deep;
 		}
 	if (this.inunderground) {
 		return col_outline_underground;
