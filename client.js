@@ -3615,9 +3615,11 @@ var col_invisborder = "#2A2A2A60",
     col_landbiome = "#3FBA54",
     col_snowcolor = "#f7f7f7",
     col_outline_land = "#09992F",
+    col_outline_underground = "#3E3417",
         col_outline_cold_ocean = "#60A8CE",
             col_outline_reef = "#288DAC",
     col_outline_ocean = "#007ec0",
+    col_outline_deep = "#0E1231",
     col_outline_arctic = "grey",
     col_outline_jungle = "#334D3D";
 
@@ -3657,10 +3659,12 @@ var outlineColForBiome = function(biomeN) {
       return col_outline_reef;
       
           case biome_land:
+		  if (myPlayer && myPlayer.flag_indeepsea) return col_outline_underground;
       return col_outline_land;
       
     case biome_ocean:
-            return col_outline_ocean;
+		  		  if (myPlayer && myPlayer.flag_indeepsea) return col_outline_deep;
+            return col_outline_ocean;//mark123
       
       case biome_arctic:
             return col_outline_arctic;
