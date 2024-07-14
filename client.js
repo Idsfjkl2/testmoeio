@@ -3666,11 +3666,11 @@ var outlineColForBiome = function(biomeN) {
       return col_outline_reef;
       
           case biome_land:
-		  if (this && this.flag_indeepsea) return col_outline_underground;
+		  if (myPlayer && myPlayer.flag_indeepsea) return col_outline_underground;
       return col_outline_land;
       
     case biome_ocean:
-		  		  if (this && this.flag_indeepsea) return col_outline_deep;
+		  		  if (myPlayer && myPlayer.flag_indeepsea) return col_outline_deep;
             return col_outline_ocean;//mark123
       
       case biome_arctic:
