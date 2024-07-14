@@ -3157,6 +3157,11 @@ function AniChoiceButton(x, y, w, h, aniT, biomeNum, spec) {
                      this.drawnAniObj.curBiome = 1
                 ctx.fillStyle = "#1CB2B8";
                 break;
+                             case 11:
+                     this.drawnAniObj.curBiome = 0
+		  this.drawnAniObj.flag_indeepsea = true
+                ctx.fillStyle = "#5E2E0D";
+                break;
           
             }
       
@@ -30380,7 +30385,7 @@ function handleWsMessage(msgArrBuf) {
         //read minimap
         //if (!spectating) {
 
-        generateMinimap(msg);
+        //generateMinimap(msg);
 		
         //reset game nodes (messages will soon come in with new ones)
         gameReset();
