@@ -3099,8 +3099,8 @@ function AniChoiceButton(x, y, w, h, aniT, biomeNum, spec) {
 
       //bg square
       ctx.globalAlpha = origA * 0.50;
-	    		  this.drawnAniObj.inunderground = false
-	    		  this.drawnAniObj.indeep = false
+	    		  anO.inunderground = false
+	    		  anO.indeep = false
       switch (this.biomeNum) {
       
         case 0:
@@ -3147,7 +3147,7 @@ function AniChoiceButton(x, y, w, h, aniT, biomeNum, spec) {
           
                                        case 8:
                      this.drawnAniObj.curBiome = 1
-		 this.drawnAniObj.indeep = true
+		 anO.indeep = true
                 ctx.fillStyle = "#11323D";
                 break;
           
@@ -3162,7 +3162,7 @@ function AniChoiceButton(x, y, w, h, aniT, biomeNum, spec) {
                 break;
                              case 11:
                      this.drawnAniObj.curBiome = 0
-		  this.drawnAniObj.inunderground = true
+		  anO.inunderground = true
                 ctx.fillStyle = "#5E2E0D";
                 break;
           
