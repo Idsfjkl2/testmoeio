@@ -30397,6 +30397,32 @@ function handleWsMessage(msgArrBuf) {
       
   //NORMAL INFO IS DOWN.
       break;
+
+		   case 30: //MsgNewGameRoom
+      {
+        console.log("Joined new game room!");
+
+        gameW = msg.readUInt16();
+        gameH = msg.readUInt16();
+
+
+
+        //read minimap
+        //if (!spectating) {
+ctx.save()
+        generateMinimap(msg);
+  ctx.restore();
+    	
+
+
+
+      }
+      
+      
+      
+      
+  //NORMAL INFO IS DOWN.
+      break;
     case 6:
       {
         //MsgPlayerAliveInGame
