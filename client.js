@@ -8179,6 +8179,7 @@ GameObj.prototype.customDraw = function(batchDrawOutline) {
         if (this.curBiome == 7) {
           drawCol = col_plankton3;
       }
+
                   if (myPlayer) {
             if (myPlayer.flag_indeepsea) {
           drawCol = "#00DBFF";
@@ -11085,6 +11086,7 @@ if (myPlayer && myPlayer.flag_flying) {
                     //beach top (beach aligns with top, fills gap)
                     ctx.fillRect(-this.rectW / 2 - beachW, -this.rectH / 2, this.rectW + beachW, beachW * 2);*/
           //main water
+		
           if (myPlayer) {
             if (myPlayer.flag_indeepsea) {
               ctx.fillStyle = col_ocean2;
@@ -11800,7 +11802,7 @@ if (myPlayer && myPlayer.flag_flying) {
       break;
     case o_biome_land:
       {
-
+	      var myPlayer = gameObjsByID[myPlayerID];
 	                  if (myPlayer && myPlayer.flag_indeepsea) {
         ctx.fillStyle = "#665728";
              }  else {
