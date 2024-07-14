@@ -11800,7 +11800,12 @@ if (myPlayer && myPlayer.flag_flying) {
       break;
     case o_biome_land:
       {
+
+	                  if (myPlayer.flag_indeepsea) {
+        ctx.fillStyle = #665728;
+             }  else {
         ctx.fillStyle = col_landbiome;
+			  }
         ctx.fillRect(-this.rectW / 2, -this.rectH / 2, this.rectW, this.rectH);
 
         //draw dark grid
