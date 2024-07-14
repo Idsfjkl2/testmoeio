@@ -12710,6 +12710,8 @@ GameObj.prototype.getOutlineColor = function() {
   }
   //plain outline (based on biome)
   var biome = this.curBiome;
+			  if (biome == 0 && this.flag_indeepsea) return col_outline_underground;
+		  		  if (biome == 1 && this.flag_indeepsea) return col_outline_deep;
 	if (this.inunderground) {
 		return col_outline_underground;
 	}
