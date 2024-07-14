@@ -3651,6 +3651,7 @@ var col_invisborder = "#2A2A2A60",
     col_rockHill_desert = "#878053";
 
 var outlineColForBiome = function(biomeN) {
+		      var myPlayer = gameObjsByID[myPlayerID];
   switch (biomeN) {
                       case biome_coldocean:
       return col_outline_cold_ocean;
