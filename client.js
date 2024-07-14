@@ -3145,6 +3145,7 @@ function AniChoiceButton(x, y, w, h, aniT, biomeNum, spec) {
           
                                        case 8:
                      this.drawnAniObj.curBiome = 1
+		                           this.indeep
                 ctx.fillStyle = "#11323D";
                 break;
           
@@ -3159,7 +3160,7 @@ function AniChoiceButton(x, y, w, h, aniT, biomeNum, spec) {
                 break;
                              case 11:
                      this.drawnAniObj.curBiome = 0
-		  this.drawnAniObj.flag_indeepsea = true
+		  this.drawnAniObj.inunderground = true
                 ctx.fillStyle = "#5E2E0D";
                 break;
           
@@ -3665,11 +3666,11 @@ var outlineColForBiome = function(biomeN) {
       return col_outline_reef;
       
           case biome_land:
-		  if (myPlayer && myPlayer.flag_indeepsea) return col_outline_underground;
+		  if (this && this.flag_indeepsea) return col_outline_underground;
       return col_outline_land;
       
     case biome_ocean:
-		  		  if (myPlayer && myPlayer.flag_indeepsea) return col_outline_deep;
+		  		  if (this && this.flag_indeepsea) return col_outline_deep;
             return col_outline_ocean;//mark123
       
       case biome_arctic:
@@ -12707,7 +12708,12 @@ GameObj.prototype.getOutlineColor = function() {
   }
   //plain outline (based on biome)
   var biome = this.curBiome;
-  
+	if (this.inunderground) {
+		return col_outline_underground
+	}
+		if (this.indeep) {
+		return col_outline_deep
+	}
   if (this.flag_inWater) biome = biome_ocean;
   else if (this.flag_inLava && !this.flag_inJungle) return "#c64a00";
   else if (biome == 3 && !this.flag_inJungle) return "#c64a00";
