@@ -3099,6 +3099,7 @@ function AniChoiceButton(x, y, w, h, aniT, biomeNum, spec) {
 
       //bg square
       ctx.globalAlpha = origA * 0.50;
+	    	    	  anO.isbuttonchar = true
 	    		  anO.inunderground = false
 	    		  anO.indeep = false
       switch (this.biomeNum) {
@@ -12710,8 +12711,11 @@ GameObj.prototype.getOutlineColor = function() {
   }
   //plain outline (based on biome)
   var biome = this.curBiome;
-			  if (biome == 0 && this.flag_indeepsea) return col_outline_underground;
-		  		  if (biome == 1 && this.flag_indeepsea) return col_outline_deep;
+myPlayer = gameObjsByID[myPlayerID];
+		if (!this.isbuttonchar && myPlayer) {
+			  if (myPlayer.curBiome == 0 && myPlayer.flag_indeepsea) return col_outline_underground;
+		  		  if (myPlayer.curBiome == 1 && myPlayer.flag_indeepsea) return col_outline_deep;
+		}
 	if (this.inunderground) {
 		return col_outline_underground;
 	}
