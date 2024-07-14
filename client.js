@@ -11801,7 +11801,7 @@ if (myPlayer && myPlayer.flag_flying) {
     case o_biome_land:
       {
 
-	                  if (myPlayer.flag_indeepsea) {
+	                  if (myPlayer && myPlayer.flag_indeepsea) {
         ctx.fillStyle = "#665728";
              }  else {
         ctx.fillStyle = col_landbiome;
