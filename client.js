@@ -3099,6 +3099,8 @@ function AniChoiceButton(x, y, w, h, aniT, biomeNum, spec) {
 
       //bg square
       ctx.globalAlpha = origA * 0.50;
+	    		  this.drawnAniObj.inunderground = false
+	    		  this.drawnAniObj.indeep = false
       switch (this.biomeNum) {
       
         case 0:
@@ -3145,7 +3147,7 @@ function AniChoiceButton(x, y, w, h, aniT, biomeNum, spec) {
           
                                        case 8:
                      this.drawnAniObj.curBiome = 1
-		                           this.indeep
+		 this.drawnAniObj.indeep = true
                 ctx.fillStyle = "#11323D";
                 break;
           
@@ -12709,10 +12711,10 @@ GameObj.prototype.getOutlineColor = function() {
   //plain outline (based on biome)
   var biome = this.curBiome;
 	if (this.inunderground) {
-		return col_outline_underground
+		return col_outline_underground;
 	}
 		if (this.indeep) {
-		return col_outline_deep
+		return col_outline_deep;
 	}
   if (this.flag_inWater) biome = biome_ocean;
   else if (this.flag_inLava && !this.flag_inJungle) return "#c64a00";
