@@ -29457,7 +29457,7 @@ var Piechart = function(options) {
   this.drawCircle = function(centerX, centerY, radius, color) {
     this._ctx.fillStyle = color;
     this._ctx.beginPath();
-    this._ctx.moveTo(centerX 5, centerY);
+    this._ctx.moveTo(centerX, centerY);
     this._ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
     this._ctx.closePath();
     this._ctx.fill();
