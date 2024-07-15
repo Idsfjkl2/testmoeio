@@ -174,6 +174,7 @@ o_bombexplosion = 122;
 o_cloud = 123;
 o_infinitevoid = 124;
 o_damagesignal = 125;
+o_undergroundwall = 126
 //o_hat = 99;
 var GameObjType = {
   //makes it easy to add new subclasses- each class will add itself!
@@ -2757,6 +2758,12 @@ var drawCircle= function (x, y, rad, col) {
   ctx.fillStyle = col;
   ctx.beginPath();
   ctx.arc(x, y, Math.max(0, rad), 0, Math.PI * 2);
+  ctx.fill();
+}
+var drawSquare = function (x, y, rad, col) {
+  ctx.fillStyle = col;
+  ctx.beginPath();
+   ctx.rect(x, y, rad, rad)
   ctx.fill();
 }
 
@@ -11837,6 +11844,13 @@ if (myPlayer && myPlayer.flag_flying) {
         );
       }
       break;
+		      case o_undergroundwall:
+      {
+
+        var rockColor = col_outline_underground;
+        drawSquare(0, 0, this.rad, rockColor);
+      }
+      break;
     case o_rockHill:
       {
         //draw outline
@@ -12899,6 +12913,7 @@ GameObj.prototype.worldUpd_readMsgNewlyVisible = function(
     oType == o_lake ||
     oType == o_abilityGObj ||
     oType == o_hill ||
+    oType == o_undergroundwall ||
     oType == o_iceberg ||
     oType == o_rockHill ||
     oType == o_fruitTree ||
@@ -13237,6 +13252,7 @@ case o_cakesplash:
       this.z = 1002;
       break;
     case o_iceberg:
+    case o_undergroundwall:
     case o_hill:
       this.z = 999;
       break;
@@ -29443,7 +29459,7 @@ var Piechart = function(options) {
   this.drawCircle = function(centerX, centerY, radius, color) {
     this._ctx.fillStyle = color;
     this._ctx.beginPath();
-    this._ctx.moveTo(centerX, centerY);
+    this._ctx.moveTo(centerX 5, centerY);
     this._ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
     this._ctx.closePath();
     this._ctx.fill();
