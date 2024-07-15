@@ -2763,7 +2763,7 @@ var drawCircle= function (x, y, rad, col) {
 var drawSquare = function (x, y, rad, col) {
   ctx.fillStyle = col;
   ctx.beginPath();
-   ctx.rect(x, y, rad, rad)
+   ctx.rect(x - rad, y - rad, Math.max(0, rad * 2), Math.max(0, rad * 2))
   ctx.fill();
 }
 
