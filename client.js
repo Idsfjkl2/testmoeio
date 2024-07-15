@@ -2997,12 +2997,11 @@ CachedText.prototype = {
     if (this._text) {
       var nscale = this.renderScale;
       var rnchache = this.getRenderedCanvas(),
-	      rnchache.onload = () => {
         nw = rnchache.width / nscale, //scale down by camzoom (constant font size!)
         nh = rnchache.height / nscale;
       this.setPos(nw, nh);
       ctx.drawImage(rnchache, this.x - nw / 2.0, this.y - nh / 2.0, nw, nh);
-      }
+      
     }
   },
   setPos: function(w,h) {
@@ -20904,7 +20903,6 @@ txt += txt2
 
 DMG.prototype.customDraw = function (batchDrawOutline) {
 	
-    //this.arenaRadUpdate();
     ctx.save();
     this.setTitle();
     ctx.restore();
