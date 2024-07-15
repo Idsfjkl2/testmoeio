@@ -11846,7 +11846,7 @@ if (myPlayer && myPlayer.flag_flying) {
       break;
 		      case o_undergroundwall:
       {
-          drawSquare(0, 0, this.rad, this.getOutlineColor());
+          drawSquare(0, 0, this.rad + 1.5, this.getOutlineColor());
       }
       break;
     case o_rockHill:
