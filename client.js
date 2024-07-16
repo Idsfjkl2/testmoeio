@@ -5751,7 +5751,9 @@ console.log(minimapScaleF_x,minimapScaleF_y)
     var x = msg.readUInt8() * minimapScaleF_x;
     var y = msg.readUInt8() * minimapScaleF_y;
     var rad = msg.readUInt8() * 5.0; //scaled down here
-    drawSquare(x, y, rad, col_outline_underground)
+    ctx_.beginPath();
+    ctx_.rect(x - Math.max(1, rad * (minimapW / gameW))/2, y - Math.max(1, rad * (minimapW / gameW))/2, Math.max(1, rad * (minimapW / gameW)), Math.max(1, rad * (minimapW / gameW)));
+    ctx_.fill();
   }
     var numWater = msg.readUInt16();
   ctx_.fillStyle = col_rockHill;
