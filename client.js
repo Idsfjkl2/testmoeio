@@ -17800,6 +17800,15 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.aniCol = "#FF0000";
             infoO.skinName = "wanderingspider";
             break;
+
+
+		  		    		    		    		    		    		    		    		    		    		    		    		    		     case a_assassinbug:
+            infoO.aniName = "Assassin Bug";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s get more hp from every kill they get. You can deal damage and steal other players health.";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "Assassin Bug";
+            break;
 		  
 
 		  
@@ -19333,6 +19342,9 @@ Animal.prototype.basicDrawSkinImg = function() {
 	}
 		if (this.animalType == a_wanderingspider) {
 		iScale = 1000 / 340.0;
+	}
+			if (this.animalType == a_assassinbug) {
+		iScale = 800 / 340.0;
 	}
   this.skinRad = rad;
   this.skinScale = iScale;
