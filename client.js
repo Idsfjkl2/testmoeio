@@ -433,6 +433,7 @@ a_mongoose = 147,
 a_bat = 148,
 a_muddauber = 149,
 a_wanderingspider = 150,
+a_assassinbug = 151,
 a_skibidi = 9999;
 var infoForAnimalType = function (aniT) {
     var infoO = {};
@@ -1090,6 +1091,14 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s have very toxic poison. You can pounce and web animals you hit!";
             infoO.aniCol = "#FF0000";
             infoO.skinName = "wanderingspider";
+            break;
+
+		    		    		    		    		    		    		    		    		    		    		    		    		     case a_assassinbug:
+            infoO.aniName = "Assassin Bug";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s get more hp from every kill they get. You can deal damage and steal other players health.";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "Assassin Bug";
             break;
 
 		    
