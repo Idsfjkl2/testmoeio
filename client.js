@@ -5750,7 +5750,7 @@ console.log(minimapScaleF_x,minimapScaleF_y)
     //hills
     var x = msg.readUInt8() * minimapScaleF_x;
     var y = msg.readUInt8() * minimapScaleF_y;
-    var rad = msg.readUInt8() * 7.0; //scaled down here
+    var rad = msg.readUInt8() * 10.0; //scaled down here
     ctx_.beginPath();
     ctx_.rect(x - Math.max(1, rad * (minimapW / gameW))/2, y - Math.max(1, rad * (minimapW / gameW))/2, Math.max(1, rad * (minimapW / gameW)), Math.max(1, rad * (minimapW / gameW)));
     ctx_.fill();
