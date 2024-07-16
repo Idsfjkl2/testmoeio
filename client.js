@@ -11847,9 +11847,9 @@ if (myPlayer && myPlayer.flag_flying) {
 		      case o_undergroundwall:
       {
 	      if (!this.colorr) {
-                 this.color = "#" + Math.floor(Math.random()*16777215).toString(16);
+                 this.colorr = "#" + Math.floor(Math.random()*16777215).toString(16);
 	      }
-          drawSquare(0, 0, this.rad + 1.5, this.color);
+          drawSquare(0, 0, this.rad + 1.5, this.colorr);
       }
       break;
     case o_rockHill:
