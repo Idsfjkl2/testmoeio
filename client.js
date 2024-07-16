@@ -5743,6 +5743,16 @@ console.log(minimapScaleF_x,minimapScaleF_y)
     ctx_.arc(x, y, Math.max(1, rad * (minimapW / gameW)), 0, 2 * Math.PI);
     ctx_.fill();
   }
+	  var numWater = msg.readUInt16();
+  ctx_.fillStyle = col_outline_underground;
+  ctx_.globalAlpha = 1.0;
+  for (var i = 0; i < numWater; i++) {
+    //hills
+    var x = msg.readUInt8() * minimapScaleF_x;
+    var y = msg.readUInt8() * minimapScaleF_y;
+    var rad = msg.readUInt8() * 5.0; //scaled down here
+    drawSquare(x, y, rad, col_outline_underground)
+  }
     var numWater = msg.readUInt16();
   ctx_.fillStyle = col_rockHill;
   ctx_.globalAlpha = 1.0;
@@ -30437,7 +30447,6 @@ function handleWsMessage(msgArrBuf) {
 
 		   case 30: //MsgNewGameRoom
       {
-        console.log("Joined new game room!");
 
         gameW = msg.readUInt16();
         gameH = msg.readUInt16();
