@@ -3551,9 +3551,12 @@ var AbilityButton = function () {
           ctx.globalAlpha = oAlpha * this.abil_avilableA;
                     if (abilImg == "skins/secretarybird/secretarybird.png" || abilImg == "skins/trex.png") {
           ctx.drawImage(theImg, -rad, -rad/500 * 600 * 0.85, 2 * rad, 2 * rad/500 * 600);
-          } else if (abilImg == "skins/muddauber.png") {
+          } else if (abilImg == "skins/muddauber.png" || abilImg == "skins/yellowjacket.png") {
 			              var rad = this.w * 0.4 * 1050/500;
 	ctx.drawImage(theImg, -rad, -rad * 0.85, 2 * rad, 2 * rad);	    
+	  } else if (abilImg == "skins/assassinbug.png") {
+			              var rad = this.w * 0.4 * 800/500;
+	ctx.drawImage(theImg, -rad, -rad * 0.85, 2 * rad, 2 * rad);
 	} else if (abilImg == "skins/wanderingspider.png") {
 	var rad = this.w * 0.4 * 1000/500;
 	ctx.drawImage(theImg, -rad, -rad * 0.85, 2 * rad, 2 * rad);	  
