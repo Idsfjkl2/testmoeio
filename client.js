@@ -434,6 +434,7 @@ a_bat = 148,
 a_muddauber = 149,
 a_wanderingspider = 150,
 a_assassinbug = 151,
+a_yellowjacket = 152,
 a_skibidi = 9999;
 var infoForAnimalType = function (aniT) {
     var infoO = {};
@@ -1080,7 +1081,7 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
 		    		    		    		    		    		    		    		    		    		    		     case a_muddauber:
             infoO.aniName = "Mud Dauber";
             infoO.aniDesc = "";
-            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s can sting and poison animals behind you and fly on hills and rocks.\n (Tip: Boost while using your ability)";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s can sting and poison animals behind you.\n (Tip: Leaving the underground changes your ability and you can boost while using your sting ability to go very fast!)";
             infoO.aniCol = "#FF0000";
             infoO.skinName = "muddauber";
             break;
@@ -1099,6 +1100,14 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s get more hp from every kill they get. You can deal damage and steal other players health.";
             infoO.aniCol = "#FF0000";
             infoO.skinName = "assassinbug";
+            break;
+
+		    		    		    		    		    		    		    		    		    		    		    		    		    		     case a_yellowjacket:
+            infoO.aniName = "Yellow Jacket";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s are very aggresive animals and fast flyers. Hold W to charge its attack doing a devestating sting! (Hint: Leave the underground to use your secondary ability!)";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "yellowjacket";
             break;
 
 		    
@@ -17809,6 +17818,14 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.aniCol = "#FF0000";
             infoO.skinName = "assassinbug";
             break;
+
+		  		    		    		    		    		    		    		    		    		    		    		    		    		    		     case a_yellowjacket:
+            infoO.aniName = "Yellow Jacket";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s are very aggresive animals and fast flyers. Hold W to charge its attack doing a devestating sting! (Hint: Leave the underground to use your secondary ability!)";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "yellowjacket";
+            break;
 		  
 
 		  
@@ -19338,6 +19355,9 @@ Animal.prototype.basicDrawSkinImg = function() {
   var WScale = 1
   var HScale = 1
 	if (this.animalType == a_muddauber) {
+		iScale = 1050 / 340.0;
+	}
+		if (this.animalType == a_yellowjacket) {
 		iScale = 1050 / 340.0;
 	}
 		if (this.animalType == a_wanderingspider) {
