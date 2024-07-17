@@ -19369,9 +19369,9 @@ Animal.prototype.basicDrawSkinImg = function() {
 						if (this.specType2 > 0) {
                                          this.specType22 += (this.specType2 - this.specType22)/50
 						}
-			//if (this.specType22 > 0) {
-				HScale2 = 1 - 1/this.specType2
-			//}
+			if (this.specType22 > 0) {
+				HScale2 = 1 - 1/255 * this.specType22
+			}
 			                          
 	}
 		if (this.animalType == a_wanderingspider) {
