@@ -1098,7 +1098,7 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s get more hp from every kill they get. You can deal damage and steal other players health.";
             infoO.aniCol = "#FF0000";
-            infoO.skinName = "Assassin Bug";
+            infoO.skinName = "assassinbug";
             break;
 
 		    
@@ -17807,7 +17807,7 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s get more hp from every kill they get. You can deal damage and steal other players health.";
             infoO.aniCol = "#FF0000";
-            infoO.skinName = "Assassin Bug";
+            infoO.skinName = "assassinbug";
             break;
 		  
 
