@@ -19370,7 +19370,7 @@ Animal.prototype.basicDrawSkinImg = function() {
                                          this.specType22 += (this.specType2 - this.specType22)/50
 						}
 			if (this.specType22 > 0) {
-				HScale2 = 1 - 1/this.specType22
+				HScale2 = 1 - 1/this.specType2
 			}
 			                          
 	}
