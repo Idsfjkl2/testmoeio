@@ -19366,10 +19366,8 @@ Animal.prototype.basicDrawSkinImg = function() {
 	      if (!this.specType22) {
                this.specType22 = 0
 	      }
-						if (this.specType2 > 0) {
-                                         this.specType22 += (this.specType2 - this.specType22)/50
-						} else {
-                                         this.specType22 = 0
+						if (this.specType2 >= 0) {
+                                         this.specType22 += (this.specType2 - this.specType22)/ (50/((100 - this.specType)/100))
 						}
 			if (this.specType22 > 0) {
 				RHScale2 = 1 - 1/255 * this.specType22
