@@ -19553,7 +19553,7 @@ Animal.prototype.basicDrawSkinImg = function() {
       ctx.drawImage(
         this.loadedSkinImg,
         -rad * iScale * WScale,
-        -rad * iScale * HScale * RHScale2,
+        -rad * iScale * HScale * RHScale2 * 2,
         2 * rad * iScale * WScale,
         2 * rad * iScale * HScale * RHScale2
       );
