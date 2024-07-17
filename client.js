@@ -19357,11 +19357,22 @@ Animal.prototype.basicDrawSkinImg = function() {
   var rad = this.rad - this.outlineW;
   var WScale = 1
   var HScale = 1
+  var HScale2 = 1
 	if (this.animalType == a_muddauber) {
 		iScale = 1050 / 340.0;
 	}
 		if (this.animalType == a_yellowjacket) {
 		iScale = 1050 / 340.0;
+	      if (!this.specType22) {
+               this.specType22 = 0
+	      }
+						if (this.specType2 > 0) {
+                                         this.specType22 += (this.specType2 - this.specType22)/50
+						}
+			if (this.specType22 > 0) {
+				HScale2 = 1 - 1/this.specType22
+			}
+			                          
 	}
 		if (this.animalType == a_wanderingspider) {
 		iScale = 1000 / 340.0;
@@ -19540,7 +19551,7 @@ Animal.prototype.basicDrawSkinImg = function() {
       ctx.drawImage(
         this.loadedSkinImg,
         -rad * iScale * WScale,
-        -rad * iScale * HScale,
+        -rad * iScale * HScale * HScale2,
         2 * rad * iScale * WScale,
         2 * rad * iScale * HScale
       );
