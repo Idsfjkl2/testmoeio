@@ -19366,7 +19366,7 @@ Animal.prototype.basicDrawSkinImg = function() {
 	      if (!this.specType22) {
                this.specType22 = 0
 	      }
-						if (this.specType2 >= 0) {
+						if (this.specType2 >= 0 && this.specType) {
 							if (specType == 0) {
                                          this.specType22 = this.specType2
 							} else {
