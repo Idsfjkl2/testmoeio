@@ -174,7 +174,8 @@ o_bombexplosion = 122;
 o_cloud = 123;
 o_infinitevoid = 124;
 o_damagesignal = 125;
-o_undergroundwall = 126
+o_undergroundwall = 126;
+o_cave = 127;
 //o_hat = 99;
 var GameObjType = {
   //makes it easy to add new subclasses- each class will add itself!
@@ -10150,6 +10151,31 @@ if (this.specType != 1) {
 
       }
       break;
+
+		       case o_cave:
+      {
+        this.drawOutlinedCircle("", "#9D9D9D");
+        //drawCircle(0, 0, this.rad, "#9F8641");
+
+        if (!options_lowGraphics) {
+          drawCircle(
+            0 - this.rPer,
+            0 - this.rPer,
+            Math.max(0, this.rad - 7),
+            "#7E6A35"
+          );
+        }
+        drawCircle(0 + this.rPer, 1, Math.max(0, this.rad - 14), "#595959");
+        drawCircle(
+          0 - this.rPer * 2 - 3,
+          1,
+          Math.max(0, this.rad - 18.5),
+          "#393939"
+        );
+        
+
+      }
+      break;
     case o_hidingBush:
       {
         ctx.save();
@@ -13307,6 +13333,11 @@ case o_cakesplash:
       this.z = -101;
         
       break;
+		      case o_cave:
+    
+      this.z = -100.5;
+        
+      break;
     case o_hidingHole:
       this.z = -100;
       break;
@@ -13600,6 +13631,7 @@ function GameObj(oType) {
   if (
     this.oType == o_hidingHole ||
     this.oType == o_bigHidingHole ||
+    this.oType == o_cave ||
     this.oType == o_hidingHoleOcean ||
     this.oType == o_spiderWeb
   )
