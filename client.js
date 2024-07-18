@@ -20258,7 +20258,7 @@ Animal.prototype.drawTopEffects = function() {
     }
     ctx.restore();
   }
-
+/*
 	  var idealOp = this.flag_stickyspikes ? 1.0 : 0.0;
   this.effA_stickyspikes += (idealOp - this.effA_stickyspikes) * 0.02;
 
@@ -20275,7 +20275,7 @@ Animal.prototype.drawTopEffects = function() {
       //console.log("drawing banana");
     }
     ctx.restore();
-  }
+  } */
   //constrict
   var idealOp = this.flag_constricted ? 1.0 : 0.0;
   this.effA_constricted += (idealOp - this.effA_constricted) * 0.04;
