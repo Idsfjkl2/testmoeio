@@ -436,6 +436,7 @@ a_wanderingspider = 150,
 a_assassinbug = 151,
 a_yellowjacket = 152,
 a_spittingscorpion = 153,
+a_mantis = 154,
 a_skibidi = 9999;
 var infoForAnimalType = function (aniT) {
     var infoO = {};
@@ -1117,6 +1118,14 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s can spit a poisonous ball that does high poison damage. (Hint: The ball can pull animals close to you!)";
             infoO.aniCol = "#FF0000";
             infoO.skinName = "spittingscorpion";
+            break;
+
+		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		     case a_mantis:
+            infoO.aniName = "Queen Of Mantises";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + You are a giant mantis! Pressing W can grab and crush prey you attack sometimes sticking spikes into them. (Tip: Chase animals who receive the sticking spike effect to damage them.)";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "mantis";
             break;
 
 		    
@@ -3563,7 +3572,7 @@ var AbilityButton = function () {
           } else if (abilImg == "skins/muddauber.png" || abilImg == "skins/yellowjacket.png") {
 			              var rad = this.w * 0.4 * 1050/500;
 	ctx.drawImage(theImg, -rad, -rad * 0.85, 2 * rad, 2 * rad);	    
-	  } else if (abilImg == "skins/assassinbug.png" || abilImg == "skins/spittingscorpion.png") {
+	  } else if (abilImg == "skins/assassinbug.png" || abilImg == "skins/spittingscorpion.png" || abilImg == "skins/mantis.png") {
 			              var rad = this.w * 0.4 * 800/500;
 	ctx.drawImage(theImg, -rad, -rad * 0.85, 2 * rad, 2 * rad);
 	} else if (abilImg == "skins/wanderingspider.png") {
@@ -13492,6 +13501,7 @@ this.z = 1005; //fireball just under dragon
                     else if (this.animalType == a_qilin)
             this.z = 1009 + this.rad/1000;
           else if (this.animalType == a_dragon) this.z = 1500 + this.rad/1000;
+		            else if (this.animalType == a_mantis) this.z = 1020 + this.rad/1000;
                    else if (this.animalType == a_griffin) this.z = 1005 + this.rad/1000;
           else if (this.animalType ==  a_kingCrab) this.z = 1006 + this.rad/1000;
 		  	else if (this.animalType == a_ladybug) this.z = 0 + this.rad/1000;
@@ -17846,6 +17856,14 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.aniCol = "#FF0000";
             infoO.skinName = "spittingscorpion";
             break;
+
+		  		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		     case a_mantis:
+            infoO.aniName = "Queen Of Mantises";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + You are a giant mantis! Pressing W can grab and crush prey you attack sometimes sticking spikes into them. (Tip: Chase animals who receive the sticking spike effect to damage them.)";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "mantis";
+            break;
 		  
 
 		  
@@ -19398,7 +19416,7 @@ Animal.prototype.basicDrawSkinImg = function() {
 		if (this.animalType == a_wanderingspider) {
 		iScale = 1000 / 340.0;
 	}
-			if (this.animalType == a_assassinbug || this.animalType == a_spittingscorpion) {
+			if (this.animalType == a_assassinbug || this.animalType == a_spittingscorpion || this.animalType == a_mantis) {
 		iScale = 800 / 340.0;
 	}
   this.skinRad = rad;
