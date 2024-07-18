@@ -14772,7 +14772,12 @@ case ability_thunderbirdAttack:
 
           //clip to sliwly show the claw
           var rad = this.rad * 0.6;
+		if (this.specType == 0) {
           ctx.rotate(this.angle + toRadians(90.0) + extraRotate);
+		} else {
+          ctx.rotate(this.angle -(toRadians(90.0) + extraRotate));	
+	ctx.scale(-1, 1);
+		}
           var imX = 0,
             imY = this.rad;
           var imW = rad * 2.0 * 0.7,
