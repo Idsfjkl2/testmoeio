@@ -10176,9 +10176,8 @@ if (this.specType != 1) {
 
 		       case o_cave:
       {
+	      ctx.rotate(this.angle);
         this.drawOutlinedCircle("", "#9D9D9D");
-        //drawCircle(0, 0, this.rad, "#9F8641");
-
         if (!options_lowGraphics) {
           drawCircle(
             0 - this.rPer,
