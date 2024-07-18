@@ -1712,6 +1712,7 @@ ability_aardvark = 146,
 ability_bite = 147,
 ability_echo = 148,
 ability_poisonsting = 149,
+ability_mantis = 154,
   ability_none = 0;
 var infoForAbilityT = function(abilT) {
   var infoO = {};
@@ -1748,6 +1749,15 @@ var infoForAbilityT = function(abilT) {
 
 		  		  		  		                                          case ability_echo:
       infoO.abilName = "Echo";
+      infoO.abilImg =
+        "skins/" +
+        zombieFolder +
+        infoForAnimalType(myPlayerLastAniT).skinName +
+        ".png";
+      break;
+
+		  		  		  		  		                                          case ability_mantis:
+      infoO.abilName = "Mantis Grab";
       infoO.abilImg =
         "skins/" +
         zombieFolder +
@@ -13237,6 +13247,8 @@ case o_cakesplash:
         this.type == ability_finalhit ||
         this.type == ability_alligatorslap||
         this.type == ability_elephantTrunkSmack ||
+	this.type == ability_mantis ||
+	      
         this.type == ability_crabSmash ||
         this.type == ability_crocWaterGrab ||
         this.type == ability_alligatorgrab ||
@@ -13765,6 +13777,7 @@ AbilityObj.prototype.updateZ = function() {
     this.abilityType == ability_alligatorslap||
      this.abilityType == ability_freezeprey||
     this.abilityType == ability_elephantTrunkSmack ||
+    this.abilityType == ability_mantis ||
     this.abilityType == ability_crabSmash ||
     this.abilityType == ability_giantinktop ||
     this.abilityType == ability_crocWaterGrab ||
@@ -14672,7 +14685,7 @@ case ability_thunderbirdAttack:
         ctx.restore();
       }
       break;
-      /*
+      
     case ability_elephantTrunkSmack:
       {
         ctx.save();
@@ -14724,13 +14737,13 @@ case ability_thunderbirdAttack:
         ctx.restore();
       }
       break;
-      */
+      
 
 
 		  
 
 		       
-    case ability_elephantTrunkSmack:
+    case ability_mantis:
       {
         ctx.save();
         var oldA = ctx.globalAlpha;
