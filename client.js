@@ -20655,7 +20655,7 @@ for (var J = 0; J < cnt; J++) {
 	this.flag_swallowed = aniFlags.includes(50)
 	this.flag_inCloud = aniFlags.includes(51)
 	this.flag_tts = aniFlags.includes(52)
-        this.flag_stickyspikes = aniFlags.includes(53)
+        //this.flag_stickyspikes = aniFlags.includes(53)
         this.wins1v1 = msg.readUInt8();
 
     if (this.isAbility1v1Active && this.flag_can1v1) {
