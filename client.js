@@ -1123,7 +1123,7 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
 		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		     case a_mantis:
             infoO.aniName = "Queen Of Mantises";
             infoO.aniDesc = "";
-            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n You are a giant mantis! Pressing W can grab and crush prey you attack sometimes sticking spikes into them. (Tip: Chase animals who receive the sticking spike effect to damage them.)";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n You are a giant mantis! \n Pressing W can grab and crush prey you attack sometimes sticking spikes into them. \n (Tip: Chase animals who receive the sticking spike effect to damage them.)";
             infoO.aniCol = "#FF0000";
             infoO.skinName = "mantis";
             break;
@@ -17860,7 +17860,7 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
 		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		     case a_mantis:
             infoO.aniName = "Queen Of Mantises";
             infoO.aniDesc = "";
-            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n You are a giant mantis! Pressing W can grab and crush prey you attack sometimes sticking spikes into them. (Tip: Chase animals who receive the sticking spike effect to damage them.)";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n You are a giant mantis! \n Pressing W can grab and crush prey you attack sometimes sticking spikes into them. \n (Tip: Chase animals who receive the sticking spike effect to damage them.)";
             infoO.aniCol = "#FF0000";
             infoO.skinName = "mantis";
             break;
