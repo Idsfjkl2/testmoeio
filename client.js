@@ -10162,7 +10162,7 @@ if (this.specType != 1) {
             0 - this.rPer,
             0 - this.rPer,
             Math.max(0, this.rad - 7),
-            "#7E6A35"
+            "#888888"
           );
         }
         drawCircle(0 + this.rPer, 1, Math.max(0, this.rad - 14), "#595959");
