@@ -14758,7 +14758,7 @@ case ability_thunderbirdAttack:
           var extraRotate = -(-0.5 + rotfac0to1) * toRadians(135.0); //spin animation
 
           //clip to sliwly show the claw
-          var rad = this.rad;
+          var rad = this.rad * 0.6;
           ctx.rotate(this.angle + toRadians(90.0) + extraRotate);
           var imX = 0,
             imY = this.rad;
