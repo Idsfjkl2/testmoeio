@@ -10182,16 +10182,16 @@ if (this.specType != 1) {
         if (!options_lowGraphics) {
           drawCircle(
             0 - this.rPer,
-            0 - this.rPer - this.rad * 0.25,
-            Math.max(0, this.rad * 0.75),
+            0 - this.rPer - this.rad * 0.14,
+            Math.max(0, this.rad * 0.86),
             "#888888"
           );
         }
-        drawCircle(0 + this.rPer, 1 - this.rad * 0.5, Math.max(0, this.rad * 0.5), "#595959");
+        drawCircle(0 + this.rPer, 1 - this.rad * 0.38, Math.max(0, this.rad * 0.72), "#595959");
         drawCircle(
           0 - this.rPer * 2 - 3,
-          1 - this.rad * 0.75,
-          Math.max(0, this.rad * 0.25),
+          1 - this.rad * 0.37,
+          Math.max(0, this.rad * 0.63),
           "#393939"
         );
         
