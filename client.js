@@ -435,6 +435,7 @@ a_muddauber = 149,
 a_wanderingspider = 150,
 a_assassinbug = 151,
 a_yellowjacket = 152,
+a_spittingscorpion = 153,
 a_skibidi = 9999;
 var infoForAnimalType = function (aniT) {
     var infoO = {};
@@ -1108,6 +1109,14 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s are very aggresive animals and fast flyers. Hold W to charge its attack doing a devestating sting! (Hint: Leave the underground to use your secondary ability!)";
             infoO.aniCol = "#FF0000";
             infoO.skinName = "yellowjacket";
+            break;
+
+		    		    		    		    		    		    		    		    		    		    		    		    		    		    		     case a_spittingscorpion:
+            infoO.aniName = "Black Spitting Scorpion";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s can spit a poisonous ball that does high poison damage. (Hint: The ball can pull animals close to you!)";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "spittingscorpion";
             break;
 
 		    
@@ -3554,7 +3563,7 @@ var AbilityButton = function () {
           } else if (abilImg == "skins/muddauber.png" || abilImg == "skins/yellowjacket.png") {
 			              var rad = this.w * 0.4 * 1050/500;
 	ctx.drawImage(theImg, -rad, -rad * 0.85, 2 * rad, 2 * rad);	    
-	  } else if (abilImg == "skins/assassinbug.png") {
+	  } else if (abilImg == "skins/assassinbug.png" || abilImg == "skins/spittingscorpion.png") {
 			              var rad = this.w * 0.4 * 800/500;
 	ctx.drawImage(theImg, -rad, -rad * 0.85, 2 * rad, 2 * rad);
 	} else if (abilImg == "skins/wanderingspider.png") {
@@ -17829,6 +17838,14 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.aniCol = "#FF0000";
             infoO.skinName = "yellowjacket";
             break;
+
+		  		    		    		    		    		    		    		    		    		    		    		    		    		    		    		     case a_spittingscorpion:
+            infoO.aniName = "Black Spitting Scorpion";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s can spit a poisonous ball that does high poison damage. (Hint: The ball can pull animals close to you!)";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "spittingscorpion";
+            break;
 		  
 
 		  
@@ -19381,7 +19398,7 @@ Animal.prototype.basicDrawSkinImg = function() {
 		if (this.animalType == a_wanderingspider) {
 		iScale = 1000 / 340.0;
 	}
-			if (this.animalType == a_assassinbug) {
+			if (this.animalType == a_assassinbug || this.animalType == a_spittingscorpion) {
 		iScale = 800 / 340.0;
 	}
   this.skinRad = rad;
