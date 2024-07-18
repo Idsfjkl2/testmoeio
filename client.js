@@ -16869,7 +16869,8 @@ Animal.prototype.stunA = 0.0; //for fading animal under water
 Animal.prototype.shockedEffA = 0.0;
 Animal.prototype.frozenEffA  = Animal.prototype.onFireEffA = Animal.prototype.effA_healing = Animal.prototype.effA_hot = 0.0;
 Animal.prototype.effA_poison = Animal.prototype.effA_bleeding = Animal.prototype.effA_stunk = 0.0;
-Animal.prototype.effA_constricted = Animal.prototype.effA_slimed = Animal.prototype.effA_webStuck = 0.0 = Animal.prototype.effA_stickyspikes = 0.0; //for fading animal under water
+Animal.prototype.effA_constricted = Animal.prototype.effA_slimed = Animal.prototype.effA_webStuck = 0.0; //for fading animal under water
+//Animal.prototype.effA_stickyspikes = 0.0;
 Animal.prototype.objs = [];
 
 Animal.prototype.nameA = 0.0;
@@ -20258,7 +20259,7 @@ Animal.prototype.drawTopEffects = function() {
     }
     ctx.restore();
   }
-
+/*
 	  var idealOp = this.flag_stickyspikes ? 1.0 : 0.0;
   this.effA_stickyspikes += (idealOp - this.effA_stickyspikes) * 0.02;
 
@@ -20276,7 +20277,7 @@ Animal.prototype.drawTopEffects = function() {
     }
     ctx.restore();
   }
-
+*/
   //constrict
   var idealOp = this.flag_constricted ? 1.0 : 0.0;
   this.effA_constricted += (idealOp - this.effA_constricted) * 0.04;
@@ -20656,7 +20657,7 @@ for (var J = 0; J < cnt; J++) {
 	this.flag_swallowed = aniFlags.includes(50)
 	this.flag_inCloud = aniFlags.includes(51)
 	this.flag_tts = aniFlags.includes(52)
-	this.flag_stickyspikes = aniFlags.includes(53)
+	//this.flag_stickyspikes = aniFlags.includes(53)
         this.wins1v1 = msg.readUInt8();
 
     if (this.isAbility1v1Active && this.flag_can1v1) {
