@@ -438,6 +438,7 @@ a_assassinbug = 151,
 a_yellowjacket = 152,
 a_spittingscorpion = 153,
 a_mantis = 154,
+a_gianthornet = 155,
 a_skibidi = 9999;
 var infoForAnimalType = function (aniT) {
     var infoO = {};
@@ -1036,14 +1037,16 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.skinName = "lobster";
             break;
 
-		    		    		     case a_ant:
+		    		    	
+	    case a_ant:
             infoO.aniName = "Ant";
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n A scrawny bug...\n You can climb on hills!";
             infoO.aniCol = "#FF0000";
             infoO.skinName = "ant";
             break;
-		    		    		    		     case a_ladybug:
+		    		    
+	    case a_ladybug:
             infoO.aniName = "Ladybug";
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n A beautiful ladybug that can fly...\n You can hide under hills, rocks, and fruit trees!";
@@ -1051,21 +1054,24 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.skinName = "ladybug";
             break;
 
-		    		    		    		    		     case a_centipede:
+		    		    
+	    case a_centipede:
             infoO.aniName = "Centipede";
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n You are a deadly centipede that can bite and poison animals up close!";
             infoO.aniCol = "#FF0000";
             infoO.skinName = "centipede";
             break;
-		    		    		    		    		    		    		     case a_aardvark:
+		    		
+	    case a_aardvark:
             infoO.aniName = "Aardvark";
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n You can stomp on people with your feet knocking nearby players from holes!";
             infoO.aniCol = "#FF0000";
             infoO.skinName = "aardvark";
             break;
-		    		    		    		    		    		    		    		     case a_mongoose:
+		    		
+	    case a_mongoose:
             infoO.aniName = "Mongoose";
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s are great swimmers, dominate the Lakes/Oceans/Mud! You are also immune to poison and can bite animals.";
@@ -1073,7 +1079,8 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.skinName = "mongoose";
             break;
 
-		    		    		    		    		    		    		    		    		    		     case a_bat:
+		    		
+	    case a_bat:
             infoO.aniName = "Bat";
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s have lower vision then other animals. You can fire screeches at animals that show their stats. \n (Tip: You are faster when attacking players you screeched recently)";
@@ -1081,7 +1088,8 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.skinName = "bat";
             break;
 
-		    		    		    		    		    		    		    		    		    		    		     case a_muddauber:
+		    		    
+	    case a_muddauber:
             infoO.aniName = "Mud Dauber";
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s can sting and poison animals behind you.\n (Tip: Leaving the underground changes your ability and you can boost while using your sting ability to go very fast!)";
@@ -1089,7 +1097,8 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.skinName = "muddauber";
             break;
 
-		    		    		    		    		    		    		    		    		    		    		    		     case a_wanderingspider:
+		    		    	
+	    case a_wanderingspider:
             infoO.aniName = "Wandering Spider";
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s have very toxic poison. You can pounce and web animals you hit!";
@@ -1097,7 +1106,8 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.skinName = "wanderingspider";
             break;
 
-		    		    		    		    		    		    		    		    		    		    		    		    		     case a_assassinbug:
+		    		    	
+	    case a_assassinbug:
             infoO.aniName = "Assassin Bug";
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s get more hp from every kill they get. You can deal damage and steal other players health.";
@@ -1105,7 +1115,8 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.skinName = "assassinbug";
             break;
 
-		    		    		    		    		    		    		    		    		    		    		    		    		    		     case a_yellowjacket:
+		    		   
+	    case a_yellowjacket:
             infoO.aniName = "Yellow Jacket";
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s are very aggresive animals and fast flyers. Hold W to charge its attack doing a devestating sting! (Hint: Leave the underground to use your secondary ability!)";
@@ -1113,7 +1124,8 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.skinName = "yellowjacket";
             break;
 
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		     case a_spittingscorpion:
+		    		    		
+	    case a_spittingscorpion:
             infoO.aniName = "Black Spitting Scorpion";
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n " + infoO.aniName + "s can spit a poisonous ball that does high poison damage. (Hint: The ball can pull animals close to you!)";
@@ -1121,13 +1133,23 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.skinName = "spittingscorpion";
             break;
 
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		     case a_mantis:
-            infoO.aniName = "Queen Of Mantises";
+		    		    		    	
+	    case a_mantis:
+            infoO.aniName = "Mantis Queen";
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n You are a giant mantis! \n Pressing W can grab and crush prey you attack sometimes sticking spikes into them. \n (Tip: Chase animals who receive the sticking spike effect to damage them.)";
             infoO.aniCol = "#FF0000";
             infoO.skinName = "mantis";
             break;
+		    
+	    case a_gianthornet:
+            infoO.aniName = "Giant Hornet";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n (You're amazing!) \n You can hold W to attack prey with a barrage of sting's!";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "gianthornet";
+            break;
+
 
 		    
 
@@ -17796,6 +17818,14 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.aniCol = "#FF0000";
             infoO.skinName = "mantis";
             break;
+
+		  	    case a_gianthornet:
+            infoO.aniName = "Giant Hornet";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n (You're amazing!) \n You can hold W to attack prey with a barrage of sting's!";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "gianthornet";
+            break;
 		  
 
 		  
@@ -19347,6 +19377,9 @@ Animal.prototype.basicDrawSkinImg = function() {
 	}
 		if (this.animalType == a_wanderingspider) {
 		iScale = 1000 / 340.0;
+	}
+			if (this.animalType == a_gianthornet) {
+		iScale = 1200 / 340.0;
 	}
 			if (this.animalType == a_assassinbug || this.animalType == a_spittingscorpion || this.animalType == a_mantis) {
 		iScale = 800 / 340.0;
