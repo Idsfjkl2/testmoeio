@@ -7418,6 +7418,7 @@ if (curServer.serverConnURL == "127.0.0.1" || curServer.serverConnURL == "localh
         }*/
  document.getElementById("onconnectDiv").style.visibility = "visible";
     document.getElementById("startMenu").style.visibility = "visible";
+document.getElementsByClassName("spinner")[0].className = "spinner2";
     document.getElementById("connecting").style.visibility = "hidden";
 
     
@@ -7443,6 +7444,7 @@ if (curServer.serverConnURL == "127.0.0.1" || curServer.serverConnURL == "localh
         //show connecting label
               document.getElementById("startMenu").style.visibility = "hidden";
        document.getElementById("onconnectDiv").style.visibility = "hidden";
+	      document.getElementsByClassName("spinner2")[0].className = "spinner";
         document.getElementById("connecting").style.visibility = "visible";
       } else {
         //dced, show dom?
