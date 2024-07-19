@@ -13585,6 +13585,7 @@ this.z = 1005; //fireball just under dragon
             this.z = 1008 + (this.flag_usingAbility ? 1 : 0) + this.rad/1000;
                     else if (this.animalType == a_qilin)
             this.z = 1009 + this.rad/1000;
+	else if (this.animalType == a_gianthornet && this.flag_usingAbility) this.z = 1800 + this.rad/1000;
           else if (this.animalType == a_dragon) this.z = 1500 + this.rad/1000;
 		            else if (this.animalType == a_mantis) this.z = 1020 + this.rad/1000;
                    else if (this.animalType == a_griffin) this.z = 1005 + this.rad/1000;
