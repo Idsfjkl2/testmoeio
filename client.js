@@ -10186,10 +10186,10 @@ if (this.specType != 1) {
             "#888888"
           );
         }
-        drawCircle(0 + this.rPer, 1 - this.rad * 0.14, Math.max(0, this.rad * 0.72), "#595959");
+        drawCircle(0 - this.rPer, 0 - this.rPer - this.rad * 0.14, Math.max(0, this.rad * 0.72), "#595959");
         drawCircle(
           0 - this.rPer * 2 - 3,
-          1 - this.rad * 0.23,
+          0 - this.rPer - this.rad * 0.23,
           Math.max(0, this.rad * 0.63),
           "#393939"
         );
