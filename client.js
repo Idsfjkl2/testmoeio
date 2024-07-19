@@ -19379,8 +19379,11 @@ Animal.prototype.basicDrawSkinImg = function() {
 	if (this.animalType == a_muddauber) {
 		iScale = 1050 / 340.0;
 	}
-		if (this.animalType == a_yellowjacket) {
+		if (this.animalType == a_yellowjacket || this.animalType == a_gianthornet) {
 		iScale = 1050 / 340.0;
+			if (this.animalType == a_gianthornet) {
+		iScale = 1200 / 340.0;
+			}
 	      if (!this.specType22) {
                this.specType22 = 0
 	      }
@@ -19398,9 +19401,6 @@ Animal.prototype.basicDrawSkinImg = function() {
 	}
 		if (this.animalType == a_wanderingspider) {
 		iScale = 1000 / 340.0;
-	}
-			if (this.animalType == a_gianthornet) {
-		iScale = 1200 / 340.0;
 	}
 			if (this.animalType == a_assassinbug || this.animalType == a_spittingscorpion || this.animalType == a_mantis) {
 		iScale = 800 / 340.0;
