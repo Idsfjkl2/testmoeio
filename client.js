@@ -177,6 +177,8 @@ o_damagesignal = 125;
 o_undergroundwall = 126;
 o_cave = 127;
 o_potato = 128;
+o_smallglowingshroom = 129;
+o_mushroompatch = 130;
 //o_hat = 99;
 var GameObjType = {
   //makes it easy to add new subclasses- each class will add itself!
@@ -9947,7 +9949,7 @@ console.log(rps)
         }
       }
       break;
-
+    case o_smallglowingshroom:
     case o_mushroom:
     case o_bigMushroom:
       {
@@ -9982,6 +9984,9 @@ console.log(rps)
         ctx.beginPath();
         ctx.arc(0, 0, Math.max(0, this.rad - strokeW), Math.PI, 2 * Math.PI);
         ctx.fillStyle = this.oType == o_bigMushroom ? "#B8413B" : "#CFAD59";
+	if (this.oType == o_smallglowingshroom) {
+        ctx.fillStyle = "#00DBFF"
+	}
         ctx.fill();
       }
       break;
@@ -10194,6 +10199,12 @@ if (this.specType != 1) {
       }
       break;
 
+		       case o_mushroompatch:
+      {
+	              ctx.globalAlpha = 0.5;
+        this.drawOutlinedCircle("", "#00DBFF");
+      }
+      break;
 		       case o_cave:
       {
 	      ctx.rotate(this.angle);
@@ -13374,6 +13385,9 @@ case o_cakesplash:
       this.z = -101;
         
       break;
+		  case o_mushroompatch:
+      this.z = -102;
+      break;
 		      case o_cave:
     
       this.z = -100.5;
@@ -13632,7 +13646,7 @@ function GameObj(oType) {
     case o_fireBall:
     case o_poisonBall:
     case o_spiderWeb:
-
+    case o_smallglowingshroom:
     case o_mushroom:
     case o_bigMushroom:
     case o_lillypad:
