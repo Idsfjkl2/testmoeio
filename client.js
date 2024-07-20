@@ -10202,7 +10202,8 @@ if (this.specType != 1) {
 		       case o_mushroompatch:
       {
 	              ctx.globalAlpha = 0.5;
-        this.drawOutlinedCircle("", "#00DBFF");
+        drawCircle(0, 0, Math.max(0, this.rad), "#00DBFF"
+        );
       }
       break;
 		       case o_cave:
