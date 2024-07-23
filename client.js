@@ -18974,7 +18974,7 @@ if (this.rad < 20) {
   }
 
   //player name text
-			if (this.telespawntime && Math.trunc((timestamp - this.telespawntime) / 40) > 3) {
+			if (this.telespawntime) {
 	if (this.canhavenick) {
   this.drawNickName(idealOp);
 	}
