@@ -16219,8 +16219,8 @@ ctx.globalAlpha = 1
         //ctx.globalAlpha = 0.1 * oldA;
         //drawCircle(0, 0, this.rad, "#1898BD");
 
-        ctx.globalAlpha = 0.8 * oldA;
-      var imNum = Math.trunc(timestamp / 200) % 4;
+        ctx.globalAlpha = oldA;
+      var imNum = Math.trunc(timestamp / 80) % 4;
 	      imNum += 1
         var theImg = getLoadedImg("img/stoicbomb" + imNum + ".png");
         if (theImg) {
