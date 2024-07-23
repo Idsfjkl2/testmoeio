@@ -19484,7 +19484,6 @@ Animal.prototype.basicDrawSkinImg = function() {
  if (this.flag_usingAbility && this.animalType == a_ladybug) WScale = 1.294;
 if (this.animalType == a_kj && this.specType2 == 1) ctx.rotate(-this.angle);
 	if (this.animalType == a_kj && this.specType == 1 && this.specType2 == 2) {
-		ctx.rotate(-this.angle);
 		var oldrad = rad
 		               var rps = 60 / 60;
           var rotationTms = 1000 / rps; //ms to one full movement- t=dist * v
@@ -19494,7 +19493,7 @@ if (this.animalType == a_kj && this.specType2 == 1) ctx.rotate(-this.angle);
 		ctx.rotate(rotation3)
 		              var theImg = getLoadedImg("img/firecrash.png");
 		        if (theImg) {
-				oldrad *= Math.min(5/3, (Date.now() - firetimestamp)/1000)
+				oldrad *= Math.min(5/3, (Date.now() - firetimestamp)/750)
            ctx.drawImage(
         theImg,
         -oldrad * iScale,
