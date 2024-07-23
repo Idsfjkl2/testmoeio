@@ -18781,7 +18781,7 @@ if (this.rad < 20) {
     this.flag_flying || this.flag_isGrabbed||
  
    
-      (this.animalType == a_tornado || options_lowGraphics &&
+      (this.animalType == a_tornado || (this.animalType == a_kj && this.specType2 == 1) || options_lowGraphics &&
         !(outlineCol == col_edibleOutline || outlineCol == col_dangerOutline))
     )
   ) {
@@ -20448,7 +20448,7 @@ Animal.prototype.getSkinName = function() {
 			  if (!this.telespawntime) {
                         this.telespawntime = timestamp
 			  }
-			  let img = Math.trunc((timestamp - this.telespawntime) / 200)
+			  let img = Math.trunc((timestamp - this.telespawntime) / 80)
                       skinName = skinFolder + skinName + "tele" + img;
 		  } else {
 			  this.telespawnTime = false
