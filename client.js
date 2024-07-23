@@ -3974,10 +3974,10 @@ var getLoadedImg = function(imgUrl) {
     return null;
   }
 };
-var sksdif1 = getLoadedImg("skins/kj/kjtele0");
-var sksdif2 = getLoadedImg("skins/kj/kjtele1");
-var sksdif3 = getLoadedImg("skins/kj/kjtele2");
-var sksdif4 = getLoadedImg("skins/kj/kjtele3");
+var sksdif1 = getLoadedImg("skins/kj/kjtele0.png");
+var sksdif2 = getLoadedImg("skins/kj/kjtele1.png");
+var sksdif3 = getLoadedImg("skins/kj/kjtele2.png");
+var sksdif4 = getLoadedImg("skins/kj/kjtele3.png");
 //game vars
 var xpNextAni = 100;
 var lastxp = 1;
