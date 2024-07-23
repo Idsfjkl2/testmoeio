@@ -19483,6 +19483,23 @@ Animal.prototype.basicDrawSkinImg = function() {
   this.skinScale = iScale;
  if (this.flag_usingAbility && this.animalType == a_ladybug) WScale = 1.294;
 if (this.animalType == a_kj && this.specType2 == 1) ctx.rotate(-this.angle);
+	if (this.animalType == a_kj && this.specType == 1) {
+		               var rps = 15 / 60;
+          var rotationTms = 1000 / rps; //ms to one full movement- t=dist * v
+          var fac0to1 =
+            ((timestamp - this.spawnTime) % rotationTms) / rotationTms;
+          var rotation3 = fac0to1 * 2 * Math.PI;
+		              var theImg = getLoadedImg("img/firecrash.png");
+		        if (theImg) {
+           ctx.drawImage(
+        theImg,
+        -rad * iScale,
+        -rad * iScale,
+        2 * rad * iScale,
+        2 * rad * iScale
+      );
+			}
+	}
   if (this.loadedSkinImg) {
     if ((this.animalType == a_trex || this._animalType == a_trex) && this.specType != 200) { //animal x and y set mark20
       overSizeOffset = rad / 2;
