@@ -20452,6 +20452,9 @@ Animal.prototype.getSkinName = function() {
                         this.telespawntime = timestamp
 			  }
 			  let img = Math.trunc((timestamp - this.telespawntime) / 40)
+			  if (img == 0) {
+                          console.log("yippee")
+			  }
 			  if (img > 3) {
                           img = 4
 			  }
