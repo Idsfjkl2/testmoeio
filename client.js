@@ -19485,6 +19485,7 @@ Animal.prototype.basicDrawSkinImg = function() {
 if (this.animalType == a_kj && this.specType2 == 1) ctx.rotate(-this.angle);
 	if (this.animalType == a_kj && this.specType == 1 && this.specType2 == 2) {
 		ctx.rotate(-this.angle);
+		var oldrad = rad
 		               var rps = 60 / 60;
           var rotationTms = 1000 / rps; //ms to one full movement- t=dist * v
           var fac0to1 =
@@ -19507,6 +19508,7 @@ if (this.animalType == a_kj && this.specType2 == 1) ctx.rotate(-this.angle);
       );
 								rad /= 4/3
 				ctx.rotate(-rotation3);
+				rad = oldrad
 			}
 	} else {
 firetimestamp = Date.now()
