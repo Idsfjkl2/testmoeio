@@ -20494,6 +20494,8 @@ Animal.prototype.getSkinName = function() {
                           img = 4
 			  }
                       skinName = skinFolder + skinName + "tele" + img;
+		  } else if (this.specType == 1) {
+                      skinName = skinFolder + skinName + 3;
 		  } else {
 			  this.telespawntime = false
 		  if (this.lastdistance > 1) {
