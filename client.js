@@ -19494,7 +19494,7 @@ if (this.animalType == a_kj && this.specType2 == 1) ctx.rotate(-this.angle);
 		ctx.rotate(rotation3)
 		              var theImg = getLoadedImg("img/firecrash.png");
 		        if (theImg) {
-				oldrad *= Math.min(4/3, (Date.now() - firetimestamp)/)(750/2))
+				oldrad *= Math.min(4/3, (Date.now() - firetimestamp)/(750/2))
 				if ((Date.now() - firetimestamp) > 500) {
 					console.log(Math.max(0.75, 1 - ((Date.now() - firetimestamp - 500)/500)))
                                  oldrad *= Math.max(0.75, 1 - ((Date.now() - firetimestamp - 1000)/1000))
