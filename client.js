@@ -20446,7 +20446,7 @@ Animal.prototype.getSkinName = function() {
             var skinFolder = "";
 		  if (this.lastdistance > 1) {
                   var skinFolder = "";
-			  time = 1000/Math.min(2, this.lastdistance/5)
+			  time = 1000/1.5
       var imgType = Math.ceil(((timestamp - this.spawnTime) % time)/(time/2));
 			  console.log(time)
 			  console.log(((timestamp - this.spawnTime) % time)/(time/2))
