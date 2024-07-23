@@ -3974,7 +3974,10 @@ var getLoadedImg = function(imgUrl) {
     return null;
   }
 };
-
+getLoadedImg("skins/kj/kjtele0");
+getLoadedImg("skins/kj/kjtele1");
+getLoadedImg("skins/kj/kjtele2");
+getLoadedImg("skins/kj/kjtele3");
 //game vars
 var xpNextAni = 100;
 var lastxp = 1;
