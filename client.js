@@ -20442,6 +20442,16 @@ Animal.prototype.getSkinName = function() {
               skinName = skinFolder + skinName + this.specType;
             }
             break;
+		  		      case a_kj:
+            var skinFolder = "";
+		  if (this.lastdistance > 10) {
+		      var imgType = Math.ceil(((timestamp - this.spawnTime) % 1000)/this.lastdistance * 4);
+	     if (imgType == 0) {
+		imgType = 1
+		  }
+              skinName = skinFolder + skinName + imgType;
+		  }
+            break;
     case a_pufferFish:
     case a_muskox:
     case a_aardvark:
@@ -20593,6 +20603,7 @@ Animal.prototype.readCustomData_onNewlyVisible = function(msg) {
   var nickName = msg.readString();
   // read which speices is this animal
   this.canhavenick = msg.readUInt8();
+  this.lastdistance = msg.readUInt32();
   this.animalSpecies = msg.readUInt8();
   this.velocityX = msg.readUInt8();
   this.velocityX = msg.readUInt8();
@@ -20688,6 +20699,7 @@ Animal.prototype.readCustomData_onUpdate = function(msg) {
 
   this.specType = msg.readUInt8();
   this.specType2 = msg.readUInt8();
+  this.lastdistance = msg.readUInt32();
   this.velocityX = msg.readUInt8();
   this.velocityY = msg.readUInt8();
   var lookAng = msg.readUInt8() * 2.0;
