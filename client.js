@@ -3978,6 +3978,7 @@ var sksdif1 = getLoadedImg("skins/kj/kjtele0.png");
 var sksdif2 = getLoadedImg("skins/kj/kjtele1.png");
 var sksdif3 = getLoadedImg("skins/kj/kjtele2.png");
 var sksdif4 = getLoadedImg("skins/kj/kjtele3.png");
+var sksdif5 = getLoadedImg("skins/kj/kjtele4.png");
 //game vars
 var xpNextAni = 100;
 var lastxp = 1;
@@ -19444,7 +19445,7 @@ Animal.prototype.basicDrawSkinImg = function() {
   this.skinRad = rad;
   this.skinScale = iScale;
  if (this.flag_usingAbility && this.animalType == a_ladybug) WScale = 1.294;
-
+if (this.animalType == a_kj && this.specType2 == 1) ctx.rotate(-this.angle);
   if (this.loadedSkinImg) {
     if ((this.animalType == a_trex || this._animalType == a_trex) && this.specType != 200) { //animal x and y set mark20
       overSizeOffset = rad / 2;
@@ -19603,7 +19604,7 @@ Animal.prototype.basicDrawSkinImg = function() {
       );
      
 
-
+ctx.rotate(this.angle);
                   ctx.restore();
     } else {
 
@@ -20452,9 +20453,6 @@ Animal.prototype.getSkinName = function() {
                         this.telespawntime = timestamp
 			  }
 			  let img = Math.trunc((timestamp - this.telespawntime) / 40)
-			  if (img == 0) {
-                          console.log("yippee")
-			  }
 			  if (img > 3) {
                           img = 4
 			  }
