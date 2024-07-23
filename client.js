@@ -16220,7 +16220,8 @@ ctx.globalAlpha = 1
         //drawCircle(0, 0, this.rad, "#1898BD");
 
         ctx.globalAlpha = 0.8 * oldA;
-      var imNum = Math.trunc(timestamp / 200) % 5;
+      var imNum = Math.trunc(timestamp / 200) % 4;
+	      imNum += 1
         var theImg = getLoadedImg("img/ability_bat" + imNum + ".png");
         if (theImg) {
           var rad = this.rad * 500/185.4;
