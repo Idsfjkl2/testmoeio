@@ -18839,7 +18839,7 @@ if (this.rad < 20) {
   if (
     this.animalType != a_rabbit &&
     this.animalType != a_tornado && 
-    (this.animalType != a_kj || this.specType2 != 1) &&
+    (this.animalType != a_kj) &&
     this.animalType != a_mouse &&
     this.animalType != a_crab
   ) {
