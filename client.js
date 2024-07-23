@@ -20465,9 +20465,6 @@ Animal.prototype.getSkinName = function() {
                   var skinFolder = "";
 			  time = 1000/1.5
       var imgType = Math.ceil(((timestamp - this.spawnTime) % time)/(time/2));
-			  console.log(time)
-			  console.log(((timestamp - this.spawnTime) % time)/(time/2))
-			  console.log(imgType)
             skinName = skinFolder + skinName + imgType;
 		  } else {
  skinName = skinFolder + skinName + 0;
