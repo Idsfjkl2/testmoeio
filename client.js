@@ -19508,7 +19508,7 @@ if (this.animalType == a_kj && this.specType2 == 1) ctx.rotate(-this.angle);
       );
 								rad /= 4/3
 				ctx.rotate(-rotation3);
-				rad = oldrad
+				rad = this.skinRad
 			}
 	} else {
 firetimestamp = Date.now()
