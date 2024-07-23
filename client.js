@@ -19484,6 +19484,7 @@ Animal.prototype.basicDrawSkinImg = function() {
  if (this.flag_usingAbility && this.animalType == a_ladybug) WScale = 1.294;
 if (this.animalType == a_kj && this.specType2 == 1) ctx.rotate(-this.angle);
 	if (this.animalType == a_kj && this.specType == 1 && this.specType2 == 2) {
+		ctx.rotate(-this.angle)
 		var oldrad = rad
 		               var rps = 60 / 60;
           var rotationTms = 1000 / rps; //ms to one full movement- t=dist * v
@@ -19502,6 +19503,7 @@ if (this.animalType == a_kj && this.specType2 == 1) ctx.rotate(-this.angle);
         2 * oldrad * iScale
       );
 								oldrad /= 4/3
+				ctx.rotate(this.angle)
 				ctx.rotate(-rotation3);
 			}
 	} else {
