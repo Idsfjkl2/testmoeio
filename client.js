@@ -19502,7 +19502,7 @@ if (this.animalType == a_kj && this.specType2 == 1) ctx.rotate(-this.angle);
         2 * rad * iScale
       );
 								rad /= 4/3
-				ctx.rotate(this.angle);
+				ctx.rotate(-rotation3);
 			}
 	}
   if (this.loadedSkinImg) {
