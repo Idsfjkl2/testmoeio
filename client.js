@@ -19494,21 +19494,20 @@ if (this.animalType == a_kj && this.specType2 == 1) ctx.rotate(-this.angle);
 		ctx.rotate(rotation3)
 		              var theImg = getLoadedImg("img/firecrash.png");
 		        if (theImg) {
-				rad *= Math.min(4/3, (Date.now() - firetimestamp)/1000)
+				oldrad *= Math.min(4/3, (Date.now() - firetimestamp)/1000)
 				if ((Date.now() - firetimestamp) > 1000) {
-                                 rad /= Math.min(0.75, 1 - ((Date.now() - firetimestamp - 1000)/1000))
+                                 oldrad /= Math.min(0.75, 1 - ((Date.now() - firetimestamp - 1000)/1000))
 				}
-				rad *= 4/3
+				oldrad *= 4/3
            ctx.drawImage(
         theImg,
-        -rad * iScale,
-        -rad * iScale,
-        2 * rad * iScale,
-        2 * rad * iScale
+        -oldrad * iScale,
+        -oldrad * iScale,
+        2 * oldrad * iScale,
+        2 * oldrad * iScale
       );
-								rad /= 4/3
+								oldrad /= 4/3
 				ctx.rotate(-rotation3);
-				rad = this.skinRad
 			}
 	} else {
 firetimestamp = Date.now()
