@@ -1748,6 +1748,7 @@ ability_bite = 147,
 ability_echo = 148,
 ability_poisonsting = 149,
 ability_mantis = 154,
+ability_stoicbomb = 156,
   ability_none = 0;
 var infoForAbilityT = function(abilT) {
   var infoO = {};
@@ -1798,6 +1799,15 @@ var infoForAbilityT = function(abilT) {
         zombieFolder +
         infoForAnimalType(myPlayerLastAniT).skinName +
         ".png";
+      break;
+
+		  		  		  		  		  		                                          case ability_stoicbomb:
+      infoO.abilName = "Stoic Bomb";
+      infoO.abilImg =
+        "skins/" +
+        zombieFolder +
+        infoForAnimalType(myPlayerLastAniT).skinName +
+        "3.png";
       break;
 		  
 		  		  		                                          case ability_centipede:
@@ -13355,6 +13365,7 @@ case o_cakesplash:
         this.type == ability_zebraKick ||
         this.type == ability_passivekick ||
         this.type == ability_sharkBite ||
+	this.type == ability_stoicbomb ||
         this.type == ability_fart
       )
         this.z = 10001;
@@ -13890,6 +13901,7 @@ AbilityObj.prototype.updateZ = function() {
     this.abilityType == ability_sabertoothJawAttack ||
     this.abilityType == ability_trexShake ||
     this.abilityType == ability_echo ||
+    this.abilityType == ability_stoicbomb ||
     this.abilityType == ability_tigerSlash ||
     this.abilityType == ability_pounce ||
     //this.abilityType == ability_tigerJump ||
@@ -16191,6 +16203,27 @@ ctx.globalAlpha = 1
         var theImg = getLoadedImg("img/ability_bat.png");
         if (theImg) {
           var rad = this.rad;
+
+          ctx.drawImage(theImg, -rad, -rad, 2 * rad, 2 * rad);
+          //console.log("drawing banana");
+        }
+        ctx.restore();
+      }
+      break;
+		      case ability_stoicbomb:
+      {
+        ctx.save();
+        ctx.rotate(this.angle);
+
+        var oldA = ctx.globalAlpha;
+        //ctx.globalAlpha = 0.1 * oldA;
+        //drawCircle(0, 0, this.rad, "#1898BD");
+
+        ctx.globalAlpha = 0.8 * oldA;
+      var imNum = Math.trunc(timestamp / 200) % 5;
+        var theImg = getLoadedImg("img/ability_bat" + imNum + ".png");
+        if (theImg) {
+          var rad = this.rad * 500/185.4;
 
           ctx.drawImage(theImg, -rad, -rad, 2 * rad, 2 * rad);
           //console.log("drawing banana");
