@@ -20448,7 +20448,7 @@ Animal.prototype.getSkinName = function() {
 			  if (!this.telespawntime) {
                         this.telespawntime = timestamp
 			  }
-			  let img = Math.trunc((timestamp - this.telespawntime) / 80)
+			  let img = Math.trunc((timestamp - this.telespawntime) / 40)
                       skinName = skinFolder + skinName + "tele" + img;
 		  } else {
 			  this.telespawnTime = false
