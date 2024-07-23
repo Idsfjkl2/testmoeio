@@ -442,6 +442,7 @@ a_yellowjacket = 152,
 a_spittingscorpion = 153,
 a_mantis = 154,
 a_gianthornet = 155,
+a_kj = 156,
 a_skibidi = 9999;
 var infoForAnimalType = function (aniT) {
     var infoO = {};
@@ -1148,9 +1149,17 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
 	    case a_gianthornet:
             infoO.aniName = "Giant Hornet";
             infoO.aniDesc = "";
-            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n (You're amazing!) \n You can hold W to attack prey with a barrage of sting's!";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n (You're amazing!) \n You can press W to charge and skewer animals in your stinger";
             infoO.aniCol = "#FF0000";
             infoO.skinName = "gianthornet";
+            break;
+
+		    	    case a_kj:
+            infoO.aniName = "KJ";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "kj0";
             break;
 
 
@@ -17862,6 +17871,14 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n (You're amazing!) \n You can hold W to attack prey with a barrage of sting's!";
             infoO.aniCol = "#FF0000";
             infoO.skinName = "gianthornet";
+            break;
+
+		  		    	    case a_kj:
+            infoO.aniName = "KJ";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "kj0";
             break;
 		  
 
