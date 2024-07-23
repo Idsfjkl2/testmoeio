@@ -1159,7 +1159,7 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!";
             infoO.aniCol = "#FF0000";
-            infoO.skinName = "kj0";
+            infoO.skinName = "kj/kj0";
             break;
 
 
@@ -17878,7 +17878,7 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!";
             infoO.aniCol = "#FF0000";
-            infoO.skinName = "kj0";
+            infoO.skinName = "kj/kj0";
             break;
 		  
 
