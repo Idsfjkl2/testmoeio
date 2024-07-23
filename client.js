@@ -20445,11 +20445,13 @@ Animal.prototype.getSkinName = function() {
 		  		      case a_kj:
             var skinFolder = "";
 		  if (this.lastdistance > 10) {
-		      var imgType = Math.ceil(((timestamp - this.spawnTime) % 1000/(this.lastdistance * 8))/(500/(this.lastdistance * 4)));
+                  var skinFolder = "";
+			  time = 1000/(this.lastdistance/10)
+      var imgType = Math.ceil(((timestamp - this.spawnTime) % time)/time/2);
 	     if (imgType == 0) {
 		imgType = 1
 		  }
-              skinName = skinFolder + skinName + imgType;
+            if (this.flag_usingAbility) skinName = skinFolder + skinName + imgType;
 		  }
             break;
     case a_pufferFish:
