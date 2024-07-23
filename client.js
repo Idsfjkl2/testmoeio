@@ -1159,7 +1159,7 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!";
             infoO.aniCol = "#FF0000";
-            infoO.skinName = "kj/kj0";
+            infoO.skinName = "kj/kj";
             break;
 
 
@@ -17878,7 +17878,7 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.aniDesc = "";
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!";
             infoO.aniCol = "#FF0000";
-            infoO.skinName = "kj/kj0";
+            infoO.skinName = "kj/kj";
             break;
 		  
 
@@ -20449,11 +20449,11 @@ Animal.prototype.getSkinName = function() {
 			  time = 1000/(this.lastdistance/10)
       var imgType = Math.ceil(((timestamp - this.spawnTime) % time)/time/2);
 			  console.log(time)
-			  console.log(imgType)
+			  console.log(imgType + 1)
 	     if (imgType == 0) {
 		imgType = 1
 		  }
-            if (this.flag_usingAbility) skinName = skinFolder + skinName + imgType;
+            if (this.flag_usingAbility) skinName = skinFolder + skinName + imgType + 1;
 		  }
             break;
     case a_pufferFish:
