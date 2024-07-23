@@ -20793,7 +20793,7 @@ for (var J = 0; J < cnt; J++) {
   this.flag_oldeagle = aniFlags.includes(39)
     this.flag_inColdOcean = aniFlags.includes(41)
       this.flag_invisible = aniFlags.includes(42)
-	if (this.telespawntime && Math.trunc((timestamp - this.telespawntime) / 40)) {
+	if (this.telespawntime && Math.trunc((timestamp - this.telespawntime) / 40) > 3) {
               this.flag_invisible = true
 		}
   this.flag_oldinvisible = aniFlags.includes(42)
