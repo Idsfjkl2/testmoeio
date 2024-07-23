@@ -19483,8 +19483,8 @@ Animal.prototype.basicDrawSkinImg = function() {
   this.skinScale = iScale;
  if (this.flag_usingAbility && this.animalType == a_ladybug) WScale = 1.294;
 if (this.animalType == a_kj && this.specType2 == 1) ctx.rotate(-this.angle);
+			if (!this.firetimestamp) this.firetimestamp = Date.now();
 	if (this.animalType == a_kj && this.specType == 1 && this.specType2 == 2) {
-		if (!this.firetimestamp) this.firetimestamp = Date.now();
 		ctx.rotate(-this.angle)
 		var oldrad = rad
 		               var rps = 60 / 60;
@@ -19507,8 +19507,6 @@ if (this.animalType == a_kj && this.specType2 == 1) ctx.rotate(-this.angle);
 				ctx.rotate(this.angle)
 				ctx.rotate(-rotation3);
 			}
-	} else {
-this.firetimestamp = Date.now()
 	}
   if (this.loadedSkinImg) {
     if ((this.animalType == a_trex || this._animalType == a_trex) && this.specType != 200) { //animal x and y set mark20
