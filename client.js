@@ -19483,7 +19483,7 @@ Animal.prototype.basicDrawSkinImg = function() {
   this.skinScale = iScale;
  if (this.flag_usingAbility && this.animalType == a_ladybug) WScale = 1.294;
 if (this.animalType == a_kj && this.specType2 == 1) ctx.rotate(-this.angle);
-	if (this.animalType == a_kj && this.specType == 1) {
+	if (this.animalType == a_kj && this.specType == 1 && this.specType2 == 2) {
 		ctx.rotate(-this.angle);
 		               var rps = 60 / 60;
           var rotationTms = 1000 / rps; //ms to one full movement- t=dist * v
@@ -19493,6 +19493,7 @@ if (this.animalType == a_kj && this.specType2 == 1) ctx.rotate(-this.angle);
 		ctx.rotate(rotation3)
 		              var theImg = getLoadedImg("img/firecrash.png");
 		        if (theImg) {
+				rad *= (Date.now() - firetimestamp)/1000
 				rad *= 4/3
            ctx.drawImage(
         theImg,
@@ -19504,6 +19505,8 @@ if (this.animalType == a_kj && this.specType2 == 1) ctx.rotate(-this.angle);
 								rad /= 4/3
 				ctx.rotate(-rotation3);
 			}
+	} else {
+firetimestamp = Date.now()
 	}
   if (this.loadedSkinImg) {
     if ((this.animalType == a_trex || this._animalType == a_trex) && this.specType != 200) { //animal x and y set mark20
