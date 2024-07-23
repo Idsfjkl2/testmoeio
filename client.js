@@ -19489,8 +19489,10 @@ if (this.animalType == a_kj && this.specType2 == 1) ctx.rotate(-this.angle);
           var fac0to1 =
             ((timestamp - this.spawnTime) % rotationTms) / rotationTms;
           var rotation3 = fac0to1 * 2 * Math.PI;
+		ctx.rotate(rotation3)
 		              var theImg = getLoadedImg("img/firecrash.png");
 		        if (theImg) {
+				rad *= 4/3
            ctx.drawImage(
         theImg,
         -rad * iScale,
@@ -19498,6 +19500,7 @@ if (this.animalType == a_kj && this.specType2 == 1) ctx.rotate(-this.angle);
         2 * rad * iScale,
         2 * rad * iScale
       );
+								rad /= 4/3
 			}
 	}
   if (this.loadedSkinImg) {
