@@ -16222,7 +16222,7 @@ ctx.globalAlpha = 1
         ctx.globalAlpha = 0.8 * oldA;
       var imNum = Math.trunc(timestamp / 200) % 4;
 	      imNum += 1
-        var theImg = getLoadedImg("img/ability_bat" + imNum + ".png");
+        var theImg = getLoadedImg("img/stoicbomb" + imNum + ".png");
         if (theImg) {
           var rad = this.rad * 500/185.4;
 
