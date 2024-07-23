@@ -19497,7 +19497,7 @@ if (this.animalType == a_kj && this.specType2 == 1) ctx.rotate(-this.angle);
 				oldrad *= Math.min(4/3, (Date.now() - firetimestamp)/(750/2))
 				if ((Date.now() - firetimestamp) > 500) {
 					console.log(Math.max(0.75, 1 - ((Date.now() - firetimestamp - 500)/500)))
-                                 oldrad *= Math.max(0.75, 1 - ((Date.now() - firetimestamp - 1000)/1000))
+                                 oldrad *= Math.max(0.75, 1 - ((Date.now() - firetimestamp - 500)/500))
 				}
 				oldrad *= 4/3
            ctx.drawImage(
