@@ -20444,6 +20444,14 @@ Animal.prototype.getSkinName = function() {
             break;
 		  		      case a_kj:
             var skinFolder = "";
+		  if (this.specType2 == 1) {
+			  if (!this.telespawntime) {
+                        this.telespawntime = timestamp
+			  }
+			  let img = Math.trunc(this.telespawntime / 120)
+                      skinName = skinFolder + skinName + "tele" + img;
+		  } else {
+			  this.telespawnTime = false
 		  if (this.lastdistance > 1) {
                   var skinFolder = "";
 			  time = 1000/1.5
@@ -20454,6 +20462,7 @@ Animal.prototype.getSkinName = function() {
             skinName = skinFolder + skinName + imgType;
 		  } else {
  skinName = skinFolder + skinName + 0;
+		  }
 		  }
             break;
     case a_pufferFish:
