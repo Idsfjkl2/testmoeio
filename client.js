@@ -16248,7 +16248,9 @@ ctx.globalAlpha = 1
 
         var oldA = ctx.globalAlpha;
         //ctx.globalAlpha = 0.1 * oldA;
-        //drawCircle(0, 0, this.rad, "#1898BD");
+	      ctx.globalAlpha = 0.3;
+        drawCircle(0, 0, this.rad * 3.5, "#FF9900");
+        drawCircle(0, 0, this.rad * 7, "#FF9900");
 
         ctx.globalAlpha = oldA;
       var imNum = Math.trunc(timestamp / 80) % 4;
