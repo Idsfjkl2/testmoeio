@@ -16256,6 +16256,7 @@ ctx.globalAlpha = 1
 		      this.rad2 += (this.rad * 3.5 - this.rad2) * 0.1
         drawCircle(0, 0, this.rad2, "#FF9900");
         drawCircle(0, 0, this.rad2 * 2, "#FF9900");
+        drawCircle(0, 0, 9999999999999, "#FF9900");
 	      }
 
         ctx.globalAlpha = oldA;
