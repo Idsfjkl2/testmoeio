@@ -16255,10 +16255,10 @@ ctx.globalAlpha = 1
 	      imNum += 1
 	              var shake = 6
         if (this.specType == 1) {
-          x = (Math.random() - 0.5) * shake
-          y = (Math.random() - 0.5) * shake
+        var x = (Math.random() - 0.5) * shake
+           var y = (Math.random() - 0.5) * shake
+			      ctx.translate(x, y)
         }
-	      ctx.translate(x, y)
         var theImg = getLoadedImg("img/stoicbomb" + imNum + ".png");
         if (theImg) {
           var rad = this.rad * 500/185.4;
