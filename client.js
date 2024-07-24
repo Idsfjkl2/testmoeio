@@ -179,6 +179,7 @@ o_cave = 127;
 o_potato = 128;
 o_smallglowingshroom = 129;
 o_mushroompatch = 130;
+o_firecrash = 131;
 //o_hat = 99;
 var GameObjType = {
   //makes it easy to add new subclasses- each class will add itself!
@@ -12187,7 +12188,34 @@ case o_gift:
         }
       }
       break;
-      
+                 case o_firecrash:
+      {
+        var theImg = getLoadedImg(
+          "img/firecrash" + ".png"
+        );
+
+        if (theImg) {
+          var rps = 15 / 60;
+          var rotationTms = 1000 / rps; //ms to one full movement- t=dist * v
+          var fac0to1 =
+            ((timestamp - this.spawnTime) % rotationTms) / rotationTms;
+          var rotation3 = fac0to1 * 2 * Math.PI;
+
+          //ctx.drawImage(tornado, -rad, -rad, 2 * rad, 2 * rad);
+          //var rad = Math.max(0, this.rad - 30);
+
+          var tSinceSpawn = (timestamp - this.spawnTime) / 1000.0;
+          var period = 2.2;
+          var xShift = 6.5 * Math.cos(((2.0 * Math.PI) / period) * tSinceSpawn);
+          var yShift = 6.5 * Math.sin(((2.0 * Math.PI) / period) * tSinceSpawn);
+          var rad = this.rad * 1.2;
+          ctx.save();
+          ctx.rotate(rotation3);
+          ctx.drawImage(theImg, -rad, -rad, 2 * rad, 2 * rad);
+          ctx.restore();
+        }
+      }
+      break;
            case o_bigwhirlpool:
       {
         var theImg = getLoadedImg(
@@ -13538,6 +13566,7 @@ case o_battleroyale:
     case o_sharinganeye:
       this.z = -1
       break;
+	 case o_firecrash:
           case o_storm:
         this.z = 9999;
          break;
