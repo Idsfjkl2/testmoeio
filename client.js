@@ -7,6 +7,9 @@ var secr = url.searchParams.get("ModeActivate");
 var oldmope = false
 var daynightstamp = Date.now()
 var daynight = 6
+var fullblindtime = 0
+var startblindtime = 0
+var blindtimestamp = 0
 var stages = 0
 var brtimerx = 0
 var impactblindness = false
@@ -5137,6 +5140,7 @@ function drawGameInterface() {
         ctx.fillRect(0, 0, canvasW, canvasH); //bg
 		    ctx.globalAlpha = 1;
 	}
+		
 			if (daynight > 18 && daynight < 19) {
 						stages = 1
     ctx.globalAlpha = 0.25 * (daynight - 18);
@@ -5162,6 +5166,14 @@ function drawGameInterface() {
         ctx.fillRect(0, 0, canvasW, canvasH); //bg
 		    ctx.globalAlpha = 1;
 	}
+
+	if (fullblindtime >= Date.now()) {
+    ctx.globalAlpha = (Date.now() - blindtimestamp)/(startblindtime - blindtimestamp);
+  ctx.fillStyle = "#FFFFFF";
+        ctx.fillRect(0, 0, canvasW, canvasH); //bg
+		    ctx.globalAlpha = 1;
+	}
+		
 	} else {
 
 	}
@@ -31316,6 +31328,17 @@ impactblindness = true
       setTimeout(() => {
 impactblindness = false
          }, time);
+      }
+      break;
+		  
+		         case 63: //battleroyalmessages
+      {
+	      		startblindtime = msg.readUInt8();
+	      	      	fullblindtime = msg.readUInt8();
+	                startblindtime += Date.now()
+	                fullblindtime += Date.now()
+	                blindtimestamp = Date.now()
+                              
       }
       break;
 		  
