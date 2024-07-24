@@ -13567,6 +13567,8 @@ case o_battleroyale:
       this.z = -1
       break;
 	 case o_firecrash:
+           this.z = 10002
+		  break;
           case o_storm:
         this.z = 9999;
          break;
