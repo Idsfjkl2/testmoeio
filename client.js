@@ -1,6 +1,6 @@
 var gamever = 100;
 var KTestingModeON = true;
-var KTestingBetaMode = true && !KTestingModeON;
+var KTestingBetaMode = true && !KTestingModeON;//a
 var ACTIVATEOURGAMEMODE = false
 var url = new URL(window.location.href);
 var secr = url.searchParams.get("ModeActivate");
