@@ -31334,8 +31334,8 @@ impactblindness = false
 		  
 		         case 63: //battleroyalmessages
       {
-	      		startblindtime = msg.readUInt8() + Date.now();
-	      	      	fullblindtime = msg.readUInt8() + Date.now();
+	      		startblindtime = msg.readUInt16() + Date.now();
+	      	      	fullblindtime = msg.readUInt16() + Date.now();
 	      	                blindtimestamp = Date.now()
                               
       }
