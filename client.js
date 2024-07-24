@@ -16262,7 +16262,10 @@ ctx.globalAlpha = 1
         var theImg = getLoadedImg("img/stoicbomb" + imNum + ".png");
         if (theImg) {
           var rad = this.rad * 500/185.4;
-
+        if (this.specType == 1) {
+				var radi = (Math.random() - 0.5) * shake * 4
+	}
+		rad *= 1 + radi
           ctx.drawImage(theImg, -rad, -rad, 2 * rad, 2 * rad);
           //console.log("drawing banana");
         }
