@@ -5168,6 +5168,7 @@ function drawGameInterface() {
 	}
 
 	if (fullblindtime >= Date.now()) {
+		console.log("a")
     ctx.globalAlpha = Math.min(1, ((Date.now() - blindtimestamp)/(startblindtime - blindtimestamp))/1000);
   ctx.fillStyle = "#FFFFFF";
         ctx.fillRect(0, 0, canvasW, canvasH); //bg
@@ -31333,11 +31334,9 @@ impactblindness = false
 		  
 		         case 63: //battleroyalmessages
       {
-	      		startblindtime = msg.readUInt8();
-	      	      	fullblindtime = msg.readUInt8();
-	                startblindtime += Date.now()
-	                fullblindtime += Date.now()
-	                blindtimestamp = Date.now()
+	      		startblindtime = msg.readUInt8() + Date.now();
+	      	      	fullblindtime = msg.readUInt8() + Date.now();
+	      	                blindtimestamp = Date.now()
                               
       }
       break;
