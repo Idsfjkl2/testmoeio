@@ -16250,8 +16250,12 @@ ctx.globalAlpha = 1
         //ctx.globalAlpha = 0.1 * oldA;
 	      ctx.globalAlpha = 0.3;
 	      if (this.specType == 1) { 
-        drawCircle(0, 0, this.rad * 3.5, "#FF9900");
-        drawCircle(0, 0, this.rad * 7, "#FF9900");
+              if (!this.rad2) {
+              this.rad2 = 0
+	      }
+		      this.rad2 += (this.rad * 3.5 - this.rad) * 0.1
+        drawCircle(0, 0, this.rad2, "#FF9900");
+        drawCircle(0, 0, this.rad2 * 2, "#FF9900");
 	      }
 
         ctx.globalAlpha = oldA;
