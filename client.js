@@ -5106,6 +5106,16 @@ function drawGameInterface() {
  pressureBarPerc += (pressureBarPerc_n - pressureBarPerc) * 0.1;
   xpPer += (xpPer_n - xpPer) * 0.03;
   //flashing LOW water animation
+		if (fullblindtime >= Date.now()) {
+		console.log(fullblindtime - Date.now())
+   // ctx.globalAlpha = Math.min(1, ((Date.now() - blindtimestamp)/(startblindtime - blindtimestamp)));
+		ctx.globalAlpha = 1
+  //ctx.fillStyle = "#FFFFFF";
+		  ctx.fillStyle = "#1829FF";
+        ctx.fillRect(0, 0, canvasW, canvasH); //bg
+		    ctx.globalAlpha = 1;
+	}
+	
 	if (!impactblindness) {
 	daynight = 6 + ((Date.now() - daynightstamp)/(1000 * 60/2)) % 24
 		if (oldmope || options_NoDayNight) {
@@ -5163,16 +5173,6 @@ function drawGameInterface() {
 					stages = 2
     ctx.globalAlpha = 0.25;
   ctx.fillStyle = "#1829FF";
-        ctx.fillRect(0, 0, canvasW, canvasH); //bg
-		    ctx.globalAlpha = 1;
-	}
-
-	if (fullblindtime >= Date.now()) {
-		console.log(fullblindtime - Date.now())
-   // ctx.globalAlpha = Math.min(1, ((Date.now() - blindtimestamp)/(startblindtime - blindtimestamp)));
-		ctx.globalAlpha = 1
-  //ctx.fillStyle = "#FFFFFF";
-		  ctx.fillStyle = "#1829FF";
         ctx.fillRect(0, 0, canvasW, canvasH); //bg
 		    ctx.globalAlpha = 1;
 	}
