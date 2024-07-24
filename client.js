@@ -5170,8 +5170,9 @@ function drawGameInterface() {
 	if (fullblindtime >= Date.now()) {
 		console.log(fullblindtime - Date.now())
    // ctx.globalAlpha = Math.min(1, ((Date.now() - blindtimestamp)/(startblindtime - blindtimestamp)));
-		ctx.globalAlpha = 1
-  ctx.fillStyle = "#FFFFFF";
+		ctx.globalAlpha = 0.25
+  //ctx.fillStyle = "#FFFFFF";
+		  ctx.fillStyle = "#1829FF";
         ctx.fillRect(0, 0, canvasW, canvasH); //bg
 		    ctx.globalAlpha = 1;
 	}
