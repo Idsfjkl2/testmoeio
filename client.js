@@ -31374,13 +31374,13 @@ impactblindness = false
 		  
 		  		  		         case 64: //kj
       {
-	      		    var time = msg.readUInt16();
+	      		    var time2 = msg.readUInt16();
 impactblindness = true
 kjframe = true
-    var kjIn =  setTimeout(() => {
+   setTimeout(() => {
 impactblindness = false
 kjframe = false
-         }, time);
+         }, time2);
       }
       break;
 		  
