@@ -31375,6 +31375,7 @@ impactblindness = false
 		  
 		         case 64: //battleroyalmessages
       {
+	      console.log("a")
 	      		    var time = msg.readUInt16();
 	      kjframe = true
 impactblindness = true
