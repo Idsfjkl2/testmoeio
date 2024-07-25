@@ -31375,12 +31375,11 @@ impactblindness = false
 		  		  		         case 64: //kj
       {
 	      		    var time = msg.readUInt8();
+impactblindness = true
 kjframe = true
-	      if (kjIn) {
-		      clearTimeout(kjIn)
-	      }
     var kjIn =  setTimeout(() => {
 kjframe = false
+impactblindness = false
          }, time);
       }
       break;
