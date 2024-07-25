@@ -19059,7 +19059,7 @@ if (this.rad < 20) {
   }
 
   //player name text
-			if (this.telespawntime) {
+			if (!this.telespawntime) {
 	if (this.canhavenick) {
   this.drawNickName(idealOp);
 	}
