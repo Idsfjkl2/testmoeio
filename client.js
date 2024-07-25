@@ -10,6 +10,7 @@ var daynight = 6
 var fullblindtime = 0
 var startblindtime = 0
 var blindtimestamp = 0
+var kjframe = false
 var stages = 0
 var brtimerx = 0
 var impactblindness = false
@@ -5115,6 +5116,13 @@ function drawGameInterface() {
 		  ctx.fillStyle = "#FFFFFF";
         ctx.fillRect(0, 0, canvasW, canvasH); //bg
 		    ctx.globalAlpha = 1;
+	}
+
+	if (kjframe) {
+				        var theImg = getLoadedImg("img/stoictext.svg");
+        if (theImg) {
+          ctx.drawImage(theImg, 0, 0, canvasW, canvasH);
+        }
 	}
 	
 	if (!impactblindness) {
@@ -31354,8 +31362,8 @@ impactblindness = false
          }, time);
       }
       break;
-		  
-		         case 63: //battleroyalmessages
+
+		         case 63: //flashbang
       {
 	      		startblindtime = msg.readUInt16() + Date.now();
 	      	      	fullblindtime = msg.readUInt16() + Date.now();
@@ -31364,7 +31372,18 @@ impactblindness = false
       }
       break;
 		  
-		  
+		  		  		         case 64: //kj
+      {
+	      		    var time = msg.readUInt8();
+kjframe = true
+	      if (kjIn) {
+		      clearTimeout(kjIn)
+	      }
+    var kjIn =  setTimeout(() => {
+kjframe = false
+         }, time);
+      }
+      break;
 		  
     case 23: //MsgPersonalGameEvent
       {
