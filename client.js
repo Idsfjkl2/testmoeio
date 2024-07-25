@@ -31373,17 +31373,15 @@ impactblindness = false
       }
       break;
 		  
-		  		  		         case 64: //kj
+		         case 64: //battleroyalmessages
       {
-	      		    var time2 = msg.readUInt16();
-	      console.log(time2)
-	      console.log("b")
+	      		    var time = msg.readUInt16();
+	      kjframe = true
 impactblindness = true
-kjframe = true
-   setTimeout(() => {
+      setTimeout(() => {
+	      kjframe = false
 impactblindness = false
-kjframe = false
-         }, time2);
+         }, time);
       }
       break;
 		  
