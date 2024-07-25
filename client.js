@@ -19059,7 +19059,7 @@ if (this.rad < 20) {
   }
 
   //player name text
-			if (!this.telespawntime) {
+			if (this.specType2 != 1 || this.animalType != a_kj) {
 	if (this.canhavenick) {
   this.drawNickName(idealOp);
 	}
