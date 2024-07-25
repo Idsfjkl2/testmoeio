@@ -31377,6 +31377,7 @@ impactblindness = false
       {
 	      		    var time2 = msg.readUInt16();
 	      console.log(time2)
+	      console.log("b")
 impactblindness = true
 kjframe = true
    setTimeout(() => {
