@@ -5120,6 +5120,7 @@ function drawGameInterface() {
 
 	if (kjframe) {
 				        var theImg = getLoadedImg("img/stoictext.svg");
+		console.log("a")
         if (theImg) {
           ctx.drawImage(theImg, 0, 0, canvasW, canvasH);
         }
@@ -31375,6 +31376,7 @@ impactblindness = false
 		  		  		         case 64: //kj
       {
 	      		    var time2 = msg.readUInt16();
+	      console.log(time2)
 impactblindness = true
 kjframe = true
    setTimeout(() => {
