@@ -1,6 +1,6 @@
 var gamever = 100;
 var KTestingModeON = true;
-var KTestingBetaMode = true && !KTestingModeON;//a
+var KTestingBetaMode = true && !KTestingModeON;
 var ACTIVATEOURGAMEMODE = false
 var url = new URL(window.location.href);
 var secr = url.searchParams.get("ModeActivate");
@@ -12235,9 +12235,9 @@ case o_gift:
 		                   case o_stoicexplosion:
       {
         var theImg = getLoadedImg(
-          "img/stoicexplosion" + ".png"
+          "img/stoicexplosion" + ".svg"
         );
-
+	drawCircle(0, 0, this.rad * 99999, "#000000");
         if (theImg) {
           var rad = this.rad * 2;
           ctx.save();
