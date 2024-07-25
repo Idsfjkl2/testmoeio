@@ -12237,7 +12237,9 @@ case o_gift:
         var theImg = getLoadedImg(
           "img/stoicexplosion" + ".svg"
         );
+	      	      ctx.globalAlpha = 0.5;
 	drawCircle(0, 0, this.rad * 99999, "#000000");
+	      	      ctx.globalAlpha = 1;
         if (theImg) {
           var rad = this.rad * 2;
           ctx.save();
