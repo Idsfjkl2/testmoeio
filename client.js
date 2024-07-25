@@ -31378,8 +31378,8 @@ impactblindness = false
 impactblindness = true
 kjframe = true
     var kjIn =  setTimeout(() => {
-kjframe = false
 impactblindness = false
+kjframe = false
          }, time);
       }
       break;
