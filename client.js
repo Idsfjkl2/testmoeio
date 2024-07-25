@@ -183,6 +183,7 @@ o_potato = 128;
 o_smallglowingshroom = 129;
 o_mushroompatch = 130;
 o_firecrash = 131;
+o_stoicexplosion = 132;
 //o_hat = 99;
 var GameObjType = {
   //makes it easy to add new subclasses- each class will add itself!
@@ -12231,6 +12232,21 @@ case o_gift:
         }
       }
       break;
+		                   case o_stoicexplosion:
+      {
+        var theImg = getLoadedImg(
+          "img/stoicexplosion" + ".png"
+        );
+
+        if (theImg) {
+          var rad = this.rad * 2;
+          ctx.save();
+          ctx.rotate(rotation3);
+          ctx.drawImage(theImg, -rad, -rad, 2 * rad, 2 * rad);
+          ctx.restore();
+        }
+      }
+      break;
            case o_bigwhirlpool:
       {
         var theImg = getLoadedImg(
@@ -13581,8 +13597,11 @@ case o_battleroyale:
     case o_sharinganeye:
       this.z = -1
       break;
+	  case o_stoicexplosion:
+		  this.z = 10000;
+		  break;
 	 case o_firecrash:
-           this.z = 10002
+           this.z = 10002;
 		  break;
           case o_storm:
         this.z = 9999;
