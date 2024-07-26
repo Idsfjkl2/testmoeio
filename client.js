@@ -5119,7 +5119,7 @@ function drawGameInterface() {
 	}
 
 	if (kjframe) {
-				        var theImg = getLoadedImg("img/stoictext.svg");
+				        var theImg = getLoadedImg("img/stoictext2.svg");
 		console.log("a")
         if (theImg) {
           ctx.drawImage(theImg, 0, 0, canvasW, canvasH);
