@@ -12293,7 +12293,7 @@ case o_gift:
 		  		                   case o_fossil:
       {
         var theImg = getLoadedImg(
-          "img/carcass" + this.specType + ".png"
+          "img/carcass/" + this.specType + ".png"
         );
         if (theImg) {
           var rad = this.rad;
