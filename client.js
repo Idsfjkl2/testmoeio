@@ -186,6 +186,7 @@ o_mushroompatch = 130;
 o_firecrash = 131;
 o_stoicexplosion = 132;
 o_radish = 133;
+o_fossil = 134;
 //o_hat = 99;
 var GameObjType = {
   //makes it easy to add new subclasses- each class will add itself!
@@ -12058,6 +12059,7 @@ if (myPlayer && myPlayer.flag_flying) {
                  this.colorr = "#" + Math.floor(Math.random()*16777215).toString(16);
 	      } */
           drawSquare(0, 0, this.rad + 1.5, col_outline_underground);
+	      /*
 	          if (this.specType >= 1) {
                  var theImg = getLoadedImg("img/carcass" + this.specType + ".png");
                   if (theImg) {
@@ -12069,6 +12071,7 @@ if (myPlayer && myPlayer.flag_flying) {
                     //console.log("drawing banana");
                   }
 		  }
+    */
       }
       break;
     case o_rockHill:
@@ -12282,6 +12285,20 @@ case o_gift:
           var rad = this.rad * 2;
           ctx.save();
           ctx.rotate(rotation3);
+          ctx.drawImage(theImg, -rad, -rad, 2 * rad, 2 * rad);
+          ctx.restore();
+        }
+      }
+      break;
+		  		                   case o_fossil:
+      {
+        var theImg = getLoadedImg(
+          "img/carcass" + this.specType + ".png"
+        );
+        if (theImg) {
+          var rad = this.rad;
+          ctx.save();
+          ctx.rotate(this.rPer * Math.PI * 2.0);
           ctx.drawImage(theImg, -rad, -rad, 2 * rad, 2 * rad);
           ctx.restore();
         }
@@ -13620,6 +13637,9 @@ case o_battleroyale:
    case o_mandarinsplat:
       this.z = 0;
       break;
+	  case o_fossil:
+		  this.z = -153 + this.rad
+		  break;
     case o_fruitthrow:
 	  case o_radish:
 	  case o_potato:
