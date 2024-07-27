@@ -13638,7 +13638,7 @@ case o_battleroyale:
       this.z = 0;
       break;
 	  case o_fossil:
-		  this.z = -153 + this.rad
+		  this.z = 1000
 		  break;
     case o_fruitthrow:
 	  case o_radish:
