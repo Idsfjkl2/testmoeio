@@ -185,6 +185,7 @@ o_smallglowingshroom = 129;
 o_mushroompatch = 130;
 o_firecrash = 131;
 o_stoicexplosion = 132;
+o_radish = 133;
 //o_hat = 99;
 var GameObjType = {
   //makes it easy to add new subclasses- each class will add itself!
@@ -8969,6 +8970,23 @@ console.log(rps)
       }
       break;
 
+		  		      case o_radish:
+      {
+        //draw banana img
+        var theImg = getLoadedImg(
+          "img/radish" + (this.isEdibleOutlined() ? "_e" : "") + ".png"
+        );
+        if (theImg) {
+          var rad = this.rad * 1.0;
+          ctx.save();
+          ctx.rotate(this.rPer * Math.PI * 2.0);
+          ctx.drawImage(theImg, -rad, -rad, 2 * rad, 2 * rad);
+          //console.log("drawing banana");
+          ctx.restore();
+        }
+      }
+      break;
+
 
 		  		      case o_bombexplosion:
       {
@@ -13592,6 +13610,7 @@ case o_battleroyale:
       this.z = 0;
       break;
     case o_fruitthrow:
+	  case o_radish:
 	  case o_potato:
           case o_lotus:
     case o_coconut:
@@ -13740,6 +13759,7 @@ function GameObj(oType) {
     case o_pear:
     case o_fruitthrow:
     case o_lotus:
+    case o_radish:
     case o_potato:
     case o_coconut:
     case o_water:
