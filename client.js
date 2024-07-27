@@ -12058,6 +12058,17 @@ if (myPlayer && myPlayer.flag_flying) {
                  this.colorr = "#" + Math.floor(Math.random()*16777215).toString(16);
 	      } */
           drawSquare(0, 0, this.rad + 1.5, col_outline_underground);
+	          if (this.specType >= 1) {
+                 var theImg = getLoadedImg("img/carcass" + this.specType + ".png");
+                  if (theImg) {
+                    ctx.save();
+                    var rad = this.rad;
+                  ctx.rotate(this.rPer * Math.PI * 2.0);
+          ctx.drawImage(theImg, -rad, -rad, 2 * rad, 2 * rad);
+                    ctx.restore();
+                    //console.log("drawing banana");
+                  }
+		  }
       }
       break;
     case o_rockHill:
