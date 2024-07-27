@@ -8977,7 +8977,7 @@ console.log(rps)
           "img/radish" + (this.isEdibleOutlined() ? "_e" : "") + ".png"
         );
         if (theImg) {
-          var rad = this.rad * 1.0;
+          var rad = this.rad * 2;
           ctx.save();
           ctx.rotate(this.rPer * Math.PI * 2.0);
           ctx.drawImage(theImg, -rad, -rad, 2 * rad, 2 * rad);
