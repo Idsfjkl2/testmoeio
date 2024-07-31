@@ -11343,7 +11343,7 @@ if (myPlayer && myPlayer.flag_flying) {
         if (theImg) {
           var rad = this.rad;
           ctx.save();
-          ctx.drawImage(theImg, -this.rectW, -this.rectH, 2 * this.rectW, 2 * this.rectH);
+          ctx.drawImage(theImg, 0, 0, this.rectW, this.rectH);
           ctx.restore();
         }
 		    		    ctx.globalAlpha = 0.7
@@ -11408,7 +11408,7 @@ if (myPlayer && myPlayer.flag_flying) {
         if (theImg) {
           var rad = this.rad;
           ctx.save();
-          ctx.drawImage(theImg, -this.rectW, -this.rectH, 2 * this.rectW, 2 * this.rectH);
+          ctx.drawImage(theImg, 0, 0, this.rectW, this.rectH);
           ctx.restore();
         }
 		    ctx.globalAlpha = 0.7
