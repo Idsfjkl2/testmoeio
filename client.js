@@ -11341,7 +11341,7 @@ if (myPlayer && myPlayer.flag_flying) {
 		            var theImg = getLoadedImg(
           "img/oceanfloor.png"
         );
-setTimeout(() => {
+
         if (theImg) {
 		console.log("a")
           var rad = this.rad;
@@ -11349,7 +11349,7 @@ setTimeout(() => {
           ctx.drawImage(theImg, -0.5 * this.rectW, -0.5 * this.rectH, this.rectW, this.rectH);
           ctx.restore();
         }
-    }, 0);
+
 		    		    ctx.globalAlpha = 0.7
               ctx.fillStyle = col_ocean2;
             } else {
@@ -11409,7 +11409,7 @@ setTimeout(() => {
 		    		            var theImg = getLoadedImg(
           "img/oceanfloor.png"
         );
-setTimeout(() => {
+
         if (theImg) {
 		console.log("a")
           var rad = this.rad;
@@ -11417,7 +11417,7 @@ setTimeout(() => {
           ctx.drawImage(theImg, -0.5 * this.rectW, -0.5 * this.rectH, this.rectW, this.rectH);
           ctx.restore();
         }
-    }, 0);
+
 		    ctx.globalAlpha = 0.7
               ctx.fillStyle = col_ocean2;
             } else {
