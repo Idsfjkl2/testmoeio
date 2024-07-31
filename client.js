@@ -11338,15 +11338,11 @@ if (myPlayer && myPlayer.flag_flying) {
 		
           if (myPlayer) {
             if (myPlayer.flag_indeepsea) {
-		            var theImg = getLoadedImg(
-          "img/oceanfloor.png"
-        );
 
-        if (theImg) {
-		console.log("a")
+        if (fgdfgd) {
           var rad = this.rad;
           ctx.save();
-          ctx.drawImage(theImg, -0.5 * this.rectW, -0.5 * this.rectH, this.rectW, this.rectH);
+          ctx.drawImage(fgdfgd, -0.5 * this.rectW, -0.5 * this.rectH, this.rectW, this.rectH);
           ctx.restore();
         }
 
@@ -11406,15 +11402,12 @@ if (myPlayer && myPlayer.flag_flying) {
           //main water
           if (myPlayer) {
             if (myPlayer.flag_indeepsea) {
-		    		            var theImg = getLoadedImg(
-          "img/oceanfloor.png"
-        );
 
-        if (theImg) {
-		console.log("a")
+
+        if (fgdfgd) {
           var rad = this.rad;
           ctx.save();
-          ctx.drawImage(theImg, -0.5 * this.rectW, -0.5 * this.rectH, this.rectW, this.rectH);
+          ctx.drawImage(fgdfgd, -0.5 * this.rectW, -0.5 * this.rectH, this.rectW, this.rectH);
           ctx.restore();
         }
 
