@@ -11338,7 +11338,7 @@ if (myPlayer && myPlayer.flag_flying) {
 		
           if (myPlayer) {
             if (myPlayer.flag_indeepsea) {
-
+var theImg = getLoadedImg("img/oceanfloor.png");
         if (theImg) {
           var rad = this.rad;
           ctx.save();
@@ -11403,7 +11403,7 @@ if (myPlayer && myPlayer.flag_flying) {
           if (myPlayer) {
             if (myPlayer.flag_indeepsea) {
 
-
+var theImg = getLoadedImg("img/oceanfloor.png");
         if (theImg) {
           var rad = this.rad;
           ctx.save();
