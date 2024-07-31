@@ -11338,11 +11338,11 @@ if (myPlayer && myPlayer.flag_flying) {
 		
           if (myPlayer) {
             if (myPlayer.flag_indeepsea) {
-var theImg = getLoadedImg("img/oceanfloor.png");
-        if (theImg) {
+
+        if (fgdfgd) {
           var rad = this.rad;
           ctx.save();
-          ctx.drawImage(theImg, -0.5 * this.rectW, -0.5 * this.rectH, this.rectW, this.rectH);
+          ctx.drawImage(fgdfgd, -0.5 * this.rectW, -0.5 * this.rectH, this.rectW, this.rectH);
           ctx.restore();
         }
 
@@ -11354,19 +11354,7 @@ var theImg = getLoadedImg("img/oceanfloor.png");
           } else {
           ctx.fillStyle = col_ocean; 
           }
-          if (myPlayer) {
-		if (myPlayer.flag_indeepsea) {
-          var minusForEdge = 35;
-          fillGrid(
-            -this.rectW / 2 + minusForEdge,
-            -this.rectH / 2 + minusForEdge,
-            this.rectW / 2 - minusForEdge,
-            this.rectH / 2 - minusForEdge,
-            this.x,
-            this.y
-          );
-		}
-	  }
+
           ctx.fillRect(
             -this.rectW / 2 + waveDelta,
             -this.rectH / 2 + waveDelta + beachW,
@@ -11384,7 +11372,6 @@ var theImg = getLoadedImg("img/oceanfloor.png");
           );
           ctx.fill();
 
-          if (!myPlayer || !myPlayer.flag_indeepsea) {
           var minusForEdge = 35;
           fillGrid(
             -this.rectW / 2 + minusForEdge,
@@ -11394,8 +11381,6 @@ var theImg = getLoadedImg("img/oceanfloor.png");
             this.x,
             this.y
           );
-		}
-	  }
         } else {
           //LEFT side
 
@@ -11417,12 +11402,12 @@ var theImg = getLoadedImg("img/oceanfloor.png");
           //main water
           if (myPlayer) {
             if (myPlayer.flag_indeepsea) {
-var theImg = getLoadedImg("img/oceanfloor.png");
 
-        if (theImg) {
+
+        if (fgdfgd) {
           var rad = this.rad;
           ctx.save();
-          ctx.drawImage(theImg, -0.5 * this.rectW, -0.5 * this.rectH, this.rectW, this.rectH);
+          ctx.drawImage(fgdfgd, -0.5 * this.rectW, -0.5 * this.rectH, this.rectW, this.rectH);
           ctx.restore();
         }
 
@@ -11436,19 +11421,6 @@ var theImg = getLoadedImg("img/oceanfloor.png");
           }
 
           waveDelta *= -1;
-	                if (myPlayer) {
-		if (myPlayer.flag_indeepsea) {
-          var minusForEdge = 25;
-          fillGrid(
-            -this.rectW / 2 + minusForEdge,
-            -this.rectH / 2 + minusForEdge,
-            this.rectW / 2 - minusForEdge,
-            this.rectH / 2 - minusForEdge,
-            this.x,
-            this.y
-          );
-		}
-	  }
           ctx.fillRect(
             -this.rectW / 2,
             -this.rectH / 2 - waveDelta + beachW,
@@ -11456,7 +11428,6 @@ var theImg = getLoadedImg("img/oceanfloor.png");
             this.rectH + waveDelta - beachW
           );
 
-          if (!myPlayer || !myPlayer.flag_indeepsea) {
           var minusForEdge = 25;
           fillGrid(
             -this.rectW / 2 + minusForEdge,
@@ -11466,7 +11437,6 @@ var theImg = getLoadedImg("img/oceanfloor.png");
             this.x,
             this.y
           );
-		}
         }
 	      		    ctx.globalAlpha = 1
       }
