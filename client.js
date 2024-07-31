@@ -11341,12 +11341,15 @@ if (myPlayer && myPlayer.flag_flying) {
 		            var theImg = getLoadedImg(
           "img/oceanfloor.png"
         );
+		    theImg.onload = function() {
+  console.log("Asadsa")
         if (theImg) {
           var rad = this.rad;
           ctx.save();
           ctx.drawImage(theImg, -0.5 * this.rectW, -0.5 * this.rectH, this.rectW, this.rectH);
           ctx.restore();
         }
+			    };
 		    		    ctx.globalAlpha = 0.7
               ctx.fillStyle = col_ocean2;
             } else {
