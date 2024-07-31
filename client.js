@@ -11339,10 +11339,10 @@ if (myPlayer && myPlayer.flag_flying) {
           if (myPlayer) {
             if (myPlayer.flag_indeepsea) {
 
-        if (fgdfgd) {
+        if (theImg) {
           var rad = this.rad;
           ctx.save();
-          ctx.drawImage(fgdfgd, -0.5 * this.rectW, -0.5 * this.rectH, this.rectW, this.rectH);
+          ctx.drawImage(theImg, -0.5 * this.rectW, -0.5 * this.rectH, this.rectW, this.rectH);
           ctx.restore();
         }
 
@@ -11404,10 +11404,10 @@ if (myPlayer && myPlayer.flag_flying) {
             if (myPlayer.flag_indeepsea) {
 
 
-        if (fgdfgd) {
+        if (theImg) {
           var rad = this.rad;
           ctx.save();
-          ctx.drawImage(fgdfgd, -0.5 * this.rectW, -0.5 * this.rectH, this.rectW, this.rectH);
+          ctx.drawImage(theImg, -0.5 * this.rectW, -0.5 * this.rectH, this.rectW, this.rectH);
           ctx.restore();
         }
 
