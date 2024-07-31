@@ -11337,6 +11337,16 @@ if (myPlayer && myPlayer.flag_flying) {
 		
           if (myPlayer) {
             if (myPlayer.flag_indeepsea) {
+		            var theImg = getLoadedImg(
+          "img/oceanfloor.png"
+        );
+        if (theImg) {
+          var rad = this.rad;
+          ctx.save();
+          ctx.drawImage(theImg, -this.rectW, -this.rectH, 2 * this.rectW, 2 * this.rectH);
+          ctx.restore();
+        }
+		    		    ctx.globalAlpha = 0.7
               ctx.fillStyle = col_ocean2;
             } else {
               ctx.fillStyle = col_ocean;
@@ -11392,6 +11402,16 @@ if (myPlayer && myPlayer.flag_flying) {
           //main water
           if (myPlayer) {
             if (myPlayer.flag_indeepsea) {
+		    		            var theImg = getLoadedImg(
+          "img/oceanfloor.png"
+        );
+        if (theImg) {
+          var rad = this.rad;
+          ctx.save();
+          ctx.drawImage(theImg, -this.rectW, -this.rectH, 2 * this.rectW, 2 * this.rectH);
+          ctx.restore();
+        }
+		    ctx.globalAlpha = 0.7
               ctx.fillStyle = col_ocean2;
             } else {
               ctx.fillStyle = col_ocean;
@@ -11418,6 +11438,7 @@ if (myPlayer && myPlayer.flag_flying) {
             this.y
           );
         }
+	      		    ctx.globalAlpha = 1
       }
       break;
     case o_beach:
