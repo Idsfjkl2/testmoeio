@@ -8993,7 +8993,7 @@ console.log(rps)
       {
         //draw banana img
         var theImg = getLoadedImg(
-          "img/radish" + (this.isEdibleOutlined() ? "_e" : "") + ".png"
+          "img/root" + (this.isEdibleOutlined() ? "_e" : "") + ".png"
         );
         if (theImg) {
           var rad = this.rad * 2;
