@@ -187,6 +187,7 @@ o_firecrash = 131;
 o_stoicexplosion = 132;
 o_radish = 133;
 o_fossil = 134;
+o_root = 135;
 //o_hat = 99;
 var GameObjType = {
   //makes it easy to add new subclasses- each class will add itself!
@@ -8988,6 +8989,23 @@ console.log(rps)
       }
       break;
 
+		  		  		      case o_root:
+      {
+        //draw banana img
+        var theImg = getLoadedImg(
+          "img/radish" + (this.isEdibleOutlined() ? "_e" : "") + ".png"
+        );
+        if (theImg) {
+          var rad = this.rad * 2;
+          ctx.save();
+          ctx.rotate(this.rPer * Math.PI * 2.0);
+          ctx.drawImage(theImg, -rad, -rad, 2 * rad, 2 * rad);
+          //console.log("drawing banana");
+          ctx.restore();
+        }
+      }
+      break;
+
 
 		  		      case o_bombexplosion:
       {
@@ -13637,6 +13655,7 @@ case o_battleroyale:
    case o_mandarinsplat:
       this.z = 0;
       break;
+		  	  case o_root:
 	  case o_fossil:
 		  this.z = 1000
 		  break;
