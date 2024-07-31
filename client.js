@@ -11342,6 +11342,7 @@ if (myPlayer && myPlayer.flag_flying) {
           "img/oceanfloor.png"
         );
         if (theImg) {
+		console.log("a")
           var rad = this.rad;
           ctx.save();
           ctx.drawImage(theImg, -0.5 * this.rectW, -0.5 * this.rectH, this.rectW, this.rectH);
@@ -11407,6 +11408,7 @@ if (myPlayer && myPlayer.flag_flying) {
           "img/oceanfloor.png"
         );
         if (theImg) {
+				console.log("a")
           var rad = this.rad;
           ctx.save();
           ctx.drawImage(theImg, -0.5 * this.rectW, -0.5 * this.rectH, this.rectW, this.rectH);
