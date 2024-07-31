@@ -3993,6 +3993,7 @@ var getLoadedImg = function(imgUrl) {
     return null;
   }
 };
+var fgdfgd = getLoadedImg("img/oceanfloor.png");
 var sksdif1 = getLoadedImg("skins/kj/kjtele0.png");
 var sksdif2 = getLoadedImg("skins/kj/kjtele1.png");
 var sksdif3 = getLoadedImg("skins/kj/kjtele2.png");
