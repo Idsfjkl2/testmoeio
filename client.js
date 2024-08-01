@@ -3993,7 +3993,6 @@ var getLoadedImg = function(imgUrl) {
     return null;
   }
 };
-var fgdfgd = getLoadedImg("img/oceanfloor.png");
 var sksdif1 = getLoadedImg("skins/kj/kjtele0.png");
 var sksdif2 = getLoadedImg("skins/kj/kjtele1.png");
 var sksdif3 = getLoadedImg("skins/kj/kjtele2.png");
@@ -11338,7 +11337,7 @@ if (myPlayer && myPlayer.flag_flying) {
 		
           if (myPlayer) {
             if (myPlayer.flag_indeepsea) {
-var theImg = getLoadedImg("img/oceanfloor.png");
+/* var theImg = getLoadedImg("img/oceanfloor.png");
         if (theImg) {
           var rad = this.rad;
           ctx.save();
@@ -11347,6 +11346,7 @@ var theImg = getLoadedImg("img/oceanfloor.png");
         }
 
 		    		    ctx.globalAlpha = 0.7
+	    */
               ctx.fillStyle = col_ocean2;
             } else {
               ctx.fillStyle = col_ocean;
@@ -11403,7 +11403,7 @@ var theImg = getLoadedImg("img/oceanfloor.png");
           if (myPlayer) {
             if (myPlayer.flag_indeepsea) {
 
-var theImg = getLoadedImg("img/oceanfloor.png");
+/* var theImg = getLoadedImg("img/oceanfloor.png");
         if (theImg) {
           var rad = this.rad;
           ctx.save();
@@ -11411,7 +11411,8 @@ var theImg = getLoadedImg("img/oceanfloor.png");
           ctx.restore();
         }
 
-		    ctx.globalAlpha = 0.7
+		    		    ctx.globalAlpha = 0.7
+	    */
               ctx.fillStyle = col_ocean2;
             } else {
               ctx.fillStyle = col_ocean;
