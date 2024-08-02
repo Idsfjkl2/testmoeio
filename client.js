@@ -11337,7 +11337,7 @@ if (myPlayer && myPlayer.flag_flying) {
 		
           if (myPlayer) {
             if (myPlayer.flag_indeepsea) {
-/* var theImg = getLoadedImg("img/oceanfloor.png");
+ var theImg = getLoadedImg("img/oceanfloor.png");
         if (theImg) {
           var rad = this.rad;
           ctx.save();
@@ -11346,7 +11346,7 @@ if (myPlayer && myPlayer.flag_flying) {
         }
 
 		    		    ctx.globalAlpha = 0.7
-	    */
+	    
               ctx.fillStyle = col_ocean2;
             } else {
               ctx.fillStyle = col_ocean;
@@ -11403,7 +11403,7 @@ if (myPlayer && myPlayer.flag_flying) {
           if (myPlayer) {
             if (myPlayer.flag_indeepsea) {
 
-/* var theImg = getLoadedImg("img/oceanfloor.png");
+ var theImg = getLoadedImg("img/oceanfloor.png");
         if (theImg) {
           var rad = this.rad;
           ctx.save();
@@ -11412,7 +11412,7 @@ if (myPlayer && myPlayer.flag_flying) {
         }
 
 		    		    ctx.globalAlpha = 0.7
-	    */
+	    
               ctx.fillStyle = col_ocean2;
             } else {
               ctx.fillStyle = col_ocean;
