@@ -11337,16 +11337,6 @@ if (myPlayer && myPlayer.flag_flying) {
 		
           if (myPlayer) {
             if (myPlayer.flag_indeepsea) {
- var theImg = getLoadedImg("img/oceanfloor.png");
-        if (theImg) {
-          var rad = this.rad;
-          ctx.save();
-          ctx.drawImage(theImg, -0.5 * this.rectW, -0.5 * this.rectH, this.rectW, this.rectH);
-          ctx.restore();
-        }
-
-		    		    ctx.globalAlpha = 0.7
-	    
               ctx.fillStyle = col_ocean2;
             } else {
               ctx.fillStyle = col_ocean;
@@ -11354,7 +11344,31 @@ if (myPlayer && myPlayer.flag_flying) {
           } else {
           ctx.fillStyle = col_ocean; 
           }
-
+		
+          if (myPlayer) {
+            if (myPlayer.flag_indeepsea) {
+		                  ctx.fillStyle = col_ocean_sand;
+		    		    		    ctx.globalAlpha = 0.7
+	ctx.fillRect(
+            -this.rectW / 2 + waveDelta,
+            -this.rectH / 2 + waveDelta + beachW,
+            this.rectW - waveDelta,
+            this.rectH - waveDelta - beachW
+          );
+          //circle
+          ctx.beginPath();
+          ctx.arc(
+            -this.rectW / 2 + 50,
+            -this.rectH / 2 + 50,
+            70.0 - waveDelta,
+            0,
+            2 * Math.PI
+          );
+          ctx.fill();
+		    		    		    		    ctx.globalAlpha = 1
+		    		                  ctx.fillStyle = col_ocean2;
+	    }
+	    }
           ctx.fillRect(
             -this.rectW / 2 + waveDelta,
             -this.rectH / 2 + waveDelta + beachW,
@@ -11385,34 +11399,9 @@ if (myPlayer && myPlayer.flag_flying) {
           //LEFT side
 
           //dark rect outside ocean bounds
-          /*var wid = 1200.0;
-                    var oAlpha = ctx.globalAlpha;
-                    ctx.globalAlpha = oAlpha * 1.0;
-                    ctx.fillStyle = "#16799F"; //"#3A4495";
-                    ctx.fillRect((-this.rectW / 2) - wid, (-this.rectH / 2), wid + 0.5, this.rectH + 2 * wid); //left
-                    //ctx.fillRect((-this.rectW/ 2) , (-this.rectH/ 2) - wid, this.rectW, wid + 2); //top
-                    ctx.fillRect((-this.rectW / 2), (this.rectH / 2) - 0.5, this.rectW, wid + 1); //bottom*/
-
-          //beach R (overlaps by beachW in)
-          /*ctx.globalAlpha = oAlpha * 1.0;
-                    ctx.fillStyle = col_ocean_sand;
-                    ctx.fillRect(this.rectW / 2 - beachW, -this.rectH / 2, beachW * 2, this.rectH);
-                    //beach top
-                    ctx.fillRect(-this.rectW / 2, -this.rectH / 2, this.rectW + beachW, beachW * 2);*/
           //main water
           if (myPlayer) {
             if (myPlayer.flag_indeepsea) {
-
- var theImg = getLoadedImg("img/oceanfloor.png");
-        if (theImg) {
-          var rad = this.rad;
-          ctx.save();
-          ctx.drawImage(theImg, -0.5 * this.rectW, -0.5 * this.rectH, this.rectW, this.rectH);
-          ctx.restore();
-        }
-
-		    		    ctx.globalAlpha = 0.7
-	    
               ctx.fillStyle = col_ocean2;
             } else {
               ctx.fillStyle = col_ocean;
@@ -11422,6 +11411,30 @@ if (myPlayer && myPlayer.flag_flying) {
           }
 
           waveDelta *= -1;
+		          if (myPlayer) {
+            if (myPlayer.flag_indeepsea) {
+		                  ctx.fillStyle = col_ocean_sand;
+		    		    		    ctx.globalAlpha = 0.7
+	ctx.fillRect(
+            -this.rectW / 2 + waveDelta,
+            -this.rectH / 2 + waveDelta + beachW,
+            this.rectW - waveDelta,
+            this.rectH - waveDelta - beachW
+          );
+          //circle
+          ctx.beginPath();
+          ctx.arc(
+            -this.rectW / 2 + 50,
+            -this.rectH / 2 + 50,
+            70.0 - waveDelta,
+            0,
+            2 * Math.PI
+          );
+          ctx.fill();
+		    		    		    		    ctx.globalAlpha = 1
+		    		                  ctx.fillStyle = col_ocean2;
+	    }
+	    }
           ctx.fillRect(
             -this.rectW / 2,
             -this.rectH / 2 - waveDelta + beachW,
