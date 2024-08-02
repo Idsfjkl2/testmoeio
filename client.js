@@ -11344,41 +11344,21 @@ if (myPlayer && myPlayer.flag_flying) {
                     ctx.fillRect(-this.rectW / 2 - beachW, -this.rectH / 2, this.rectW + beachW, beachW * 2);*/
           //main water
 		
-          if (myPlayer) {
-            if (myPlayer.flag_indeepsea) {
+          if (myPlayer && myPlayer.flag_indeepsea) {
               ctx.fillStyle = col_ocean2;
             } else {
-              ctx.fillStyle = col_ocean;
-            }
-          } else {
           ctx.fillStyle = col_ocean; 
           }
+
+
+
+
+
 		
-          if (myPlayer) {
-            if (myPlayer.flag_indeepsea) {
-		                  ctx.fillStyle = col_ocean_sand;
+		
+          if (myPlayer && myPlayer.flag_indeepsea) {
 		    		    		    ctx.globalAlpha = 1
-	ctx.fillRect(
-            -this.rectW / 2 + waveDelta,
-            -this.rectH / 2 + waveDelta + beachW,
-            this.rectW - waveDelta,
-            this.rectH - waveDelta - beachW
-          );
-          //circle
-          ctx.beginPath();
-          ctx.arc(
-            -this.rectW / 2 + 50,
-            -this.rectH / 2 + 50,
-            70.0 - waveDelta,
-            0,
-            2 * Math.PI
-          );
-          ctx.fill();
-		    		    		    		    ctx.globalAlpha = .7
-		    		                  ctx.fillStyle = col_ocean2;
-	    }
-	    }
-          ctx.fillRect(
+		            ctx.fillRect(
             -this.rectW / 2 + waveDelta,
             -this.rectH / 2 + waveDelta + beachW,
             this.rectW - waveDelta,
@@ -11395,6 +11375,63 @@ if (myPlayer && myPlayer.flag_flying) {
           );
           ctx.fill();
 
+		  
+		                  ctx.fillStyle = col_ocean_sand;
+	ctx.fillRect(
+            -this.rectW / 2 + waveDelta,
+            -this.rectH / 2 + waveDelta + beachW,
+            this.rectW - waveDelta,
+            this.rectH - waveDelta - beachW
+          );
+          //circle
+          ctx.beginPath();
+          ctx.arc(
+            -this.rectW / 2 + 50,
+            -this.rectH / 2 + 50,
+            70.0 - waveDelta,
+            0,
+            2 * Math.PI
+          );
+          ctx.fill();
+		            var minusForEdge = 35;
+          fillGrid(
+            -this.rectW / 2 + minusForEdge,
+            -this.rectH / 2 + minusForEdge,
+            this.rectW / 2 - minusForEdge,
+            this.rectH / 2 - minusForEdge,
+            this.x,
+            this.y
+          );
+
+		  		    		    		    		    ctx.globalAlpha = .5
+		    		                  ctx.fillStyle = col_ocean2;
+	    }
+
+
+
+		
+
+
+		
+          ctx.fillRect(
+            -this.rectW / 2 + waveDelta,
+            -this.rectH / 2 + waveDelta + beachW,
+            this.rectW - waveDelta,
+            this.rectH - waveDelta - beachW
+          );
+          //circle
+          ctx.beginPath();
+          ctx.arc(
+            -this.rectW / 2 + 50,
+            -this.rectH / 2 + 50,
+            70.0 - waveDelta,
+            0,
+            2 * Math.PI
+          );
+          ctx.fill();
+          if (myPlayer && myPlayer.flag_indeepsea) {
+
+	  } else {
           var minusForEdge = 35;
           fillGrid(
             -this.rectW / 2 + minusForEdge,
@@ -11404,26 +11441,48 @@ if (myPlayer && myPlayer.flag_flying) {
             this.x,
             this.y
           );
+	  }
         } else {
           //LEFT side
 
           //dark rect outside ocean bounds
           //main water
-          if (myPlayer) {
-            if (myPlayer.flag_indeepsea) {
+          if (myPlayer && myPlayer.flag_indeepsea) {
               ctx.fillStyle = col_ocean2;
             } else {
-              ctx.fillStyle = col_ocean;
-            }
-          } else {
           ctx.fillStyle = col_ocean; 
           }
 
           waveDelta *= -1;
-		          if (myPlayer) {
-            if (myPlayer.flag_indeepsea) {
-		                  ctx.fillStyle = col_ocean_sand;
+
+
+
+
+
+
+		
+          if (myPlayer && myPlayer.flag_indeepsea) {
+
 		    		    		    ctx.globalAlpha = 1
+		  	ctx.fillRect(
+            -this.rectW / 2 + waveDelta,
+            -this.rectH / 2 + waveDelta + beachW,
+            this.rectW - waveDelta,
+            this.rectH - waveDelta - beachW
+          );
+          //circle
+          ctx.beginPath();
+          ctx.arc(
+            -this.rectW / 2 + 50,
+            -this.rectH / 2 + 50,
+            70.0 - waveDelta,
+            0,
+            2 * Math.PI
+          );
+          ctx.fill();
+
+		  
+		                  ctx.fillStyle = col_ocean_sand;
 	ctx.fillRect(
             -this.rectW / 2 + waveDelta,
             -this.rectH / 2 + waveDelta + beachW,
@@ -11440,10 +11499,28 @@ if (myPlayer && myPlayer.flag_flying) {
             2 * Math.PI
           );
           ctx.fill();
-		    		    		    		    ctx.globalAlpha = .7
+
+		  		            var minusForEdge = 25;
+          fillGrid(
+            -this.rectW / 2 + minusForEdge,
+            -this.rectH / 2 + minusForEdge,
+            this.rectW / 2 - minusForEdge,
+            this.rectH / 2 - minusForEdge,
+            this.x,
+            this.y
+          );
+
+		    		    		    		    ctx.globalAlpha = .5
 		    		                  ctx.fillStyle = col_ocean2;
 	    }
-	    }
+
+
+
+
+
+
+
+		
           ctx.fillRect(
             -this.rectW / 2,
             -this.rectH / 2 - waveDelta + beachW,
@@ -11451,6 +11528,9 @@ if (myPlayer && myPlayer.flag_flying) {
             this.rectH + waveDelta - beachW
           );
 
+          if (myPlayer && myPlayer.flag_indeepsea) {
+
+	  } else {
           var minusForEdge = 25;
           fillGrid(
             -this.rectW / 2 + minusForEdge,
@@ -11460,6 +11540,7 @@ if (myPlayer && myPlayer.flag_flying) {
             this.x,
             this.y
           );
+	  }
         }
 	      		    ctx.globalAlpha = 1
       }
