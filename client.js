@@ -11401,7 +11401,8 @@ if (myPlayer && myPlayer.flag_flying) {
             this.rectW / 2 - minusForEdge,
             this.rectH / 2 - minusForEdge,
             this.x,
-            this.y
+            this.y,
+	    20
           );
 		  this.rectW /= 1
 		  this.rectH /= 1
@@ -11511,7 +11512,8 @@ if (myPlayer && myPlayer.flag_flying) {
             this.rectW / 2 - minusForEdge,
             this.rectH / 2 - minusForEdge,
             this.x,
-            this.y
+            this.y,
+	    20
           );
 		  this.rectW /= 1
 		  this.rectH /= 1
@@ -32330,7 +32332,7 @@ function buildEndScreen(stats) {
 }
 
 //curRelX, curRelY are the current obj's translated pos (if drawing within GameObj, otherwise, 0,0 for global)
-function fillGrid(x1, y1, x2, y2, curRelX, curRelY) {
+function fillGrid(x1, y1, x2, y2, curRelX, curRelY, size) {
   if (options_lowGraphics) return;
   //console.log(ctx.shadowBlur);
 
@@ -32354,6 +32356,9 @@ function fillGrid(x1, y1, x2, y2, curRelX, curRelY) {
 
   //ctx.scale(camzoom, camzoom);
   var gSize = 30; //size of squares
+	if (size) {
+      gSize = size
+	}
   var fillW = x2 - x1; //canvasW / camzoom,
   fillH = y2 - y1; //canvasH / camzoom;
 
