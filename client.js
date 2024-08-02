@@ -11348,7 +11348,7 @@ if (myPlayer && myPlayer.flag_flying) {
           if (myPlayer) {
             if (myPlayer.flag_indeepsea) {
 		                  ctx.fillStyle = col_ocean_sand;
-		    		    		    ctx.globalAlpha = 0.7
+		    		    		    ctx.globalAlpha = 1
 	ctx.fillRect(
             -this.rectW / 2 + waveDelta,
             -this.rectH / 2 + waveDelta + beachW,
@@ -11365,7 +11365,7 @@ if (myPlayer && myPlayer.flag_flying) {
             2 * Math.PI
           );
           ctx.fill();
-		    		    		    		    ctx.globalAlpha = 1
+		    		    		    		    ctx.globalAlpha = .7
 		    		                  ctx.fillStyle = col_ocean2;
 	    }
 	    }
@@ -11414,7 +11414,7 @@ if (myPlayer && myPlayer.flag_flying) {
 		          if (myPlayer) {
             if (myPlayer.flag_indeepsea) {
 		                  ctx.fillStyle = col_ocean_sand;
-		    		    		    ctx.globalAlpha = 0.7
+		    		    		    ctx.globalAlpha = 1
 	ctx.fillRect(
             -this.rectW / 2 + waveDelta,
             -this.rectH / 2 + waveDelta + beachW,
@@ -11431,7 +11431,7 @@ if (myPlayer && myPlayer.flag_flying) {
             2 * Math.PI
           );
           ctx.fill();
-		    		    		    		    ctx.globalAlpha = 1
+		    		    		    		    ctx.globalAlpha = .7
 		    		                  ctx.fillStyle = col_ocean2;
 	    }
 	    }
