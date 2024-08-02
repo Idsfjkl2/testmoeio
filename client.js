@@ -11375,7 +11375,8 @@ if (myPlayer && myPlayer.flag_flying) {
           );
           ctx.fill();
 
-		  
+		  this.rectW *= 0.6
+		  this.rectH *= 0.6
 		                  ctx.fillStyle = col_ocean_sand;
 	ctx.fillRect(
             -this.rectW / 2 + waveDelta,
@@ -11402,6 +11403,8 @@ if (myPlayer && myPlayer.flag_flying) {
             this.x,
             this.y
           );
+		  this.rectW /= 0.6
+		  this.rectH /= 0.6
 
 		  		    		    		    		    ctx.globalAlpha = .5
 		    		                  ctx.fillStyle = col_ocean2;
@@ -11481,7 +11484,8 @@ if (myPlayer && myPlayer.flag_flying) {
           );
           ctx.fill();
 
-		  
+		  this.rectW *= 0.6
+		  this.rectH *= 0.6
 		                  ctx.fillStyle = col_ocean_sand;
 	ctx.fillRect(
             -this.rectW / 2 + waveDelta,
@@ -11509,7 +11513,8 @@ if (myPlayer && myPlayer.flag_flying) {
             this.x,
             this.y
           );
-
+		  this.rectW /= 0.6
+		  this.rectH /= 0.6
 		    		    		    		    ctx.globalAlpha = .5
 		    		                  ctx.fillStyle = col_ocean2;
 	    }
