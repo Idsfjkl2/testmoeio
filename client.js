@@ -11378,6 +11378,9 @@ if (myPlayer && myPlayer.flag_flying) {
 		  this.rectW *= 1
 		  this.rectH *= 1
 		                  ctx.fillStyle = col_ocean_sand;
+		  		  		  var rectmin = this.rectW - this.rectW * 0.9
+		  		  this.rectW *= 0.9
+		  this.rectH -= rectmin
 	ctx.fillRect(
             -this.rectW / 2 + waveDelta,
             -this.rectH / 2 + waveDelta + beachW,
@@ -11394,9 +11397,7 @@ if (myPlayer && myPlayer.flag_flying) {
             2 * Math.PI
           );
           ctx.fill();
-		  		  var rectmin = this.rectW - this.rectW * 0.9
-		  		  this.rectW *= 0.9
-		  this.rectH -= rectmin
+
 		            var minusForEdge = 35;
           fillGrid(
             -this.rectW / 2 + minusForEdge,
@@ -11410,7 +11411,7 @@ if (myPlayer && myPlayer.flag_flying) {
 		  this.rectW /= 0.9
 		  this.rectH += rectmin
 
-		  		    		    		    		    ctx.globalAlpha = 0
+		  		    		    		    		    ctx.globalAlpha = .75
 		    		                  ctx.fillStyle = col_ocean2;
 	    }
 
@@ -11491,6 +11492,9 @@ if (myPlayer && myPlayer.flag_flying) {
 		  this.rectW *= 1
 		  this.rectH *= 1
 		                  ctx.fillStyle = col_ocean_sand;
+		  		  		  		  var rectmin = this.rectW - this.rectW * 0.9
+		  		  this.rectW *= 0.9
+		  		  this.rectH -= rectmin
 	ctx.fillRect(
             -this.rectW / 2 + waveDelta,
             -this.rectH / 2 + waveDelta + beachW,
@@ -11507,9 +11511,7 @@ if (myPlayer && myPlayer.flag_flying) {
             2 * Math.PI
           );
           ctx.fill();
-		  		  		  var rectmin = this.rectW - this.rectW * 0.9
-		  		  this.rectW *= 0.9
-		  		  this.rectH -= rectmin
+
 		  		            var minusForEdge = 25;
           fillGrid(
             -this.rectW / 2 + minusForEdge,
