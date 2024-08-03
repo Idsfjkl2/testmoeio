@@ -11378,7 +11378,7 @@ if (myPlayer && myPlayer.flag_flying) {
 		  this.rectW *= 1
 		  this.rectH *= 1
 		                  ctx.fillStyle = col_ocean_sand;
-		  		  		  var rectmin = this.rectW - this.rectW * 0.9
+		  		  		  var rectmin = this.rectW - this.rectW * 0.8
 		  		  this.rectW *= 0.9
 		  this.rectH -= rectmin
 	ctx.fillRect(
@@ -11411,7 +11411,7 @@ if (myPlayer && myPlayer.flag_flying) {
 		  this.rectW /= 0.9
 		  this.rectH += rectmin
 
-		  		    		    		    		    ctx.globalAlpha = .75
+		  		    		    		    		    ctx.globalAlpha = .85
 		    		                  ctx.fillStyle = col_ocean2;
 	    }
 
@@ -11490,7 +11490,7 @@ if (myPlayer && myPlayer.flag_flying) {
 		  this.rectW *= 1
 		  this.rectH *= 1
 		                  ctx.fillStyle = col_ocean_sand;
-		  		  		  		  var rectmin = this.rectW - this.rectW * 0.9
+		  		  		  		  var rectmin = this.rectW - this.rectW * 0.8
 		  		  this.rectW *= 0.9
 		  		  this.rectH -= rectmin
 	ctx.fillRect(
@@ -11522,7 +11522,7 @@ if (myPlayer && myPlayer.flag_flying) {
           );
 		  this.rectW /= 0.9
 		  this.rectH += rectmin
-		    		    		    		    ctx.globalAlpha = .75
+		    		    		    		    ctx.globalAlpha = .85
 		    		                  ctx.fillStyle = col_ocean2;
 	    }
 
