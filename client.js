@@ -11394,6 +11394,8 @@ if (myPlayer && myPlayer.flag_flying) {
             2 * Math.PI
           );
           ctx.fill();
+		  		  this.rectW *= 0.9
+		  this.rectH *= 0.9
 		            var minusForEdge = 35;
           fillGrid(
             -this.rectW / 2 + minusForEdge,
@@ -11404,10 +11406,10 @@ if (myPlayer && myPlayer.flag_flying) {
             this.y,
 	    20
           );
-		  this.rectW /= 1
-		  this.rectH /= 1
+		  this.rectW /= 0.9
+		  this.rectH /= 0.9
 
-		  		    		    		    		    ctx.globalAlpha = .6
+		  		    		    		    		    ctx.globalAlpha = .7
 		    		                  ctx.fillStyle = col_ocean2;
 	    }
 
@@ -11504,7 +11506,8 @@ if (myPlayer && myPlayer.flag_flying) {
             2 * Math.PI
           );
           ctx.fill();
-
+		  		  this.rectW *= 0.9
+		  this.rectH *= 0.9
 		  		            var minusForEdge = 25;
           fillGrid(
             -this.rectW / 2 + minusForEdge,
@@ -11515,8 +11518,8 @@ if (myPlayer && myPlayer.flag_flying) {
             this.y,
 	    20
           );
-		  this.rectW /= 1
-		  this.rectH /= 1
+		  this.rectW /= 0.9
+		  this.rectH /= 0.9
 		    		    		    		    ctx.globalAlpha = .6
 		    		                  ctx.fillStyle = col_ocean2;
 	    }
