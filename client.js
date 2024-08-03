@@ -11410,7 +11410,7 @@ if (myPlayer && myPlayer.flag_flying) {
 		  this.rectW /= 0.9
 		  this.rectH += rectmin
 
-		  		    		    		    		    ctx.globalAlpha = .75
+		  		    		    		    		    ctx.globalAlpha = 0
 		    		                  ctx.fillStyle = col_ocean2;
 	    }
 
