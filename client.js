@@ -11437,9 +11437,7 @@ if (myPlayer && myPlayer.flag_flying) {
             2 * Math.PI
           );
           ctx.fill();
-          if (myPlayer && myPlayer.flag_indeepsea) {
 
-	  } else {
           var minusForEdge = 35;
           fillGrid(
             -this.rectW / 2 + minusForEdge,
@@ -11449,7 +11447,7 @@ if (myPlayer && myPlayer.flag_flying) {
             this.x,
             this.y
           );
-	  }
+
         } else {
           //LEFT side
 
@@ -11542,9 +11540,7 @@ if (myPlayer && myPlayer.flag_flying) {
             this.rectH + waveDelta - beachW
           );
 
-          if (myPlayer && myPlayer.flag_indeepsea) {
 
-	  } else {
           var minusForEdge = 25;
           fillGrid(
             -this.rectW / 2 + minusForEdge,
@@ -11554,7 +11550,7 @@ if (myPlayer && myPlayer.flag_flying) {
             this.x,
             this.y
           );
-	  }
+
         }
 	      		    ctx.globalAlpha = 1
       }
