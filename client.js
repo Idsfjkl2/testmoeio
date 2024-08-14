@@ -5510,7 +5510,7 @@ var a = (screenIns_EndT - timestamp) / 1000.0 / fadeDur;
 a = 0 > a ? 0 : 1 < a ? 1 : a; //clamp from 0-1
 screenIns_A = a;
 
-   if (screenIns_A > 0.01 && !options_lowGraphics) {
+   if (screenIns_A > 0.01 && !options_lowGraphics && 1 == 0) {
           ma = 40 + 10 / screenIns_scaleF;
             if (0 < screenIns_objsEdible.length) {
                 ctx.save();
