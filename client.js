@@ -1398,9 +1398,9 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
 
         
         case a_blueWhale:
-            infoO.aniName = "Blue Whale";
+            infoO.aniName = "Blue Whale Calf";
             infoO.aniDesc = "";
-            infoO.upgradeText = "UPGRADED to Blue Whale!\n Smash with your powerful tail!";
+            infoO.upgradeText = "UPGRADED to Blue Whale Calf!\n Smash with your powerful tail!";
             infoO.aniCol = "#945A99";
             infoO.skinName = "bluewhale";
             break;
@@ -18477,10 +18477,10 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
       break;
 
     case a_blueWhale:
-      infoO.aniName = "Blue Whale";
+      infoO.aniName = "Blue Whale Calf";
       infoO.aniDesc = "";
       infoO.upgradeText =
-        "UPGRADED to Blue Whale!\n Smash with your powerful tail!";
+        "UPGRADED to Blue Whale Calf!\n Smash with your powerful tail!";
       infoO.aniCol = "#945A99";
       infoO.skinName = "bluewhale";
       break;
