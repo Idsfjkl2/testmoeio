@@ -453,6 +453,7 @@ a_mantis = 154,
 a_gianthornet = 155,
 a_kj = 156,
 a_monkfish = 157,
+a_cireincroin = 158,
 a_skibidi = 9999;
 var infoForAnimalType = function (aniT) {
     var infoO = {};
@@ -1066,6 +1067,14 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n A silly little fella...\n Eat plankton to evolve!";
             infoO.aniCol = "#FF0000";
             infoO.skinName = "monkfish";
+            break;
+
+		    		    	    case a_cireincroin:
+            infoO.aniName = "Cirein-cròin";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n A very sneaky animal that can transform into a low tier animal!";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "cireincroin";
             break;
 		    		    
 	    case a_ladybug:
@@ -18123,7 +18132,13 @@ You got firestream that burns your victim alive! Watch your tail and slap them h
             infoO.aniCol = "#FF0000";
             infoO.skinName = "monkfish";
             break;
-
+		    		    	    case a_cireincroin:
+            infoO.aniName = "Cirein-cròin";
+            infoO.aniDesc = "";
+            infoO.upgradeText = "UPGRADED to " + infoO.aniName + "!\n A very sneaky animal that can transform into a low tier animal and suprise animals!";
+            infoO.aniCol = "#FF0000";
+            infoO.skinName = "cireincroin";
+            break;
 		  		    		    		    		     case a_ladybug:
             infoO.aniName = "Ladybug";
             infoO.aniDesc = "";
@@ -19764,6 +19779,9 @@ Animal.prototype.basicDrawSkinImg = function() {
 	}
 		if (this.animalType == a_monkfish) {
 		iScale = 600 / 340.0;
+	}
+			if (this.animalType == a_cireincroin) {
+		iScale = 700 / 340.0;
 	}
 		if (this.animalType == a_yellowjacket || this.animalType == a_gianthornet) {
 		iScale = 1050 / 340.0;
