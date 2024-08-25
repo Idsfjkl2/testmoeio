@@ -25896,6 +25896,26 @@ window.Tornado = Tornado;
 //add this file as a class! (make sure to call require!)
 GameObjType.setCustomClassForGameObjType(Tornado, o_animal, a_tornado);
 
+var Cirein = Cirein;
+var superClass = Animal;
+Cirein.prototype = Object.create(superClass.prototype); //properly inherit prototype of superclass
+Cirein.prototype.constructor = Hippo;
+Cirein.superClass = superClass; //'class' var
+
+Cirein.prototype.getSkinName = function() {
+  var skin = "cireincroin"
+if (this.specType == 1) {
+  var skin = "shrimp"
+}
+  return skin;
+};
+
+function Cirein() {
+  Cirein.superClass.call(this, o_animal);
+}
+window.Cirein = Cirein;
+//add this file as a class! (make sure to call require!)
+GameObjType.setCustomClassForGameObjType(Cirein, o_animal, a_cireincroin);
 
 var Hippo = Hippo;
 var superClass = Animal;
