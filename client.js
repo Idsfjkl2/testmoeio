@@ -7470,7 +7470,7 @@ function gameServerConnect(newGameServer, autoClickPlay = false) {
 
   var wsProtocol = window.location.protocol === "https:" ? "wss://" : "ws://";
   var wsPort = wsProtocol == "wss://" ? 80: 80;
-if (curServer.serverConnURL == "127.0.0.1" || curServer.serverConnURL == "localhost") wsProtocol = "ws://"
+if (curServer.serverConnURL == "127.0.0.1" || curServer.serverConnURL == "localhost" || testServer != null) wsProtocol = "ws://"
   var conUrl = wsProtocol + curServer.serverConnURL + ":" + curServer.port;
 
   /*
