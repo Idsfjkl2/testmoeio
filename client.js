@@ -7519,7 +7519,7 @@ document.getElementsByClassName("conimg")[0].className = "conimg2";
         //show connecting label
               document.getElementById("startMenu").style.visibility = "hidden";
        document.getElementById("onconnectDiv").style.visibility = "hidden";
-	      	  if (document.getElementsByClassName("conimg")[0]) {
+	      	  if (document.getElementsByClassName("conimg2")[0]) {
 	      document.getElementsByClassName("conimg2")[0].className = "conimg";
 		  }
         document.getElementById("connecting").style.visibility = "visible";
