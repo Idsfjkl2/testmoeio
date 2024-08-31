@@ -7491,7 +7491,9 @@ if (curServer.serverConnURL == "127.0.0.1" || curServer.serverConnURL == "localh
         }*/
  document.getElementById("onconnectDiv").style.visibility = "visible";
     document.getElementById("startMenu").style.visibility = "visible";
+	  if (document.getElementsByClassName("conimg")[0]) {
 document.getElementsByClassName("conimg")[0].className = "conimg2";
+	  }
     document.getElementById("connecting").style.visibility = "hidden";
 
     
@@ -7517,7 +7519,9 @@ document.getElementsByClassName("conimg")[0].className = "conimg2";
         //show connecting label
               document.getElementById("startMenu").style.visibility = "hidden";
        document.getElementById("onconnectDiv").style.visibility = "hidden";
+	      	  if (document.getElementsByClassName("conimg")[0]) {
 	      document.getElementsByClassName("conimg2")[0].className = "conimg";
+		  }
         document.getElementById("connecting").style.visibility = "visible";
       } else {
         //dced, show dom?
