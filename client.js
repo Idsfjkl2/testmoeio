@@ -32756,7 +32756,6 @@ function joinGame(isSpectator) {
        return;
      lastJoinTryT=tNow;
    }*/
-  const urlParams = new URLSearchParams(window.location.search);
   const developerKey = urlParams.get("devcode");
   if (developerKey != null) {
   let msg = new MsgWriter(500)
