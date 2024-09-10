@@ -20135,6 +20135,18 @@ Animal.prototype.drawOnTopOfSkinImg = function() {//womp
 //top layer, NOT ROTATED
 Animal.prototype.drawTopEffects = function() {
   //stun effect
+	  if (this.animalType == a_giantSpider && this.specType2 > 0) {
+  var iScale = 500 / 340.0; //scale up ps image to fit (to remove blank space)
+  var rad = this.rad - this.outlineW;
+		  var theImg = getLoadedImg("skins/giantSpiderMolt.png");
+		      ctx.drawImage(
+        theImg,
+        -rad * iScale,
+        -rad * iScale,
+        2 * rad * iScale,
+        2 * rad * iScale
+      ); 
+	  }
   if (this.animalType == a_giantSpider && this.flag_usingAbility) {
 	      var tSinceSpawn = (timestamp - this.spawnTime) / 1000.0;
     //var fac0to1 = (timestamp - this.spawnTime) % 1000.0/1000.0;
@@ -26232,6 +26244,8 @@ window.Sheep = Sheep;
 //add this file as a class! (make sure to call require!)
 GameObjType.setCustomClassForGameObjType(Sheep, o_animal, a_sheep);
 
+
+
 var Marlin = Marlin;
 var superClass = Animal;
 Marlin.prototype = Object.create(superClass.prototype); //properly inherit prototype of superclass
@@ -26254,6 +26268,7 @@ function Marlin() {
 window.Marlin = Marlin;
 //add this file as a class! (make sure to call require!)
 GameObjType.setCustomClassForGameObjType(Marlin, o_animal, a_marlin);
+
 
 var Donkey = Donkey;
 var superClass = Animal;
