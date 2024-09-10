@@ -20138,6 +20138,7 @@ Animal.prototype.drawTopEffects = function() {
 	  if (this.animalType == a_giantSpider && this.specType2 > 0) {
   var iScale = 500 / 340.0; //scale up ps image to fit (to remove blank space)
   var rad = this.rad - this.outlineW;
+		ctx.globalAlpha = this.specType2/255
 		  var theImg = getLoadedImg("skins/giantSpiderMolt.png");
 		      ctx.drawImage(
         theImg,
@@ -20146,6 +20147,7 @@ Animal.prototype.drawTopEffects = function() {
         2 * rad * iScale,
         2 * rad * iScale
       ); 
+		  ctx.globalAlpha = 1
 	  }
   if (this.animalType == a_giantSpider && this.flag_usingAbility) {
 	      var tSinceSpawn = (timestamp - this.spawnTime) / 1000.0;
