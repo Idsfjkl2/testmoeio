@@ -20161,7 +20161,7 @@ Animal.prototype.drawTopEffects = function() {
 		  	  	      ctx.rotate(-this.angle);
 		  ctx.globalAlpha = 1
 	  }
-  if (this.an
+
 	  if (this.animalType == a_giantSpider && this.specType2 > 0) {
   var iScale = 500 / 340.0; //scale up ps image to fit (to remove blank space)
   var rad = this.rad - this.outlineW;
