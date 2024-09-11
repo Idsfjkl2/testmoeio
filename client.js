@@ -1776,6 +1776,7 @@ ability_echo = 148,
 ability_poisonsting = 149,
 ability_mantis = 154,
 ability_stoicbomb = 156,
+	ability_molt = 157,
   ability_none = 0;
 var infoForAbilityT = function(abilT) {
   var infoO = {};
@@ -1809,7 +1810,14 @@ var infoForAbilityT = function(abilT) {
         infoForAnimalType(myPlayerLastAniT).skinName +
         ".png";
       break;
-
+		  		  		  		                                          case ability_molt:
+      infoO.abilName = "Molt";
+      infoO.abilImg =
+        "skins/" +
+        zombieFolder +
+        infoForAnimalType(myPlayerLastAniT).skinName +
+        ".png";
+      break;
 		  		  		  		                                          case ability_echo:
       infoO.abilName = "Echo";
       infoO.abilImg =
