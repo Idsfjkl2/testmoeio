@@ -20146,7 +20146,7 @@ Animal.prototype.drawTopEffects = function() {
 		  if (this.animalType == a_giantSpider && this.specType > 0) {
   var iScale = 500 / 340.0; //scale up ps image to fit (to remove blank space)
   var rad = this.rad - this.outlineW;
-		ctx.globalAlpha = (this.specType * 220/255)/255
+		ctx.globalAlpha = this.specType/255
 		  	  	      ctx.rotate(this.angle);
 		  var theImg = getLoadedImg("skins/giantSpiderMolt2.png");
 		  if (theImg) {
