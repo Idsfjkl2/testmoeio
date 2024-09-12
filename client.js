@@ -188,6 +188,7 @@ o_stoicexplosion = 132;
 o_radish = 133;
 o_fossil = 134;
 o_root = 135;
+o_spiderHusk = 136;
 //o_hat = 99;
 var GameObjType = {
   //makes it easy to add new subclasses- each class will add itself!
@@ -9018,7 +9019,22 @@ console.log(rps)
         }
       }
       break;
-
+		  		  		      case o_spiderHusk:
+      {
+        //draw banana img
+        var theImg = getLoadedImg(
+          "img/giantSpiderHusk.png"
+        );
+        if (theImg) {
+          var rad = this.rad  * 600/340;
+          ctx.save();
+          ctx.rotate(this.rPer * Math.PI * 2.0);
+          ctx.drawImage(theImg, -rad, -rad, 2 * rad, 2 * rad);
+          //console.log("drawing banana");
+          ctx.restore();
+        }
+      }
+      break;
 		  		  		      case o_root:
       {
         //draw banana img
@@ -13811,6 +13827,7 @@ case o_battleroyale:
    case o_mandarinsplat:
       this.z = 0;
       break;
+	  case o_spiderHusk:
 		  	  case o_root:
 	  case o_fossil:
 		  this.z = 1000
