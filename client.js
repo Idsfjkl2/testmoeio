@@ -7018,7 +7018,7 @@ addServerDef("US", "127.0.0.1", reg,"80");
 //addServerDef("EU", "541b-24-49-53-140.ngrok-free.app/?ModeActivate=true", reg,"80"); 
 //addServerDef("AS", "5416-24-49-53-140.ngrok-free.app/?ModeActivate=true", reg,"80"); 
     if (testServer != null) {
-addServerDef("BETATEST", testServer + "", reg,"80");    
+addServerDef("BETATEST", testServer + "/?ModeActivate=true", reg,"80");    
     }
         
 
