@@ -43,7 +43,21 @@
 <meta name="revisit-after" content="3 days">
 <meta name="googlebot" content="all">
 <meta name="twitter:card" content="summary_large_image">
+    <script>
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("d")
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log("Name: " + profile.getName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
 
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      };
+    </script>
 <link rel="stylesheet" href="./mope.io_files/main.css">
 <link rel="shortcut icon" type="image/x-icon" href="../skins/mouse.png"> 
   <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -52,13 +66,7 @@
   //https://cdn.discordapp.com/attachments/1039682883633303593/1139369781808595064/AAA.png
   //https://cdn.discordapp.com/attachments/1067917244891406378/1109495988378415195/Untitled_-_2023-05-20T110051.935.png
 
-  function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-  console.log('Name: ' + profile.getName());
-  console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-}
+
     function getQueryParams(qs) {
       qs = qs.split("+").join(" ");
       var params = {},
@@ -2167,6 +2175,7 @@ Original build made by Ahmetcan and GoldenDR!
 </div>
 </div>
 <div id="startMenu" style="visibility: hidden;">
+      <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
 <div id="mopeMenu" style="visibility: visible;">
 <img id="logo" src="./mope.io_files/logo_a.png" width="350px" height="99px">
 <div id="onconnectDiv" style="visibility: hidden;">
@@ -2177,7 +2186,7 @@ Original build made by Ahmetcan and GoldenDR!
 <input id="nickInput" autofocus="" placeholder="Your name" maxlength="15" style="width: 100%; height: 40px; line-height: 36px;">
 <a>
 <button id="startButton">Play</button>
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
 </a>
 </div>
 <div class="optionsBtn">
