@@ -19809,7 +19809,7 @@ Animal.prototype.basicDrawSkinImg = function() {
 		if (this.animalType == a_monkfish) {
 		iScale = 600 / 340.0;
 	}
-			if (this.animalType == a_cireincroin) {
+			if (this.animalType == a_cireincroin && this.specType != 1) {
 		iScale = 700 / 340.0;
 	}
 		if (this.animalType == a_yellowjacket || this.animalType == a_gianthornet) {
@@ -25965,7 +25965,7 @@ GameObjType.setCustomClassForGameObjType(Tornado, o_animal, a_tornado);
 var Cirein = Cirein;
 var superClass = Animal;
 Cirein.prototype = Object.create(superClass.prototype); //properly inherit prototype of superclass
-Cirein.prototype.constructor = Hippo;
+Cirein.prototype.constructor = Cirein;
 Cirein.superClass = superClass; //'class' var
 
 Cirein.prototype.getSkinName = function() {
