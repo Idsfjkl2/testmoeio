@@ -13850,6 +13850,7 @@ case o_battleroyale:
 		  break;
     case o_fruitthrow:
 	  case o_radish:
+	  case o_cupcake:
 	  case o_potato:
           case o_lotus:
     case o_coconut:
@@ -13999,6 +14000,7 @@ function GameObj(oType) {
     case o_fruitthrow:
     case o_lotus:
     case o_radish:
+    case  o_cupcake:
     case o_potato:
     case o_coconut:
     case o_water:
