@@ -189,6 +189,7 @@ o_radish = 133;
 o_fossil = 134;
 o_root = 135;
 o_spiderHusk = 136;
+o_cupcake = 137;
 //o_hat = 99;
 var GameObjType = {
   //makes it easy to add new subclasses- each class will add itself!
@@ -9015,6 +9016,21 @@ console.log(rps)
           ctx.rotate(this.rPer * Math.PI * 2.0);
           ctx.drawImage(theImg, -rad, -rad, 2 * rad, 2 * rad);
           //console.log("drawing banana");
+          ctx.restore();
+        }
+      }
+      break;
+		  		  		      case o_cupcake:
+      {
+        //draw banana img
+        var theImg = getLoadedImg(
+          "img/cupcake" + (this.isEdibleOutlined() ? "_e" : "") + ".png"
+        );
+        if (theImg) {
+          var rad = this.rad;
+          ctx.save();
+          ctx.rotate(this.rPer * Math.PI * 2.0);
+          ctx.drawImage(theImg, -rad, -rad, 2 * rad, 2 * rad);
           ctx.restore();
         }
       }
