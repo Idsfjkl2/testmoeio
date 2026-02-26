@@ -5676,7 +5676,7 @@ hotkeys.push('zxcvbnm'.split(''));
   }
 
   buildInviteScreen();
-  buildEmoteScreen();
+  //buildEmoteScreen();
   if (inviteScreenCanvas != null) {
     inviteScreenCanvas.width &&
       ctx.drawImage(
