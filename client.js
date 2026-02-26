@@ -5,6 +5,7 @@ var ACTIVATEOURGAMEMODE = false
 var url = new URL(window.location.href);
 var secr = url.searchParams.get("ModeActivate");
 var oldmope = false
+var emoteUI = false
 var daynightstamp = Date.now()
 var daynight = 6
 var fullblindtime = 0
@@ -5675,7 +5676,7 @@ hotkeys.push('zxcvbnm'.split(''));
   }
 
   buildInviteScreen();
-
+  buildEmoteScreen();
   if (inviteScreenCanvas != null) {
     inviteScreenCanvas.width &&
       ctx.drawImage(
@@ -33438,8 +33439,11 @@ function controlsPressEvent(cNum, isNowPressed) {
       break;
     case cNum_keyE:
       {
-          if (cNum_keyEused != isNowPressed)
+        if (cNum_keyEused != isNowPressed)
         if (serverCon_aliveInAGame) {
+		  if (isNowPressed == 1) {
+              emoteUI = !emoteUI
+		  }
           var mes = new MsgWriter(2);
           mes.writeUInt8(29);
           mes.writeUInt8(isNowPressed ? 1 : 0); //1=down, 0=up
