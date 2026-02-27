@@ -6461,7 +6461,7 @@ function buildEmoteScreen() {
     emoteScreenCanvas = document.createElement("canvas");
 
   if (emoteScreenCanvas == null) return;
-  var ctx_ = inviteScreenCanvas.getContext("2d");
+  var ctx_ = emoteScreenCanvas.getContext("2d");
 	ctx_.globalAlpha = 0.2;
   ctx_.fillStyle = "#000000";
   ctx_.fillRect(0, 0, inviteScreenCanvas.width, inviteScreenCanvas.height);
