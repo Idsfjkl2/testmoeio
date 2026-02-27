@@ -6455,18 +6455,35 @@ var displayWinsGoals = 0;
 var inviteScreenCanvas = null;
 var inviteScreenPos = 0;
 var emoteScreenCanvas = null;
+
 function buildEmoteScreen() {
-  if (emoteScreenCanvas == null)
+  if (emoteScreenCanvas == null) {
     emoteScreenCanvas = document.createElement("canvas");
 
-  if (emoteScreenCanvas == null) return;
-	
-var ctx_ = emoteScreenCanvas.getContext("2d");
-ctx_.save();
-ctx_.globalAlpha = 0.2;
-ctx_.fillStyle = "black";
-ctx_.fillRect(0, 0, emoteScreenCanvas.width, emoteScreenCanvas.height);
-ctx_.restore();
+    // Size it
+    emoteScreenCanvas.width = window.innerWidth;
+    emoteScreenCanvas.height = window.innerHeight;
+
+    // Position it as overlay
+    emoteScreenCanvas.style.position = "fixed";
+    emoteScreenCanvas.style.top = "0";
+    emoteScreenCanvas.style.left = "0";
+    emoteScreenCanvas.style.zIndex = "9999";
+    emoteScreenCanvas.style.pointerEvents = "none";
+
+    document.body.appendChild(emoteScreenCanvas);
+  }
+
+  var ctx_ = emoteScreenCanvas.getContext("2d");
+  if (!ctx_) return;
+
+  ctx_.clearRect(0, 0, emoteScreenCanvas.width, emoteScreenCanvas.height);
+
+  ctx_.save();
+  ctx_.globalAlpha = 0.2;
+  ctx_.fillStyle = "black";
+  ctx_.fillRect(0, 0, emoteScreenCanvas.width, emoteScreenCanvas.height);
+  ctx_.restore();
 }
 function buildInviteScreen() {
   /* player1v1Requests = [];
