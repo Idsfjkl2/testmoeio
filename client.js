@@ -5,6 +5,7 @@ var ACTIVATEOURGAMEMODE = false
 var url = new URL(window.location.href);
 var secr = url.searchParams.get("ModeActivate");
 var oldmope = false
+var lastEmoteUI = Date.now()
 var emoteUI = false
 var daynightstamp = Date.now()
 var daynight = 6
@@ -5676,7 +5677,7 @@ hotkeys.push('zxcvbnm'.split(''));
   }
 
   buildInviteScreen();
-  //buildEmoteScreen();
+  buildEmoteScreen();
   if (inviteScreenCanvas != null) {
     inviteScreenCanvas.width &&
       ctx.drawImage(
@@ -6454,6 +6455,24 @@ function displayPlayerStats() {
 var displayWinsGoals = 0;
 var inviteScreenCanvas = null;
 var inviteScreenPos = 0;
+var emoteScreenCanvas = null;
+function buildEmoteScreen() {
+  if (emoteScreenCanvas == null)
+    emoteScreenCanvas = document.createElement("canvas");
+
+  if (emoteScreenCanvas == null) return;
+  var ctx_ = inviteScreenCanvas.getContext("2d");
+	ctx_.globalAlpha = 0.2;
+  ctx_.fillStyle = "#000000";
+  ctx_.fillRect(0, 0, inviteScreenCanvas.width, inviteScreenCanvas.height);
+  ctx_.fillStyle = "#000000";
+  ctx_.fillRect(
+    pad,
+    pad,
+    inviteScreenCanvas.width - pad * 2,
+    inviteScreenCanvas.height - pad * 2
+  );
+}
 function buildInviteScreen() {
   /* player1v1Requests = [];
   for (i = 0; i < 1; i++) {
@@ -33443,6 +33462,9 @@ function controlsPressEvent(cNum, isNowPressed) {
         if (serverCon_aliveInAGame) {
 		  if (isNowPressed == 1) {
               emoteUI = !emoteUI
+			  if (emoteUI) {
+				  lastEmoteUI = Date.now()
+			  }
 		  }
           var mes = new MsgWriter(2);
           mes.writeUInt8(29);
