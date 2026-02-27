@@ -6461,17 +6461,11 @@ function buildEmoteScreen() {
     emoteScreenCanvas = document.createElement("canvas");
 
   if (emoteScreenCanvas == null) return;
-  var ctx_ = emoteScreenCanvas.getContext("2d");
-	ctx_.globalAlpha = 0.2;
-  ctx_.fillStyle = "#000000";
-  ctx_.fillRect(0, 0, 300,300);
-	var barW = Math.min(450, canvasW * 0.9) * interfS,
-     var barH = 30 * interfS;
-  var bx = canvasW / 2, //from bottom
-    var by = canvasH - 120 * interfS;
-  ctx.globalAlpha = 0.5; //bar bg
-  ctx.fillStyle = "#000000";
-  ctx.fillRect(bx - barW / 2, by - barH / 2, barW, barH);
+ctx_.save();
+ctx_.globalAlpha = 0.2;
+ctx_.fillStyle = "black";
+ctx_.fillRect(0, 0, emoteScreenCanvas.width, emoteScreenCanvas.height);
+ctx_.restore();
 }
 function buildInviteScreen() {
   /* player1v1Requests = [];
