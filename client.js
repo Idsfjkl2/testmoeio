@@ -6475,18 +6475,30 @@ function buildEmoteScreen() {
     document.body.appendChild(emoteScreenCanvas);
   }
 
-  var ctx_ = emoteScreenCanvas.getContext("2d");
-  if (!ctx_) return;
+var ctx_ = emoteScreenCanvas.getContext("2d");
+if (!ctx_) return;
 
-  ctx_.clearRect(0, 0, emoteScreenCanvas.width, emoteScreenCanvas.height);
+// Clear canvas
+ctx_.clearRect(0, 0, emoteScreenCanvas.width, emoteScreenCanvas.height);
 
-  ctx_.save();
-  ctx_.globalAlpha = 0.5;
-  ctx_.fillStyle = "black";
-var size =  emoteScreenCanvas.width / 5
-	ctx.rotate(45 * Math.PI / 180);
-  ctx_.fillRect(-size/2, -size/2, size, size);
-  ctx_.restore();
+ctx_.save();
+
+// Set transparency
+ctx_.globalAlpha = 0.5;
+ctx_.fillStyle = "black";
+
+var size = emoteScreenCanvas.width / 5;
+
+// Move origin to center of canvas (or wherever you want anchor)
+ctx_.translate(emoteScreenCanvas.width / 2, emoteScreenCanvas.height / 2);
+
+// Rotate around this new origin
+ctx_.rotate(45 * Math.PI / 180);
+
+// Draw rectangle centered at origin
+ctx_.fillRect(-size/2, -size/2, size, size);
+
+ctx_.restore(); // restores everything back, rotation won’t affect other drawings
 }
 function buildInviteScreen() {
   /* player1v1Requests = [];
