@@ -6497,7 +6497,7 @@ ctx_.rotate(45 * Math.PI / 180);
 
 // Draw rectangle centered at origin
 // lastEmoteUI is a date.now timestamp
-ctx_.fillRect(-size/2 * (math.min(Date.now() - lastEmoteUI, 300)/300), -size/2, size, size);
+ctx_.fillRect(-size/2 * (( 300 - Math.min(Date.now() - lastEmoteUI, 300))/1), -size/2, size, size);
 
 ctx_.restore(); // restores everything back, rotation won’t affect other drawings
 }
