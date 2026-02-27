@@ -6487,7 +6487,7 @@ ctx_.save();
 ctx_.globalAlpha = 0.5;
 ctx_.fillStyle = "black";
 
-var size = emoteScreenCanvas.width / 5;
+var size = emoteScreenCanvas.width / 10;
 
 // Move origin to center of canvas (or wherever you want anchor)
 ctx_.translate(emoteScreenCanvas.width / 2, emoteScreenCanvas.height / 2);
@@ -6496,7 +6496,8 @@ ctx_.translate(emoteScreenCanvas.width / 2, emoteScreenCanvas.height / 2);
 ctx_.rotate(45 * Math.PI / 180);
 
 // Draw rectangle centered at origin
-ctx_.fillRect(-size/2, -size/2, size, size);
+// lastEmoteUI is a date.now timestamp
+ctx_.fillRect(-size/2 * (math.min(Date.now() - lastEmoteUI, 300)/300), -size/2, size, size);
 
 ctx_.restore(); // restores everything back, rotation won’t affect other drawings
 }
