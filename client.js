@@ -6465,13 +6465,6 @@ function buildEmoteScreen() {
 	ctx_.globalAlpha = 0.2;
   ctx_.fillStyle = "#000000";
   ctx_.fillRect(0, 0, 300,300);
-  ctx_.fillStyle = "#000000";
-  ctx_.fillRect(
-    pad,
-    pad,
-    inviteScreenCanvas.width - pad * 2,
-    inviteScreenCanvas.height - pad * 2
-  );
 }
 function buildInviteScreen() {
   /* player1v1Requests = [];
