@@ -33459,6 +33459,7 @@ function controlsPressEvent(cNum, isNowPressed) {
               emoteUI = !emoteUI
 			  if (emoteUI) {
 				  lastEmoteUI = Date.now()
+				  buildEmoteScreen() 
 			  }
 		  }
           var mes = new MsgWriter(2);
