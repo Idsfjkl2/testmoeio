@@ -6483,7 +6483,7 @@ function buildEmoteScreen() {
   ctx_.save();
   ctx_.globalAlpha = 0.5;
   ctx_.fillStyle = "black";
-  ctx_.fillRect(0, 0, emoteScreenCanvas.width / 5, emoteScreenCanvas.width / 5);
+  ctx_.fillRect(-emoteScreenCanvas.width, -emoteScreenCanvas.width, emoteScreenCanvas.width / 5, emoteScreenCanvas.width / 5);
   ctx_.restore();
 }
 function buildInviteScreen() {
