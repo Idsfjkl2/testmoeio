@@ -5677,6 +5677,7 @@ hotkeys.push('zxcvbnm'.split(''));
   }
 
   buildInviteScreen();
+   buildEmoteScreen() 
   if (inviteScreenCanvas != null) {
     inviteScreenCanvas.width &&
       ctx.drawImage(
@@ -6480,7 +6481,7 @@ function buildEmoteScreen() {
   ctx_.clearRect(0, 0, emoteScreenCanvas.width, emoteScreenCanvas.height);
 
   ctx_.save();
-  ctx_.globalAlpha = 0.2;
+  ctx_.globalAlpha = 0.5;
   ctx_.fillStyle = "black";
   ctx_.fillRect(0, 0, emoteScreenCanvas.width, emoteScreenCanvas.height);
   ctx_.restore();
@@ -33476,7 +33477,6 @@ function controlsPressEvent(cNum, isNowPressed) {
               emoteUI = !emoteUI
 			  if (emoteUI) {
 				  lastEmoteUI = Date.now()
-				  buildEmoteScreen() 
 			  }
 		  }
           var mes = new MsgWriter(2);
