@@ -5677,7 +5677,6 @@ hotkeys.push('zxcvbnm'.split(''));
   }
 
   buildInviteScreen();
-  buildEmoteScreen();
   if (inviteScreenCanvas != null) {
     inviteScreenCanvas.width &&
       ctx.drawImage(
@@ -6461,6 +6460,8 @@ function buildEmoteScreen() {
     emoteScreenCanvas = document.createElement("canvas");
 
   if (emoteScreenCanvas == null) return;
+	
+var ctx_ = emoteScreenCanvas.getContext("2d");
 ctx_.save();
 ctx_.globalAlpha = 0.2;
 ctx_.fillStyle = "black";
