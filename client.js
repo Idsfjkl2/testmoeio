@@ -6464,7 +6464,7 @@ function buildEmoteScreen() {
   var ctx_ = emoteScreenCanvas.getContext("2d");
 	ctx_.globalAlpha = 0.2;
   ctx_.fillStyle = "#000000";
-  ctx_.fillRect(0, 0, inviteScreenCanvas.width, inviteScreenCanvas.height);
+  ctx_.fillRect(0, 0, 300,300);
   ctx_.fillStyle = "#000000";
   ctx_.fillRect(
     pad,
